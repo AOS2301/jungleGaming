@@ -13,9 +13,14 @@ import { ws } from 'msw'
 import type { RealtimeEvent } from '@/api/contracts'
 import { bus, type Audience } from './bus'
 import { getDb } from './db'
+import { socketOrigin } from '@/realtime/url'
 import { getScenario } from './scenarios'
 
-const link = ws.link(/\/socket\.io\//)
+/**
+ * O MSW remove o prefixo "/socket.io/" da URL antes de casar handlers, então o link é definido pela
+ * ORIGEM (ws://host). Isso também evita interceptar outros WebSockets (ex.: HMR do Vite, movido de porta).
+ */
+const link = ws.link(socketOrigin().replace(/^http/, 'ws'))
 
 interface Connection {
   id: number

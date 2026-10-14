@@ -23,7 +23,7 @@ export const walletHandlers = [
       if (auth instanceof Response) return auth
       const items = getDb()
         .wallets.filter((w) => w.userId === auth.user.id)
-        .sort((a, b) => a.slot.localeCompare(b.slot) * -1)
+        .sort((a, b) => a.slot.localeCompare(b.slot))
         .map(serialize)
       return json({ items })
     }),

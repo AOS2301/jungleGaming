@@ -70,10 +70,7 @@ export const seedUsers: SeedUser[] = [
   },
 ]
 
-export const DEMO_CREDENTIALS = [
-  { email: 'ana@example.com', password: 'Senha@123' },
-  { email: 'bruno@example.com', password: 'Senha@456' },
-] as const
+export { DEMO_CREDENTIALS } from '../credentials'
 
 export interface SeedWallet {
   id: string

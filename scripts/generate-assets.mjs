@@ -354,7 +354,7 @@ for (const n of nfts) {
   const creator = creators.find((c) => c.id === n.creatorId)
   const col = collections.find((c) => c.id === n.collectionId)
   const style = styles[n._category]
-  n.description = `${n.name} é uma obra de ${creator.name} da coleção ${col.name}. ${style.label} em tons de ${n._palette.name}, mintada na rede ${n.network} com certificado de autenticidade simulado.`
+  n.description = `${n.name} é uma obra de ${creator.name} da coleção ${col.name}. ${style.label} em tons de ${n._palette.name}, mintada na rede ${n.network[0].toUpperCase() + n.network.slice(1)} com certificado de autenticidade simulado.`
   n.images = n.images.map((img, idx) => ({ src: img.src, alt: `${style.label} em tons de ${n._palette.name} — ${n.name}${idx > 0 ? ` (detalhe ${idx})` : ''}` }))
   n.traits = [
     { label: 'Paleta', value: n._palette.name },

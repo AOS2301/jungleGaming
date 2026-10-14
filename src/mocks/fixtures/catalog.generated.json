@@ -147,7 +147,7 @@
     {
       "id": "nft-001",
       "name": "Aurora Drift",
-      "description": "Aurora Drift é uma obra de Lia Moreira da coleção Aurora Series. Composição abstrata em tons de lilás e menta, mintada na rede ethereum com certificado de autenticidade simulado.",
+      "description": "Aurora Drift é uma obra de Lia Moreira da coleção Aurora Series. Composição abstrata em tons de lilás e menta, mintada na rede Ethereum com certificado de autenticidade simulado.",
       "category": "art",
       "network": "ethereum",
       "collectionId": "col-aurora",
@@ -203,7 +203,7 @@
     {
       "id": "nft-002",
       "name": "Etéreo Cidade",
-      "description": "Etéreo Cidade é uma obra de Lia Moreira da coleção Isometria. Blocos isométricos em 3D em tons de magenta e ciano, mintada na rede polygon com certificado de autenticidade simulado.",
+      "description": "Etéreo Cidade é uma obra de Lia Moreira da coleção Isometria. Blocos isométricos em 3D em tons de magenta e ciano, mintada na rede Polygon com certificado de autenticidade simulado.",
       "category": "3d",
       "network": "polygon",
       "collectionId": "col-iso",
@@ -259,7 +259,7 @@
     {
       "id": "nft-003",
       "name": "Líquido Compasso",
-      "description": "Líquido Compasso é uma obra de Tobias Reis da coleção Synth Wave Club. Disco de vinil e equalizador em tons de grafite e dourado, mintada na rede polygon com certificado de autenticidade simulado.",
+      "description": "Líquido Compasso é uma obra de Tobias Reis da coleção Synth Wave Club. Disco de vinil e equalizador em tons de grafite e dourado, mintada na rede Polygon com certificado de autenticidade simulado.",
       "category": "music",
       "network": "polygon",
       "collectionId": "col-synth",
@@ -308,7 +308,7 @@
     {
       "id": "nft-004",
       "name": "Silente Guaxinim",
-      "description": "Silente Guaxinim é uma obra de Tobias Reis da coleção Bichos do Mangue. Criatura colecionável em tons de azul-petróleo e coral, mintada na rede base com certificado de autenticidade simulado.",
+      "description": "Silente Guaxinim é uma obra de Tobias Reis da coleção Bichos do Mangue. Criatura colecionável em tons de azul-petróleo e coral, mintada na rede Base com certificado de autenticidade simulado.",
       "category": "collectibles",
       "network": "base",
       "collectionId": "col-bichos",
@@ -357,7 +357,7 @@
     {
       "id": "nft-005",
       "name": "Etéreo Litoral",
-      "description": "Etéreo Litoral é uma obra de Marta Quental da coleção Golden Hour. Paisagem ao entardecer em tons de verde-floresta e limão, mintada na rede ethereum com certificado de autenticidade simulado.",
+      "description": "Etéreo Litoral é uma obra de Marta Quental da coleção Golden Hour. Paisagem ao entardecer em tons de verde-floresta e limão, mintada na rede Ethereum com certificado de autenticidade simulado.",
       "category": "photography",
       "network": "ethereum",
       "collectionId": "col-golden",
@@ -406,7 +406,7 @@
     {
       "id": "nft-006",
       "name": "Solar Portal",
-      "description": "Solar Portal é uma obra de Marta Quental da coleção Pixel Arena. Sprite em pixel art em tons de laranja e índigo, mintada na rede ethereum com certificado de autenticidade simulado.",
+      "description": "Solar Portal é uma obra de Marta Quental da coleção Pixel Arena. Sprite em pixel art em tons de laranja e índigo, mintada na rede Ethereum com certificado de autenticidade simulado.",
       "category": "games",
       "network": "ethereum",
       "collectionId": "col-pixel",
@@ -455,7 +455,7 @@
     {
       "id": "nft-007",
       "name": "Sereno Cidade",
-      "description": "Sereno Cidade é uma obra de Kenji Aoki da coleção Vox Blocks. Blocos isométricos em 3D em tons de rosa e turquesa, mintada na rede polygon com certificado de autenticidade simulado.",
+      "description": "Sereno Cidade é uma obra de Kenji Aoki da coleção Vox Blocks. Blocos isométricos em 3D em tons de rosa e turquesa, mintada na rede Polygon com certificado de autenticidade simulado.",
       "category": "3d",
       "network": "polygon",
       "collectionId": "col-vox",
@@ -511,7 +511,7 @@
     {
       "id": "nft-008",
       "name": "Selvagem Acorde",
-      "description": "Selvagem Acorde é uma obra de Nadia Farouk da coleção Vinil Digital. Disco de vinil e equalizador em tons de azul-petróleo e coral, mintada na rede arbitrum com certificado de autenticidade simulado.",
+      "description": "Selvagem Acorde é uma obra de Nadia Farouk da coleção Vinil Digital. Disco de vinil e equalizador em tons de azul-petróleo e coral, mintada na rede Arbitrum com certificado de autenticidade simulado.",
       "category": "music",
       "network": "arbitrum",
       "collectionId": "col-vinil",
@@ -560,7 +560,7 @@
     {
       "id": "nft-009",
       "name": "Silente Cubo",
-      "description": "Silente Cubo é uma obra de Lia Moreira da coleção Vox Blocks. Blocos isométricos em 3D em tons de verde-floresta e limão, mintada na rede polygon com certificado de autenticidade simulado.",
+      "description": "Silente Cubo é uma obra de Lia Moreira da coleção Vox Blocks. Blocos isométricos em 3D em tons de verde-floresta e limão, mintada na rede Polygon com certificado de autenticidade simulado.",
       "category": "3d",
       "network": "polygon",
       "collectionId": "col-vox",
@@ -623,7 +623,7 @@
     {
       "id": "nft-010",
       "name": "Dourado Campo",
-      "description": "Dourado Campo é uma obra de Lia Moreira da coleção Golden Hour. Paisagem ao entardecer em tons de vermelho e creme, mintada na rede ethereum com certificado de autenticidade simulado.",
+      "description": "Dourado Campo é uma obra de Lia Moreira da coleção Golden Hour. Paisagem ao entardecer em tons de vermelho e creme, mintada na rede Ethereum com certificado de autenticidade simulado.",
       "category": "photography",
       "network": "ethereum",
       "collectionId": "col-golden",
@@ -672,7 +672,7 @@
     {
       "id": "nft-011",
       "name": "Cósmico Espírito",
-      "description": "Cósmico Espírito é uma obra de Suri Valdés da coleção Totem Friends. Criatura colecionável em tons de grafite e dourado, mintada na rede base com certificado de autenticidade simulado.",
+      "description": "Cósmico Espírito é uma obra de Suri Valdés da coleção Totem Friends. Criatura colecionável em tons de grafite e dourado, mintada na rede Base com certificado de autenticidade simulado.",
       "category": "collectibles",
       "network": "base",
       "collectionId": "col-totem",
@@ -728,7 +728,7 @@
     {
       "id": "nft-012",
       "name": "Cósmico Campo",
-      "description": "Cósmico Campo é uma obra de Suri Valdés da coleção Horizonte Aberto. Paisagem ao entardecer em tons de laranja e índigo, mintada na rede base com certificado de autenticidade simulado.",
+      "description": "Cósmico Campo é uma obra de Suri Valdés da coleção Horizonte Aberto. Paisagem ao entardecer em tons de laranja e índigo, mintada na rede Base com certificado de autenticidade simulado.",
       "category": "photography",
       "network": "base",
       "collectionId": "col-horizonte",
@@ -791,7 +791,7 @@
     {
       "id": "nft-013",
       "name": "Silente Refrão",
-      "description": "Silente Refrão é uma obra de Hugo Bernardes da coleção Synth Wave Club. Disco de vinil e equalizador em tons de rosa e turquesa, mintada na rede base com certificado de autenticidade simulado.",
+      "description": "Silente Refrão é uma obra de Hugo Bernardes da coleção Synth Wave Club. Disco de vinil e equalizador em tons de rosa e turquesa, mintada na rede Base com certificado de autenticidade simulado.",
       "category": "music",
       "network": "base",
       "collectionId": "col-synth",
@@ -840,7 +840,7 @@
     {
       "id": "nft-014",
       "name": "Líquido Delta",
-      "description": "Líquido Delta é uma obra de Marta Quental da coleção Aurora Series. Composição abstrata em tons de grafite e dourado, mintada na rede base com certificado de autenticidade simulado.",
+      "description": "Líquido Delta é uma obra de Marta Quental da coleção Aurora Series. Composição abstrata em tons de grafite e dourado, mintada na rede Base com certificado de autenticidade simulado.",
       "category": "art",
       "network": "base",
       "collectionId": "col-aurora",
@@ -889,7 +889,7 @@
     {
       "id": "nft-015",
       "name": "Vibrante Refrão",
-      "description": "Vibrante Refrão é uma obra de Suri Valdés da coleção Vinil Digital. Disco de vinil e equalizador em tons de grafite e dourado, mintada na rede polygon com certificado de autenticidade simulado.",
+      "description": "Vibrante Refrão é uma obra de Suri Valdés da coleção Vinil Digital. Disco de vinil e equalizador em tons de grafite e dourado, mintada na rede Polygon com certificado de autenticidade simulado.",
       "category": "music",
       "network": "polygon",
       "collectionId": "col-vinil",
@@ -945,7 +945,7 @@
     {
       "id": "nft-016",
       "name": "Solar Totem",
-      "description": "Solar Totem é uma obra de Lia Moreira da coleção Bichos do Mangue. Criatura colecionável em tons de lilás e menta, mintada na rede polygon com certificado de autenticidade simulado.",
+      "description": "Solar Totem é uma obra de Lia Moreira da coleção Bichos do Mangue. Criatura colecionável em tons de lilás e menta, mintada na rede Polygon com certificado de autenticidade simulado.",
       "category": "collectibles",
       "network": "polygon",
       "collectionId": "col-bichos",
@@ -1001,7 +1001,7 @@
     {
       "id": "nft-017",
       "name": "Silente Miragem",
-      "description": "Silente Miragem é uma obra de Nadia Farouk da coleção Prisma Lab. Composição abstrata em tons de grafite e dourado, mintada na rede ethereum com certificado de autenticidade simulado.",
+      "description": "Silente Miragem é uma obra de Nadia Farouk da coleção Prisma Lab. Composição abstrata em tons de grafite e dourado, mintada na rede Ethereum com certificado de autenticidade simulado.",
       "category": "art",
       "network": "ethereum",
       "collectionId": "col-prisma",
@@ -1064,7 +1064,7 @@
     {
       "id": "nft-018",
       "name": "Líquido Espírito",
-      "description": "Líquido Espírito é uma obra de Marta Quental da coleção Bichos do Mangue. Criatura colecionável em tons de azul-royal e prata, mintada na rede arbitrum com certificado de autenticidade simulado.",
+      "description": "Líquido Espírito é uma obra de Marta Quental da coleção Bichos do Mangue. Criatura colecionável em tons de azul-royal e prata, mintada na rede Arbitrum com certificado de autenticidade simulado.",
       "category": "collectibles",
       "network": "arbitrum",
       "collectionId": "col-bichos",
@@ -1127,7 +1127,7 @@
     {
       "id": "nft-019",
       "name": "Cósmico Miragem",
-      "description": "Cósmico Miragem é uma obra de Marta Quental da coleção Prisma Lab. Composição abstrata em tons de vermelho e creme, mintada na rede base com certificado de autenticidade simulado.",
+      "description": "Cósmico Miragem é uma obra de Marta Quental da coleção Prisma Lab. Composição abstrata em tons de vermelho e creme, mintada na rede Base com certificado de autenticidade simulado.",
       "category": "art",
       "network": "base",
       "collectionId": "col-prisma",
@@ -1183,7 +1183,7 @@
     {
       "id": "nft-020",
       "name": "Crepuscular Acorde",
-      "description": "Crepuscular Acorde é uma obra de Marta Quental da coleção Vinil Digital. Disco de vinil e equalizador em tons de violeta e âmbar, mintada na rede ethereum com certificado de autenticidade simulado.",
+      "description": "Crepuscular Acorde é uma obra de Marta Quental da coleção Vinil Digital. Disco de vinil e equalizador em tons de violeta e âmbar, mintada na rede Ethereum com certificado de autenticidade simulado.",
       "category": "music",
       "network": "ethereum",
       "collectionId": "col-vinil",
@@ -1239,7 +1239,7 @@
     {
       "id": "nft-021",
       "name": "Dourado Espírito",
-      "description": "Dourado Espírito é uma obra de Lia Moreira da coleção Totem Friends. Criatura colecionável em tons de azul-royal e prata, mintada na rede arbitrum com certificado de autenticidade simulado.",
+      "description": "Dourado Espírito é uma obra de Lia Moreira da coleção Totem Friends. Criatura colecionável em tons de azul-royal e prata, mintada na rede Arbitrum com certificado de autenticidade simulado.",
       "category": "collectibles",
       "network": "arbitrum",
       "collectionId": "col-totem",
@@ -1302,7 +1302,7 @@
     {
       "id": "nft-022",
       "name": "Ártico Vale",
-      "description": "Ártico Vale é uma obra de Otávio Prado da coleção Horizonte Aberto. Paisagem ao entardecer em tons de verde-floresta e limão, mintada na rede arbitrum com certificado de autenticidade simulado.",
+      "description": "Ártico Vale é uma obra de Otávio Prado da coleção Horizonte Aberto. Paisagem ao entardecer em tons de verde-floresta e limão, mintada na rede Arbitrum com certificado de autenticidade simulado.",
       "category": "photography",
       "network": "arbitrum",
       "collectionId": "col-horizonte",
@@ -1358,7 +1358,7 @@
     {
       "id": "nft-023",
       "name": "Sereno Totem",
-      "description": "Sereno Totem é uma obra de Lia Moreira da coleção Bichos do Mangue. Criatura colecionável em tons de laranja e índigo, mintada na rede arbitrum com certificado de autenticidade simulado.",
+      "description": "Sereno Totem é uma obra de Lia Moreira da coleção Bichos do Mangue. Criatura colecionável em tons de laranja e índigo, mintada na rede Arbitrum com certificado de autenticidade simulado.",
       "category": "collectibles",
       "network": "arbitrum",
       "collectionId": "col-bichos",
@@ -1414,7 +1414,7 @@
     {
       "id": "nft-024",
       "name": "Neon Maré",
-      "description": "Neon Maré é uma obra de Kenji Aoki da coleção Aurora Series. Composição abstrata em tons de laranja e índigo, mintada na rede arbitrum com certificado de autenticidade simulado.",
+      "description": "Neon Maré é uma obra de Kenji Aoki da coleção Aurora Series. Composição abstrata em tons de laranja e índigo, mintada na rede Arbitrum com certificado de autenticidade simulado.",
       "category": "art",
       "network": "arbitrum",
       "collectionId": "col-aurora",
@@ -1463,7 +1463,7 @@
     {
       "id": "nft-025",
       "name": "Líquido Arcade",
-      "description": "Líquido Arcade é uma obra de Kenji Aoki da coleção Quest Relics. Sprite em pixel art em tons de grafite e dourado, mintada na rede polygon com certificado de autenticidade simulado.",
+      "description": "Líquido Arcade é uma obra de Kenji Aoki da coleção Quest Relics. Sprite em pixel art em tons de grafite e dourado, mintada na rede Polygon com certificado de autenticidade simulado.",
       "category": "games",
       "network": "polygon",
       "collectionId": "col-quest",
@@ -1526,7 +1526,7 @@
     {
       "id": "nft-026",
       "name": "Lunar Cubo",
-      "description": "Lunar Cubo é uma obra de Kenji Aoki da coleção Isometria. Blocos isométricos em 3D em tons de azul-petróleo e coral, mintada na rede ethereum com certificado de autenticidade simulado.",
+      "description": "Lunar Cubo é uma obra de Kenji Aoki da coleção Isometria. Blocos isométricos em 3D em tons de azul-petróleo e coral, mintada na rede Ethereum com certificado de autenticidade simulado.",
       "category": "3d",
       "network": "ethereum",
       "collectionId": "col-iso",
@@ -1589,7 +1589,7 @@
     {
       "id": "nft-027",
       "name": "Cobalto Refrão",
-      "description": "Cobalto Refrão é uma obra de Marta Quental da coleção Synth Wave Club. Disco de vinil e equalizador em tons de violeta e âmbar, mintada na rede base com certificado de autenticidade simulado.",
+      "description": "Cobalto Refrão é uma obra de Marta Quental da coleção Synth Wave Club. Disco de vinil e equalizador em tons de violeta e âmbar, mintada na rede Base com certificado de autenticidade simulado.",
       "category": "music",
       "network": "base",
       "collectionId": "col-synth",
@@ -1645,7 +1645,7 @@
     {
       "id": "nft-028",
       "name": "Líquido Filhote",
-      "description": "Líquido Filhote é uma obra de Hugo Bernardes da coleção Totem Friends. Criatura colecionável em tons de violeta e âmbar, mintada na rede polygon com certificado de autenticidade simulado.",
+      "description": "Líquido Filhote é uma obra de Hugo Bernardes da coleção Totem Friends. Criatura colecionável em tons de violeta e âmbar, mintada na rede Polygon com certificado de autenticidade simulado.",
       "category": "collectibles",
       "network": "polygon",
       "collectionId": "col-totem",
@@ -1708,7 +1708,7 @@
     {
       "id": "nft-029",
       "name": "Cobalto Miragem",
-      "description": "Cobalto Miragem é uma obra de Marta Quental da coleção Prisma Lab. Composição abstrata em tons de magenta e ciano, mintada na rede base com certificado de autenticidade simulado.",
+      "description": "Cobalto Miragem é uma obra de Marta Quental da coleção Prisma Lab. Composição abstrata em tons de magenta e ciano, mintada na rede Base com certificado de autenticidade simulado.",
       "category": "art",
       "network": "base",
       "collectionId": "col-prisma",
@@ -1771,7 +1771,7 @@
     {
       "id": "nft-030",
       "name": "Crepuscular Relíquia",
-      "description": "Crepuscular Relíquia é uma obra de Suri Valdés da coleção Quest Relics. Sprite em pixel art em tons de azul-royal e prata, mintada na rede arbitrum com certificado de autenticidade simulado.",
+      "description": "Crepuscular Relíquia é uma obra de Suri Valdés da coleção Quest Relics. Sprite em pixel art em tons de azul-royal e prata, mintada na rede Arbitrum com certificado de autenticidade simulado.",
       "category": "games",
       "network": "arbitrum",
       "collectionId": "col-quest",
@@ -1820,7 +1820,7 @@
     {
       "id": "nft-031",
       "name": "Vivo Maré",
-      "description": "Vivo Maré é uma obra de Otávio Prado da coleção Prisma Lab. Composição abstrata em tons de grafite e dourado, mintada na rede arbitrum com certificado de autenticidade simulado.",
+      "description": "Vivo Maré é uma obra de Otávio Prado da coleção Prisma Lab. Composição abstrata em tons de grafite e dourado, mintada na rede Arbitrum com certificado de autenticidade simulado.",
       "category": "art",
       "network": "arbitrum",
       "collectionId": "col-prisma",
@@ -1876,7 +1876,7 @@
     {
       "id": "nft-032",
       "name": "Solar Chip",
-      "description": "Solar Chip é uma obra de Hugo Bernardes da coleção Pixel Arena. Sprite em pixel art em tons de vermelho e creme, mintada na rede polygon com certificado de autenticidade simulado.",
+      "description": "Solar Chip é uma obra de Hugo Bernardes da coleção Pixel Arena. Sprite em pixel art em tons de vermelho e creme, mintada na rede Polygon com certificado de autenticidade simulado.",
       "category": "games",
       "network": "polygon",
       "collectionId": "col-pixel",
@@ -1925,7 +1925,7 @@
     {
       "id": "nft-033",
       "name": "Cobalto Terraço",
-      "description": "Cobalto Terraço é uma obra de Nadia Farouk da coleção Vox Blocks. Blocos isométricos em 3D em tons de lilás e menta, mintada na rede polygon com certificado de autenticidade simulado.",
+      "description": "Cobalto Terraço é uma obra de Nadia Farouk da coleção Vox Blocks. Blocos isométricos em 3D em tons de lilás e menta, mintada na rede Polygon com certificado de autenticidade simulado.",
       "category": "3d",
       "network": "polygon",
       "collectionId": "col-vox",
@@ -1974,7 +1974,7 @@
     {
       "id": "nft-034",
       "name": "Crepuscular Compasso",
-      "description": "Crepuscular Compasso é uma obra de Tobias Reis da coleção Vinil Digital. Disco de vinil e equalizador em tons de grafite e dourado, mintada na rede arbitrum com certificado de autenticidade simulado.",
+      "description": "Crepuscular Compasso é uma obra de Tobias Reis da coleção Vinil Digital. Disco de vinil e equalizador em tons de grafite e dourado, mintada na rede Arbitrum com certificado de autenticidade simulado.",
       "category": "music",
       "network": "arbitrum",
       "collectionId": "col-vinil",
@@ -2023,7 +2023,7 @@
     {
       "id": "nft-035",
       "name": "Líquido Guaxinim",
-      "description": "Líquido Guaxinim é uma obra de Marta Quental da coleção Totem Friends. Criatura colecionável em tons de vermelho e creme, mintada na rede polygon com certificado de autenticidade simulado.",
+      "description": "Líquido Guaxinim é uma obra de Marta Quental da coleção Totem Friends. Criatura colecionável em tons de vermelho e creme, mintada na rede Polygon com certificado de autenticidade simulado.",
       "category": "collectibles",
       "network": "polygon",
       "collectionId": "col-totem",
@@ -2072,7 +2072,7 @@
     {
       "id": "nft-036",
       "name": "Solar Miragem",
-      "description": "Solar Miragem é uma obra de Otávio Prado da coleção Prisma Lab. Composição abstrata em tons de azul-petróleo e coral, mintada na rede base com certificado de autenticidade simulado.",
+      "description": "Solar Miragem é uma obra de Otávio Prado da coleção Prisma Lab. Composição abstrata em tons de azul-petróleo e coral, mintada na rede Base com certificado de autenticidade simulado.",
       "category": "art",
       "network": "base",
       "collectionId": "col-prisma",
@@ -2128,7 +2128,7 @@
     {
       "id": "nft-037",
       "name": "Selvagem Relíquia",
-      "description": "Selvagem Relíquia é uma obra de Otávio Prado da coleção Quest Relics. Sprite em pixel art em tons de azul-petróleo e coral, mintada na rede arbitrum com certificado de autenticidade simulado.",
+      "description": "Selvagem Relíquia é uma obra de Otávio Prado da coleção Quest Relics. Sprite em pixel art em tons de azul-petróleo e coral, mintada na rede Arbitrum com certificado de autenticidade simulado.",
       "category": "games",
       "network": "arbitrum",
       "collectionId": "col-quest",
@@ -2191,7 +2191,7 @@
     {
       "id": "nft-038",
       "name": "Solar Maré",
-      "description": "Solar Maré é uma obra de Lia Moreira da coleção Aurora Series. Composição abstrata em tons de magenta e ciano, mintada na rede arbitrum com certificado de autenticidade simulado.",
+      "description": "Solar Maré é uma obra de Lia Moreira da coleção Aurora Series. Composição abstrata em tons de magenta e ciano, mintada na rede Arbitrum com certificado de autenticidade simulado.",
       "category": "art",
       "network": "arbitrum",
       "collectionId": "col-aurora",
@@ -2240,7 +2240,7 @@
     {
       "id": "nft-039",
       "name": "Cósmico Cume",
-      "description": "Cósmico Cume é uma obra de Tobias Reis da coleção Golden Hour. Paisagem ao entardecer em tons de rosa e turquesa, mintada na rede arbitrum com certificado de autenticidade simulado.",
+      "description": "Cósmico Cume é uma obra de Tobias Reis da coleção Golden Hour. Paisagem ao entardecer em tons de rosa e turquesa, mintada na rede Arbitrum com certificado de autenticidade simulado.",
       "category": "photography",
       "network": "arbitrum",
       "collectionId": "col-golden",
@@ -2289,7 +2289,7 @@
     {
       "id": "nft-040",
       "name": "Líquido Totem",
-      "description": "Líquido Totem é uma obra de Otávio Prado da coleção Totem Friends. Criatura colecionável em tons de azul-petróleo e coral, mintada na rede base com certificado de autenticidade simulado.",
+      "description": "Líquido Totem é uma obra de Otávio Prado da coleção Totem Friends. Criatura colecionável em tons de azul-petróleo e coral, mintada na rede Base com certificado de autenticidade simulado.",
       "category": "collectibles",
       "network": "base",
       "collectionId": "col-totem",
@@ -2352,7 +2352,7 @@
     {
       "id": "nft-041",
       "name": "Solar Deserto",
-      "description": "Solar Deserto é uma obra de Marta Quental da coleção Horizonte Aberto. Paisagem ao entardecer em tons de azul-royal e prata, mintada na rede polygon com certificado de autenticidade simulado.",
+      "description": "Solar Deserto é uma obra de Marta Quental da coleção Horizonte Aberto. Paisagem ao entardecer em tons de azul-royal e prata, mintada na rede Polygon com certificado de autenticidade simulado.",
       "category": "photography",
       "network": "polygon",
       "collectionId": "col-horizonte",
@@ -2415,7 +2415,7 @@
     {
       "id": "nft-042",
       "name": "Sereno Relíquia",
-      "description": "Sereno Relíquia é uma obra de Tobias Reis da coleção Quest Relics. Sprite em pixel art em tons de azul-petróleo e coral, mintada na rede arbitrum com certificado de autenticidade simulado.",
+      "description": "Sereno Relíquia é uma obra de Tobias Reis da coleção Quest Relics. Sprite em pixel art em tons de azul-petróleo e coral, mintada na rede Arbitrum com certificado de autenticidade simulado.",
       "category": "games",
       "network": "arbitrum",
       "collectionId": "col-quest",
@@ -2464,7 +2464,7 @@
     {
       "id": "nft-043",
       "name": "Selvagem Eclipse",
-      "description": "Selvagem Eclipse é uma obra de Kenji Aoki da coleção Prisma Lab. Composição abstrata em tons de laranja e índigo, mintada na rede polygon com certificado de autenticidade simulado.",
+      "description": "Selvagem Eclipse é uma obra de Kenji Aoki da coleção Prisma Lab. Composição abstrata em tons de laranja e índigo, mintada na rede Polygon com certificado de autenticidade simulado.",
       "category": "art",
       "network": "polygon",
       "collectionId": "col-prisma",
@@ -2527,7 +2527,7 @@
     {
       "id": "nft-044",
       "name": "Etéreo Eco",
-      "description": "Etéreo Eco é uma obra de Hugo Bernardes da coleção Synth Wave Club. Disco de vinil e equalizador em tons de grafite e dourado, mintada na rede ethereum com certificado de autenticidade simulado.",
+      "description": "Etéreo Eco é uma obra de Hugo Bernardes da coleção Synth Wave Club. Disco de vinil e equalizador em tons de grafite e dourado, mintada na rede Ethereum com certificado de autenticidade simulado.",
       "category": "music",
       "network": "ethereum",
       "collectionId": "col-synth",
@@ -2590,7 +2590,7 @@
     {
       "id": "nft-045",
       "name": "Neon Terraço",
-      "description": "Neon Terraço é uma obra de Suri Valdés da coleção Vox Blocks. Blocos isométricos em 3D em tons de rosa e turquesa, mintada na rede base com certificado de autenticidade simulado.",
+      "description": "Neon Terraço é uma obra de Suri Valdés da coleção Vox Blocks. Blocos isométricos em 3D em tons de rosa e turquesa, mintada na rede Base com certificado de autenticidade simulado.",
       "category": "3d",
       "network": "base",
       "collectionId": "col-vox",
@@ -2646,7 +2646,7 @@
     {
       "id": "nft-046",
       "name": "Ártico Cume",
-      "description": "Ártico Cume é uma obra de Nadia Farouk da coleção Horizonte Aberto. Paisagem ao entardecer em tons de laranja e índigo, mintada na rede arbitrum com certificado de autenticidade simulado.",
+      "description": "Ártico Cume é uma obra de Nadia Farouk da coleção Horizonte Aberto. Paisagem ao entardecer em tons de laranja e índigo, mintada na rede Arbitrum com certificado de autenticidade simulado.",
       "category": "photography",
       "network": "arbitrum",
       "collectionId": "col-horizonte",
@@ -2695,7 +2695,7 @@
     {
       "id": "nft-047",
       "name": "Cobalto Totem",
-      "description": "Cobalto Totem é uma obra de Tobias Reis da coleção Bichos do Mangue. Criatura colecionável em tons de lilás e menta, mintada na rede polygon com certificado de autenticidade simulado.",
+      "description": "Cobalto Totem é uma obra de Tobias Reis da coleção Bichos do Mangue. Criatura colecionável em tons de lilás e menta, mintada na rede Polygon com certificado de autenticidade simulado.",
       "category": "collectibles",
       "network": "polygon",
       "collectionId": "col-bichos",
@@ -2758,7 +2758,7 @@
     {
       "id": "nft-048",
       "name": "Vivo Corrente",
-      "description": "Vivo Corrente é uma obra de Hugo Bernardes da coleção Prisma Lab. Composição abstrata em tons de vermelho e creme, mintada na rede arbitrum com certificado de autenticidade simulado.",
+      "description": "Vivo Corrente é uma obra de Hugo Bernardes da coleção Prisma Lab. Composição abstrata em tons de vermelho e creme, mintada na rede Arbitrum com certificado de autenticidade simulado.",
       "category": "art",
       "network": "arbitrum",
       "collectionId": "col-prisma",
@@ -2821,7 +2821,7 @@
     {
       "id": "nft-049",
       "name": "Lunar Compasso",
-      "description": "Lunar Compasso é uma obra de Lia Moreira da coleção Synth Wave Club. Disco de vinil e equalizador em tons de laranja e índigo, mintada na rede polygon com certificado de autenticidade simulado.",
+      "description": "Lunar Compasso é uma obra de Lia Moreira da coleção Synth Wave Club. Disco de vinil e equalizador em tons de laranja e índigo, mintada na rede Polygon com certificado de autenticidade simulado.",
       "category": "music",
       "network": "polygon",
       "collectionId": "col-synth",
@@ -2884,7 +2884,7 @@
     {
       "id": "nft-050",
       "name": "Cósmico Cidade",
-      "description": "Cósmico Cidade é uma obra de Otávio Prado da coleção Isometria. Blocos isométricos em 3D em tons de lilás e menta, mintada na rede arbitrum com certificado de autenticidade simulado.",
+      "description": "Cósmico Cidade é uma obra de Otávio Prado da coleção Isometria. Blocos isométricos em 3D em tons de lilás e menta, mintada na rede Arbitrum com certificado de autenticidade simulado.",
       "category": "3d",
       "network": "arbitrum",
       "collectionId": "col-iso",
@@ -2933,7 +2933,7 @@
     {
       "id": "nft-051",
       "name": "Etéreo Refrão",
-      "description": "Etéreo Refrão é uma obra de Marta Quental da coleção Vinil Digital. Disco de vinil e equalizador em tons de lilás e menta, mintada na rede arbitrum com certificado de autenticidade simulado.",
+      "description": "Etéreo Refrão é uma obra de Marta Quental da coleção Vinil Digital. Disco de vinil e equalizador em tons de lilás e menta, mintada na rede Arbitrum com certificado de autenticidade simulado.",
       "category": "music",
       "network": "arbitrum",
       "collectionId": "col-vinil",
@@ -2989,7 +2989,7 @@
     {
       "id": "nft-052",
       "name": "Vibrante Guaxinim",
-      "description": "Vibrante Guaxinim é uma obra de Kenji Aoki da coleção Bichos do Mangue. Criatura colecionável em tons de azul-petróleo e coral, mintada na rede ethereum com certificado de autenticidade simulado.",
+      "description": "Vibrante Guaxinim é uma obra de Kenji Aoki da coleção Bichos do Mangue. Criatura colecionável em tons de azul-petróleo e coral, mintada na rede Ethereum com certificado de autenticidade simulado.",
       "category": "collectibles",
       "network": "ethereum",
       "collectionId": "col-bichos",
@@ -3045,7 +3045,7 @@
     {
       "id": "nft-053",
       "name": "Selvagem Litoral",
-      "description": "Selvagem Litoral é uma obra de Kenji Aoki da coleção Golden Hour. Paisagem ao entardecer em tons de grafite e dourado, mintada na rede polygon com certificado de autenticidade simulado.",
+      "description": "Selvagem Litoral é uma obra de Kenji Aoki da coleção Golden Hour. Paisagem ao entardecer em tons de grafite e dourado, mintada na rede Polygon com certificado de autenticidade simulado.",
       "category": "photography",
       "network": "polygon",
       "collectionId": "col-golden",
@@ -3108,7 +3108,7 @@
     {
       "id": "nft-054",
       "name": "Silente Mascote",
-      "description": "Silente Mascote é uma obra de Tobias Reis da coleção Bichos do Mangue. Criatura colecionável em tons de rosa e turquesa, mintada na rede arbitrum com certificado de autenticidade simulado.",
+      "description": "Silente Mascote é uma obra de Tobias Reis da coleção Bichos do Mangue. Criatura colecionável em tons de rosa e turquesa, mintada na rede Arbitrum com certificado de autenticidade simulado.",
       "category": "collectibles",
       "network": "arbitrum",
       "collectionId": "col-bichos",
@@ -3157,7 +3157,7 @@
     {
       "id": "nft-055",
       "name": "Dourado Torre",
-      "description": "Dourado Torre é uma obra de Otávio Prado da coleção Vox Blocks. Blocos isométricos em 3D em tons de azul-royal e prata, mintada na rede arbitrum com certificado de autenticidade simulado.",
+      "description": "Dourado Torre é uma obra de Otávio Prado da coleção Vox Blocks. Blocos isométricos em 3D em tons de azul-royal e prata, mintada na rede Arbitrum com certificado de autenticidade simulado.",
       "category": "3d",
       "network": "arbitrum",
       "collectionId": "col-vox",
@@ -3220,7 +3220,7 @@
     {
       "id": "nft-056",
       "name": "Neon Chip",
-      "description": "Neon Chip é uma obra de Tobias Reis da coleção Pixel Arena. Sprite em pixel art em tons de azul-royal e prata, mintada na rede polygon com certificado de autenticidade simulado.",
+      "description": "Neon Chip é uma obra de Tobias Reis da coleção Pixel Arena. Sprite em pixel art em tons de azul-royal e prata, mintada na rede Polygon com certificado de autenticidade simulado.",
       "category": "games",
       "network": "polygon",
       "collectionId": "col-pixel",
@@ -3276,7 +3276,7 @@
     {
       "id": "nft-057",
       "name": "Cósmico Monólito",
-      "description": "Cósmico Monólito é uma obra de Nadia Farouk da coleção Isometria. Blocos isométricos em 3D em tons de grafite e dourado, mintada na rede base com certificado de autenticidade simulado.",
+      "description": "Cósmico Monólito é uma obra de Nadia Farouk da coleção Isometria. Blocos isométricos em 3D em tons de grafite e dourado, mintada na rede Base com certificado de autenticidade simulado.",
       "category": "3d",
       "network": "base",
       "collectionId": "col-iso",
@@ -3332,7 +3332,7 @@
     {
       "id": "nft-058",
       "name": "Vibrante Névoa",
-      "description": "Vibrante Névoa é uma obra de Suri Valdés da coleção Golden Hour. Paisagem ao entardecer em tons de magenta e ciano, mintada na rede arbitrum com certificado de autenticidade simulado.",
+      "description": "Vibrante Névoa é uma obra de Suri Valdés da coleção Golden Hour. Paisagem ao entardecer em tons de magenta e ciano, mintada na rede Arbitrum com certificado de autenticidade simulado.",
       "category": "photography",
       "network": "arbitrum",
       "collectionId": "col-golden",
@@ -3388,7 +3388,7 @@
     {
       "id": "nft-059",
       "name": "Neon Guaxinim",
-      "description": "Neon Guaxinim é uma obra de Suri Valdés da coleção Bichos do Mangue. Criatura colecionável em tons de violeta e âmbar, mintada na rede ethereum com certificado de autenticidade simulado.",
+      "description": "Neon Guaxinim é uma obra de Suri Valdés da coleção Bichos do Mangue. Criatura colecionável em tons de violeta e âmbar, mintada na rede Ethereum com certificado de autenticidade simulado.",
       "category": "collectibles",
       "network": "ethereum",
       "collectionId": "col-bichos",
@@ -3451,7 +3451,7 @@
     {
       "id": "nft-060",
       "name": "Cósmico Corrente",
-      "description": "Cósmico Corrente é uma obra de Lia Moreira da coleção Aurora Series. Composição abstrata em tons de azul-petróleo e coral, mintada na rede polygon com certificado de autenticidade simulado.",
+      "description": "Cósmico Corrente é uma obra de Lia Moreira da coleção Aurora Series. Composição abstrata em tons de azul-petróleo e coral, mintada na rede Polygon com certificado de autenticidade simulado.",
       "category": "art",
       "network": "polygon",
       "collectionId": "col-aurora",
