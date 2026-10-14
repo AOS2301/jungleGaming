@@ -1,36 +1,33 @@
 @import 'tailwindcss';
-@import '@fontsource-variable/work-sans/wght.css';
-@import '@fontsource/space-mono/latin-400.css';
-@import '@fontsource/space-mono/latin-700.css';
+@import '@fontsource-variable/jetbrains-mono/wght.css';
 
 /*
- * Tokens da identidade visual (tema escuro).
- * O Figma original não estava acessível: a paleta e a tipografia foram reconstruídas
- * (violeta sobre grafite, Work Sans + Space Mono) — ver ARCHITECTURE.md → "Desvios do Figma".
- * Todos os pares texto/fundo usados atingem contraste AA (≥ 4,5:1).
+ * Tokens da identidade visual (tema escuro quente, acento cobre, tipografia monoespaçada).
+ * Reconstruída a partir da imagem de referência enviada (o Figma não estava acessível) —
+ * ver ARCHITECTURE.md → "Desvios do Figma". Pares texto/fundo com contraste AA (≥ 4,5:1).
  */
 @theme {
-  --font-sans: 'Work Sans Variable', ui-sans-serif, system-ui, sans-serif;
-  --font-mono: 'Space Mono', ui-monospace, SFMono-Regular, monospace;
+  --font-sans: 'JetBrains Mono Variable', ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-mono: 'JetBrains Mono Variable', ui-monospace, SFMono-Regular, Menlo, monospace;
 
-  --color-background: #1b1a21;
-  --color-surface: #25242d;
-  --color-surface-2: #2f2e39;
-  --color-border: #44435a;
-  --color-foreground: #f6f5fb;
-  --color-muted: #b9b7cb;
-  --color-primary: #7c3aed;
-  --color-primary-hover: #6d28d9;
-  --color-primary-foreground: #ffffff;
-  --color-accent: #c4b5fd;
-  --color-success: #4ade80;
-  --color-warning: #fbbf24;
-  --color-danger: #fb7185;
-  --color-ring: #c4b5fd;
+  --color-background: #120c0b;
+  --color-surface: #1c1311;
+  --color-surface-2: #2a1d19;
+  --color-border: #44312a;
+  --color-foreground: #f6efe9;
+  --color-muted: #bda99c;
+  --color-primary: #d98a4e;
+  --color-primary-hover: #e6a068;
+  --color-primary-foreground: #1a0f0a;
+  --color-accent: #e8a46c;
+  --color-success: #7ddc9a;
+  --color-warning: #f2c14e;
+  --color-danger: #ff8f80;
+  --color-ring: #f0b888;
 
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 20px;
+  --radius-sm: 3px;
+  --radius-md: 5px;
+  --radius-lg: 10px;
 
   --animate-shimmer: shimmer 1.6s linear infinite;
   --animate-fade-in: fade-in 0.2s ease-out;
@@ -43,8 +40,8 @@
     to { opacity: 1; transform: none; }
   }
   @keyframes pulse-ring {
-    0% { box-shadow: 0 0 0 0 rgb(124 58 237 / 0.55); }
-    100% { box-shadow: 0 0 0 18px rgb(124 58 237 / 0); }
+    0% { box-shadow: 0 0 0 0 rgb(217 138 78 / 0.55); }
+    100% { box-shadow: 0 0 0 18px rgb(217 138 78 / 0); }
   }
 }
 
@@ -59,12 +56,13 @@
     background: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);
-    font-size: 16px;
-    line-height: 1.5;
+    font-size: 15px;
+    line-height: 1.6;
     min-height: 100dvh;
     overflow-x: clip;
   }
-  h1, h2, h3, h4 { font-weight: 700; letter-spacing: -0.01em; line-height: 1.15; text-wrap: balance; }
+  h1, h2, h3, h4 { font-weight: 700; letter-spacing: -0.01em; line-height: 1.2; text-wrap: balance; }
+  h1, h2 { text-transform: uppercase; }
   :focus-visible {
     outline: 2px solid var(--color-ring);
     outline-offset: 2px;

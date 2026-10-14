@@ -1,7 +1,9 @@
 import { keepPreviousData, useQuery } from '@tanstack/react-query'
 import { getRouteApi, Link } from '@tanstack/react-router'
-import { ArrowRight, ChevronLeft, ChevronRight, RefreshCw, Search, SlidersHorizontal, X } from 'lucide-react'
+import { RefreshCw, Search, SlidersHorizontal, X } from 'lucide-react'
 import { useEffect, useMemo, useRef, useState } from 'react'
+import { Eth } from '@/components/common/Eth'
+import { Skeleton } from '@/components/ui/skeleton'
 import { SORT_IDS, type SortId } from '@/api/contracts'
 import { featuredOptions, nftListOptions } from '@/api/queries'
 import { EmptyState, ErrorState } from '@/components/common/States'
@@ -19,63 +21,57 @@ import { activeFilterCount, hasActiveFilters, splitCsv, toApiQuery, toCsv, type 
 
 const route = getRouteApi('/')
 
+/** Hero com o carrossel de destaques (dados da API) — a altura é fixa para não causar deslocamento de layout. */
 function Hero() {
+  const { data, isPending } = useQuery(featuredOptions())
+  const slides = (data ?? []).slice(0, 3)
+  const [index, setIndex] = useState(0)
+  const nft = slides[Math.min(index, Math.max(0, slides.length - 1))]
   return (
-    <section aria-labelledby="hero-title" className="relative overflow-hidden border-b border-border bg-[radial-gradient(ellipse_at_top_right,rgba(124,58,237,0.28),transparent_60%)]">
-      <div className="container-page grid items-center gap-10 py-12 md:grid-cols-2 md:py-16 lg:py-20">
-        <div className="flex flex-col items-start gap-6">
-          <p className="eth rounded-full border border-border px-3 py-1 text-xs text-accent">Ethereum · Polygon · Arbitrum · Base</p>
-          <h1 id="hero-title" className="text-4xl font-bold sm:text-5xl lg:text-6xl">
-            Descubra, colecione e negocie <span className="text-accent">NFTs únicos</span>
-          </h1>
-          <p className="max-w-xl text-lg text-muted">Obras digitais de criadores independentes, com edições limitadas e certificado de autenticidade. Compre com sua carteira em poucos cliques.</p>
-          <div className="flex flex-wrap gap-3">
-            <Button asChild size="lg">
-              <a href="#catalogo">Explorar catálogo <ArrowRight aria-hidden /></a>
-            </Button>
-            <Button asChild size="lg" variant="outline">
-              <a href="#destaques">Ver destaques</a>
-            </Button>
-          </div>
-        </div>
-        <Link to="/nfts/$nftId" params={{ nftId: 'nft-001' }} className="mx-auto block w-full max-w-md rounded-lg" aria-label="Ver Aurora Drift, NFT em destaque">
-          <div className="relative aspect-square overflow-hidden rounded-lg border border-border bg-surface-2 shadow-2xl shadow-primary/20">
-            <img src="/nfts/nft-001.svg" alt="Composição abstrata em tons de violeta e âmbar — Aurora Drift" width={800} height={800} fetchPriority="high" decoding="async" className="size-full object-cover" />
-          </div>
-        </Link>
-      </div>
-    </section>
-  )
-}
-
-function Featured() {
-  const { data, isPending, isError, refetch } = useQuery(featuredOptions())
-  const scroller = useRef<HTMLDivElement>(null)
-  const scrollBy = (dir: 1 | -1) => scroller.current?.scrollBy({ left: dir * 320, behavior: 'smooth' })
-  if (!isPending && !isError && (data?.length ?? 0) === 0) return null
-  return (
-    <section id="destaques" aria-labelledby="destaques-title" className="container-page pt-14">
-      <div className="mb-6 flex items-end justify-between gap-4">
-        <div>
-          <h2 id="destaques-title" className="text-2xl font-bold sm:text-3xl">Destaques</h2>
-          <p className="text-muted">Seleção da semana pela curadoria.</p>
-        </div>
-        <div className="hidden gap-2 md:flex">
-          <Button variant="outline" size="icon" onClick={() => scrollBy(-1)} aria-label="Destaques anteriores"><ChevronLeft aria-hidden /></Button>
-          <Button variant="outline" size="icon" onClick={() => scrollBy(1)} aria-label="Próximos destaques"><ChevronRight aria-hidden /></Button>
-        </div>
-      </div>
-      {isError ? (
-        <ErrorState error={new Error('Não foi possível carregar os destaques.')} onRetry={() => void refetch()} />
-      ) : (
-        <div ref={scroller} role="group" aria-roledescription="carrossel" aria-label="Destaques" className="-mx-4 flex snap-x snap-mandatory gap-5 overflow-x-auto px-4 pb-4 md:mx-0 md:px-0">
-          {(isPending ? Array.from({ length: 4 }) : data!).map((nft, i) => (
-            <div key={nft ? (nft as { id: string }).id : i} className="w-[72vw] max-w-[320px] shrink-0 snap-start sm:w-[300px]">
-              {nft ? <NftCard nft={nft as NonNullable<typeof data>[number]} /> : <NftCardSkeleton />}
-            </div>
+    <section aria-labelledby="hero-title" className="container-page grid items-center gap-8 py-10 md:grid-cols-[1.15fr_1fr] md:gap-12 md:py-14">
+      <div className="flex flex-col items-start gap-5 md:pl-4">
+        <p className="text-sm tracking-wide">Bem-vindo à Kurio</p>
+        <h1 id="hero-title" className="text-3xl leading-tight sm:text-4xl lg:text-5xl">Seja dono do futuro da arte digital</h1>
+        <p className="max-w-xl text-[15px] text-muted">Descubra NFTs selecionados de criadores emergentes e consagrados. Colecione arte digital rara, apoie artistas e tenha uma parte da cultura da internet.</p>
+        <Button asChild size="lg" className="mt-2 uppercase tracking-wide">
+          <a href="#catalogo">Explorar</a>
+        </Button>
+        <div role="group" aria-label="Escolher destaque" className="mt-6 flex gap-3 md:ml-[40%]">
+          {(slides.length ? slides : [null, null, null]).map((s, i) => (
+            <button
+              key={s?.id ?? i}
+              type="button"
+              disabled={!s}
+              onClick={() => setIndex(i)}
+              aria-label={s ? `Destaque ${i + 1}: ${s.name}` : `Destaque ${i + 1}`}
+              aria-current={i === index ? 'true' : undefined}
+              className="group flex size-6 items-center justify-center rounded-full"
+            >
+              <span className={`size-2.5 rounded-full transition-colors ${i === index ? 'bg-primary' : 'bg-primary/40 group-hover:bg-primary/70'}`} />
+            </button>
           ))}
         </div>
-      )}
+      </div>
+      <div role="region" aria-roledescription="carrossel" aria-label="Destaques" className="mx-auto w-full max-w-[440px] md:ml-auto">
+        <div className="relative aspect-square overflow-hidden rounded-[18px] bg-surface" data-testid="hero-featured">
+          {isPending ? (
+            <Skeleton className="size-full rounded-none" />
+          ) : nft ? (
+            <Link to="/nfts/$nftId" params={{ nftId: nft.id }} className="group block size-full" aria-label={`Ver ${nft.name}, NFT em destaque`}>
+              <img key={nft.id} src={nft.images[0]!.src} alt={nft.images[0]!.alt} width={800} height={800} fetchPriority="high" decoding="async" className="size-full animate-fade-in object-cover" />
+              <span className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-3 bg-gradient-to-t from-black/80 to-transparent p-4 pt-12">
+                <span className="min-w-0">
+                  <span className="block truncate font-bold">{nft.name}</span>
+                  <span className="block truncate text-xs text-muted">{nft.collection.name}</span>
+                </span>
+                <Eth value={nft.priceFrom} className="shrink-0 font-bold text-accent" unitClassName="text-accent" />
+              </span>
+            </Link>
+          ) : (
+            <p className="flex size-full items-center justify-center p-6 text-center text-muted">Nenhum destaque no momento.</p>
+          )}
+        </div>
+      </div>
     </section>
   )
 }
@@ -149,11 +145,8 @@ function Catalog() {
   const to = data ? Math.min(data.page * data.pageSize, data.total) : 0
 
   return (
-    <section id="catalogo" aria-labelledby="catalogo-title" className="container-page scroll-mt-24 pt-16">
-      <div className="mb-6">
-        <h2 id="catalogo-title" className="text-2xl font-bold sm:text-3xl">Catálogo</h2>
-        <p className="text-muted">Busque por nome, coleção ou criador e combine filtros.</p>
-      </div>
+    <section id="catalogo" aria-labelledby="catalogo-title" className="container-page scroll-mt-24 pt-10">
+      <h2 id="catalogo-title" className="sr-only">Catálogo</h2>
 
       <div className="mb-5 flex flex-col gap-3 sm:flex-row sm:items-center">
         <form role="search" className="relative flex-1" onSubmit={(e) => e.preventDefault()}>
@@ -164,8 +157,30 @@ function Catalog() {
           <Button variant="outline" className="lg:hidden" onClick={() => setFiltersOpen(true)} aria-haspopup="dialog">
             <SlidersHorizontal aria-hidden /> Filtros{activeFilterCount(search) > 0 && <span className="eth rounded-full bg-primary px-1.5 text-xs text-primary-foreground">{activeFilterCount(search)}</span>}
           </Button>
+        </div>
+      </div>
+
+      <div className="mb-5 flex flex-wrap items-center justify-between gap-x-6 gap-y-3 border-b border-border">
+        <div role="group" aria-label="Atalhos de ordenação" className="flex flex-wrap gap-x-6">
+          {([['featured', 'Todos os NFTs'], ['newest', 'Novos lançamentos'], ['popular', 'Em alta']] as const).map(([id, label]) => {
+            const active = (search.sort ?? 'featured') === id
+            return (
+              <button
+                key={id}
+                type="button"
+                aria-pressed={active}
+                onClick={() => update({ sort: id === 'featured' ? undefined : id })}
+                className={`-mb-px border-b-2 py-3 text-sm font-medium transition-colors ${active ? 'border-primary text-accent' : 'border-transparent hover:text-accent'}`}
+              >
+                {label}
+              </button>
+            )
+          })}
+        </div>
+        <div className="flex items-center gap-2 pb-2 text-sm">
+          <span className="hidden text-muted sm:inline" aria-hidden>Ordenar por:</span>
           <Select value={search.sort ?? 'featured'} onValueChange={(sort) => update({ sort: sort === 'featured' ? undefined : (sort as SortId) })}>
-            <SelectTrigger aria-label="Ordenar por" className="w-full sm:w-52">
+            <SelectTrigger aria-label="Ordenar por" className="h-9 w-48 border-transparent bg-transparent px-2">
               <SelectValue />
             </SelectTrigger>
             <SelectContent>
@@ -185,10 +200,10 @@ function Catalog() {
         </p>
       </div>
 
-      <div className="grid gap-8 lg:grid-cols-[260px_1fr]">
+      <div className="grid gap-8 lg:grid-cols-[280px_1fr]">
         <aside className="hidden lg:block" aria-label="Filtros">
-          <div className="sticky top-24 rounded-lg border border-border bg-surface p-5">
-            <FiltersPanel search={search} onChange={update} onClear={clearAll} idPrefix="side" canClear={filtersActive} />
+          <div className="sticky top-24 rounded-lg bg-surface p-5">
+            <FiltersPanel search={search} onChange={update} onClear={clearAll} idPrefix="side" canClear={filtersActive} facets={data?.facets} />
           </div>
         </aside>
 
@@ -196,7 +211,7 @@ function Catalog() {
           {isError && !data ? (
             <ErrorState error={error} onRetry={() => void refetch()} retrying={isFetching} title="Não foi possível carregar o catálogo" />
           ) : isPending ? (
-            <ul className="grid grid-cols-1 gap-5 min-[480px]:grid-cols-2 xl:grid-cols-3" aria-busy="true" aria-label="Carregando catálogo" data-testid="catalog-skeleton">
+            <ul className="grid grid-cols-1 gap-x-5 gap-y-8 min-[480px]:grid-cols-2 xl:grid-cols-3" aria-busy="true" aria-label="Carregando catálogo" data-testid="catalog-skeleton">
               {Array.from({ length: PAGE_SIZE }, (_, i) => (
                 <li key={i}><NftCardSkeleton /></li>
               ))}
@@ -213,7 +228,7 @@ function Catalog() {
                   <Button size="sm" variant="outline" onClick={() => void refetch()}>Tentar novamente</Button>
                 </div>
               )}
-              <ul className={`grid grid-cols-1 gap-5 transition-opacity min-[480px]:grid-cols-2 xl:grid-cols-3 ${isPlaceholderData ? 'opacity-60' : ''}`} aria-busy={isPlaceholderData} data-testid="catalog-grid">
+              <ul className={`grid grid-cols-1 gap-x-5 gap-y-8 transition-opacity min-[480px]:grid-cols-2 xl:grid-cols-3 ${isPlaceholderData ? 'opacity-60' : ''}`} aria-busy={isPlaceholderData} data-testid="catalog-grid">
                 {data.items.map((nft, i) => (
                   <li key={nft.id}>
                     <NftCard nft={nft} priority={i < 3} />
@@ -230,7 +245,7 @@ function Catalog() {
         <DialogContent side="left">
           <DialogTitle>Filtros</DialogTitle>
           <DialogDescription>Combine categoria, rede, preço e disponibilidade.</DialogDescription>
-          <FiltersPanel search={search} onChange={update} onClear={clearAll} idPrefix="drawer" canClear={filtersActive} />
+          <FiltersPanel search={search} onChange={update} onClear={clearAll} idPrefix="drawer" canClear={filtersActive} facets={data?.facets} />
           <Button className="mt-2" onClick={() => setFiltersOpen(false)}>
             {data ? `Ver ${data.total} resultado${data.total === 1 ? '' : 's'}` : 'Ver resultados'}
           </Button>
@@ -245,7 +260,6 @@ export function HomePage() {
   return (
     <>
       <Hero />
-      <Featured />
       <Catalog />
     </>
   )

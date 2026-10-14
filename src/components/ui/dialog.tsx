@@ -22,11 +22,23 @@ DialogOverlay.displayName = 'DialogOverlay'
 export const DialogContent = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Content> & { side?: 'center' | 'left' | 'right' | 'bottom'; hideClose?: boolean }
->(({ className, children, side = 'center', hideClose, ...props }, ref) => (
+>(({ className, children, side = 'center', hideClose, onCloseAutoFocus, onOpenAutoFocus, ...props }, ref) => {
+  // Diálogos abertos por estado (sem <DialogTrigger>) não têm gatilho para o Radix devolver o foco:
+  // guardamos o elemento que tinha foco ao abrir e o restauramos ao fechar.
+  const opener = React.useRef<HTMLElement | null>(null)
+  return (
   <DialogPortal>
     <DialogOverlay />
     <DialogPrimitive.Content
       ref={ref}
+      onOpenAutoFocus={(event) => {
+        opener.current = document.activeElement instanceof HTMLElement ? document.activeElement : null
+        onOpenAutoFocus?.(event)
+      }}
+      onCloseAutoFocus={(event) => {
+        onCloseAutoFocus?.(event)
+        if (opener.current?.isConnected) opener.current.focus()
+      }}
       className={cn(
         'fixed z-50 flex flex-col gap-4 border border-border bg-surface p-6 shadow-2xl animate-fade-in',
         side === 'center' && 'left-1/2 top-1/2 max-h-[90dvh] w-[calc(100%-32px)] max-w-lg -translate-x-1/2 -translate-y-1/2 overflow-y-auto rounded-lg',
@@ -45,7 +57,8 @@ export const DialogContent = React.forwardRef<
       )}
     </DialogPrimitive.Content>
   </DialogPortal>
-))
+  )
+})
 DialogContent.displayName = 'DialogContent'
 
 export const DialogHeader = ({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) => <div className={cn('flex flex-col gap-1.5 pr-8', className)} {...props} />

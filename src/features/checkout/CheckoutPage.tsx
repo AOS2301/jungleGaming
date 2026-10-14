@@ -33,7 +33,7 @@ import { NETWORK_LABELS, PROVIDER_LABELS } from '@/lib/catalog'
 import { formatEthWithUnit } from '@/lib/decimal'
 import { cn } from '@/lib/utils'
 import { announce } from '@/realtime/notices'
-import { clearDraft, clearIdempotencyKey, getIdempotencyKey, loadDraft, saveDraft } from './storage'
+import { clearIdempotencyKey, getIdempotencyKey, loadDraft, saveDraft } from './storage'
 
 const route = getRouteApi('/_auth/checkout')
 
@@ -254,8 +254,7 @@ export function CheckoutPage() {
     retry: (failureCount, error) => isOutcomeUnknown(error) && failureCount < 2,
     retryDelay: 800,
     onSuccess: (order) => {
-      clearIdempotencyKey(userId)
-      clearDraft(userId)
+      clearIdempotencyKey(userId) // o rascunho só é apagado quando o pedido é confirmado (ver OrderPage)
       queryClient.setQueryData(qk.order(scope, order.id), order)
       void queryClient.invalidateQueries({ queryKey: qk.pendingOrders(scope) })
       void router.navigate({ to: '/orders/$orderId', params: { orderId: order.id }, replace: true })

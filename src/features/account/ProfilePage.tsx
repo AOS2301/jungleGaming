@@ -87,7 +87,7 @@ function AvatarCard({ profile }: { profile: Profile }) {
         </Avatar>
         <div className="flex flex-col gap-3">
           <div className="flex flex-wrap gap-3">
-            <input ref={inputRef} id="avatar-input" type="file" accept={AVATAR_TYPES.join(',')} className="sr-only" onChange={(e) => onFile(e.target.files?.[0])} aria-describedby={error ? 'avatar-error' : undefined} />
+            <input ref={inputRef} id="avatar-input" aria-label="Escolher foto de perfil" type="file" accept={AVATAR_TYPES.join(',')} className="sr-only" onChange={(e) => onFile(e.target.files?.[0])} aria-describedby={error ? 'avatar-error' : undefined} />
             <Button type="button" variant="outline" loading={upload.isPending} onClick={() => inputRef.current?.click()}><Camera aria-hidden /> Alterar foto</Button>
             {profile.avatarUrl && <Button type="button" variant="ghost" onClick={() => remove.mutate()} loading={remove.isPending}><Trash2 aria-hidden /> Remover</Button>}
           </div>

@@ -157,6 +157,8 @@ export const nftListResponseSchema = z.object({
   pageSize: z.number().int(),
   total: z.number().int(),
   totalPages: z.number().int(),
+  /** Contagem por categoria/rede considerando os demais filtros (facets), para a sidebar. */
+  facets: z.object({ category: z.record(z.number().int()), network: z.record(z.number().int()) }),
   /** Eco dos parâmetros efetivamente aplicados pela API (já normalizados). */
   query: z.object({
     q: z.string().nullable(),

@@ -54,16 +54,16 @@ const f = (n) => Math.round(n * 10) / 10
 
 // ---------- paletas ----------
 const palettes = [
-  { name: 'violeta e âmbar', c: ['#1b1033', '#6d28d9', '#a78bfa', '#f59e0b', '#fde68a'] },
-  { name: 'azul-petróleo e coral', c: ['#06202b', '#0e7490', '#22d3ee', '#fb7185', '#fecdd3'] },
-  { name: 'verde-floresta e limão', c: ['#0a1f14', '#15803d', '#4ade80', '#bef264', '#fef9c3'] },
-  { name: 'magenta e ciano', c: ['#25062a', '#be185d', '#f472b6', '#22d3ee', '#cffafe'] },
-  { name: 'laranja e índigo', c: ['#150f35', '#4338ca', '#818cf8', '#fb923c', '#ffedd5'] },
+  { name: 'esmeralda e creme', c: ['#0f2a22', '#1f6b4f', '#3fa37a', '#d9c9a3', '#f5ecd5'] },
+  { name: 'cobre e grafite', c: ['#1a1311', '#5a3a2a', '#b5703f', '#e8a46c', '#fbe7d0'] },
+  { name: 'sálvia e lavanda', c: ['#1b2420', '#5f7f6c', '#a9c4a8', '#9b8cc9', '#efe9fb'] },
+  { name: 'âmbar e marrom', c: ['#1c1008', '#6b3e1c', '#c07a34', '#f0b85a', '#fff1d2'] },
+  { name: 'azul-petróleo e areia', c: ['#0a2326', '#14646b', '#4fb0a6', '#e2cfa0', '#fbf2da'] },
+  { name: 'oliva e mostarda', c: ['#1a1d0b', '#56602a', '#a3b04a', '#e3b93c', '#fff6c9'] },
+  { name: 'terracota e menta', c: ['#2a110c', '#a34a2c', '#e0805a', '#8fd1b3', '#e9fbf2'] },
   { name: 'grafite e dourado', c: ['#111114', '#3f3f46', '#a1a1aa', '#eab308', '#fef3c7'] },
-  { name: 'rosa e turquesa', c: ['#2b0f1e', '#db2777', '#fda4af', '#2dd4bf', '#ccfbf1'] },
-  { name: 'azul-royal e prata', c: ['#0b1437', '#1d4ed8', '#60a5fa', '#e2e8f0', '#ffffff'] },
-  { name: 'vermelho e creme', c: ['#2a0a0a', '#b91c1c', '#f87171', '#fde68a', '#fffbeb'] },
-  { name: 'lilás e menta', c: ['#1e1b3a', '#7c3aed', '#c4b5fd', '#6ee7b7', '#ecfdf5'] },
+  { name: 'violeta e âmbar', c: ['#1b1033', '#6d28d9', '#a78bfa', '#f59e0b', '#fde68a'] },
+  { name: 'rosa-antigo e verde', c: ['#2a1119', '#a04565', '#e29aaa', '#6fa88a', '#f0fbf4'] },
 ]
 
 // ---------- estilos de arte ----------

@@ -1,5 +1,5 @@
 import { Link, useRouter } from '@tanstack/react-router'
-import { LogOut, Menu, ShoppingBag, User as UserIcon, Wallet } from 'lucide-react'
+import { LogIn, LogOut, Menu, Search, ShoppingBag, User as UserIcon, Wallet } from 'lucide-react'
 import { useState } from 'react'
 import { Logo } from '@/components/common/Logo'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
@@ -14,8 +14,16 @@ import { useCartCount } from '@/features/cart/hooks'
 import { initials } from '@/lib/format'
 import { cn } from '@/lib/utils'
 
-const navLink = 'rounded-md px-3 py-2 text-[15px] font-medium text-muted transition-colors hover:text-foreground'
-const navActive = { className: 'text-foreground' }
+const navLink = 'relative -mb-px inline-flex h-[68px] items-center border-b-2 border-transparent px-1 text-[15px] font-medium text-foreground transition-colors hover:text-accent'
+const navActive = { className: '!border-primary !text-accent' }
+
+function SearchLink() {
+  return (
+    <Link to="/" hash="catalogo" className="inline-flex size-11 items-center justify-center rounded-md text-foreground transition-colors hover:bg-surface-2" aria-label="Buscar NFTs">
+      <Search className="size-5" aria-hidden />
+    </Link>
+  )
+}
 
 function CartButton() {
   const count = useCartCount()
@@ -42,10 +50,10 @@ function UserMenu() {
     return (
       <div className="hidden items-center gap-2 md:flex">
         <Button asChild variant="ghost" size="sm">
-          <Link to="/login" search={{ redirect: router.state.location.pathname === '/login' ? undefined : router.state.location.href }}>Entrar</Link>
+          <Link to="/signup">Criar conta</Link>
         </Button>
         <Button asChild size="sm">
-          <Link to="/signup">Criar conta</Link>
+          <Link to="/login" search={{ redirect: router.state.location.pathname === '/login' ? undefined : router.state.location.href }}><LogIn aria-hidden /> Entrar</Link>
         </Button>
       </div>
     )
@@ -94,7 +102,8 @@ function MobileNav() {
           <DialogTitle>Menu</DialogTitle>
           <DialogDescription className="sr-only">Navegação principal e conta</DialogDescription>
           <nav aria-label="Principal" className="flex flex-col gap-1">
-            <Link to="/" className={item} onClick={close}>Marketplace</Link>
+            <Link to="/" className={item} onClick={close}>Início</Link>
+            <Link to="/" hash="catalogo" className={item} onClick={close}>Mercado</Link>
             <Link to="/cart" className={item} onClick={close}><ShoppingBag className="size-5" aria-hidden /> Carrinho</Link>
             {user ? (
               <>
@@ -124,22 +133,23 @@ function MobileNav() {
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-40 border-b border-border/70 bg-background/90 backdrop-blur-md">
-      <div className="container-page flex h-[68px] items-center justify-between gap-4">
-        <div className="flex items-center gap-8">
+    <header className="sticky top-0 z-40 bg-background/92 backdrop-blur-md">
+      <div className="container-page">
+        <div className="relative flex h-[68px] items-center justify-between border-b border-border">
           <Logo />
-          <nav aria-label="Principal" className="hidden items-center gap-1 md:flex">
-            <Link to="/" className={navLink} activeProps={navActive} activeOptions={{ exact: true }}>Marketplace</Link>
+          <nav aria-label="Principal" className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-9 md:flex">
+            <Link to="/" className={navLink} activeProps={navActive} activeOptions={{ exact: true, includeHash: false }}>Início</Link>
+            <Link to="/" hash="catalogo" className={navLink}>Mercado</Link>
             <Link to="/wallets" className={navLink} activeProps={navActive}>Carteiras</Link>
           </nav>
-        </div>
-        <div className="flex items-center gap-1 sm:gap-2">
-          <CartButton />
-          <UserMenu />
-          <MobileNav />
+          <div className="flex items-center gap-1 sm:gap-2">
+            <SearchLink />
+            <CartButton />
+            <UserMenu />
+            <MobileNav />
+          </div>
         </div>
       </div>
     </header>
   )
 }
-

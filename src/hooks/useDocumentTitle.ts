@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 
-const BASE = 'Jungle NFT'
+const BASE = 'Kurio'
 
 /** Título por rota (SEO e leitores de tela). */
 export function useDocumentTitle(title?: string): void {

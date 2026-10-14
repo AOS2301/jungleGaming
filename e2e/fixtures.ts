@@ -70,10 +70,24 @@ export class App {
     const u = USERS[user]
     await this.goto(redirect ? `/login?redirect=${encodeURIComponent(redirect)}` : '/login')
     await this.page.getByLabel('E-mail').fill(u.email)
-    await this.page.getByLabel('Senha', { exact: true }).fill(u.password)
+    await this.page.locator('#password').fill(u.password)
     await this.page.getByRole('button', { name: 'Entrar', exact: true }).click()
     await expect(this.page.getByRole('button', { name: /Menu da conta/ })).toBeVisible().catch(() => undefined)
     await this.page.waitForURL((url) => !url.pathname.startsWith('/login'))
+  }
+
+  /** Logout pela interface (menu da conta no desktop, drawer no mobile). */
+  async logout() {
+    const menu = this.page.getByRole('button', { name: /Menu da conta/ })
+    if (await menu.isVisible()) {
+      await menu.click()
+      await this.page.getByRole('menuitem', { name: 'Sair' }).click()
+    } else {
+      await this.page.getByRole('button', { name: 'Abrir menu' }).click()
+      await this.page.getByRole('button', { name: 'Sair' }).click()
+    }
+    await expect(this.page.getByRole('link', { name: /Criar conta/ }).first()).toBeAttached()
+    await this.page.waitForFunction(() => !localStorage.getItem('jg.session'))
   }
 
   /** Login "rápido": usa a API simulada (MSW) e grava a sessão — para testes que não são sobre autenticação. */
@@ -115,6 +129,19 @@ export class App {
   async confirmOrder() {
     await this.page.getByLabel(/Revisei os itens/).check()
     await this.page.getByTestId('confirm-order').click()
+  }
+
+  /** Id do pedido atual (a partir da URL /orders/:id). */
+  orderIdFromUrl() {
+    return this.page.url().match(/\/orders\/([^/?#]+)/)?.[1] ?? ''
+  }
+
+  /** Atalho: carrinho com um item -> checkout -> revisão (carteira conectada). */
+  async buyFlowToReview(nftId = 'nft-001', qty = 1) {
+    await this.addToCart(nftId, { qty })
+    await this.page.getByRole('link', { name: 'Finalizar compra' }).click()
+    await this.page.waitForURL('**/checkout')
+    await this.checkoutToReview()
   }
 
   async orderCount() {

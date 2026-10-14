@@ -110,13 +110,11 @@ function SlotCard({ slot, wallet }: { slot: WalletSlot; wallet?: Wallet }) {
       </div>
       {wallet ? (
         <>
-          <dl className="grid gap-3 text-sm">
-            <div><dt className="text-muted">Nome</dt><dd className="font-semibold" data-testid="wallet-label">{wallet.label}</dd></div>
-            <div><dt className="text-muted">Endereço</dt><dd className="eth break-all">{wallet.address}</dd></div>
-            <div className="grid grid-cols-2 gap-3">
-              <div><dt className="text-muted">Provedor</dt><dd className="font-semibold">{PROVIDER_LABELS[wallet.provider]}</dd></div>
-              <div><dt className="text-muted">Rede preferida</dt><dd className="font-semibold">{NETWORK_LABELS[wallet.preferredNetwork]}</dd></div>
-            </div>
+          <dl className="grid grid-cols-2 gap-3 text-sm">
+            <div className="col-span-2"><dt className="text-muted">Nome</dt><dd className="font-semibold" data-testid="wallet-label">{wallet.label}</dd></div>
+            <div className="col-span-2"><dt className="text-muted">Endereço</dt><dd className="eth break-all">{wallet.address}</dd></div>
+            <div><dt className="text-muted">Provedor</dt><dd className="font-semibold">{PROVIDER_LABELS[wallet.provider]}</dd></div>
+            <div><dt className="text-muted">Rede preferida</dt><dd className="font-semibold">{NETWORK_LABELS[wallet.preferredNetwork]}</dd></div>
           </dl>
           {error && <p role="alert" className="text-sm font-medium text-danger" data-testid="wallet-error">{error.message}</p>}
           <div className="mt-auto flex flex-wrap gap-3">

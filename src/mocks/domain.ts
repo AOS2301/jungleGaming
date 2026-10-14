@@ -29,22 +29,30 @@ export function parseListParams(url: URL) {
   return { q, category, network, minPrice, maxPrice, available, sort, page, pageSize }
 }
 
-export function queryNfts(params: ReturnType<typeof parseListParams>): NftListResponse {
+type ListParams = ReturnType<typeof parseListParams>
+
+function matches(n: Nft, p: ListParams, skip?: 'category' | 'network'): boolean {
+  if (skip !== 'category' && p.category.length && !p.category.includes(n.category)) return false
+  if (skip !== 'network' && p.network.length && !p.network.includes(n.network)) return false
+  if (p.minPrice && ethCompare(n.priceFrom, p.minPrice) < 0) return false
+  if (p.maxPrice && ethCompare(n.priceFrom, p.maxPrice) > 0) return false
+  if (p.available && n.available === 0) return false
+  if (p.q) {
+    const haystack = normalize(`${n.name} ${n.collection.name} ${n.creator.name} ${CATEGORY_LABELS[n.category]}`)
+    if (!normalize(p.q).split(/\s+/).every((t) => haystack.includes(t))) return false
+  }
+  return true
+}
+
+export function queryNfts(params: ListParams): NftListResponse {
   const { q, category, network, minPrice, maxPrice, available, sort, pageSize } = params
   const all = getScenario().catalog === 'empty' ? [] : getDb().nfts
-  const needle = q ? normalize(q) : null
-  let items = all.filter((n) => {
-    if (category.length && !category.includes(n.category)) return false
-    if (network.length && !network.includes(n.network)) return false
-    if (minPrice && ethCompare(n.priceFrom, minPrice) < 0) return false
-    if (maxPrice && ethCompare(n.priceFrom, maxPrice) > 0) return false
-    if (available && n.available === 0) return false
-    if (needle) {
-      const haystack = normalize(`${n.name} ${n.collection.name} ${n.creator.name} ${CATEGORY_LABELS[n.category]}`)
-      if (!needle.split(/\s+/).every((t) => haystack.includes(t))) return false
-    }
-    return true
-  })
+  const facet = (skip: 'category' | 'network', key: 'category' | 'network') => {
+    const counts: Record<string, number> = {}
+    for (const n of all) if (matches(n, params, skip)) counts[n[key]] = (counts[n[key]] ?? 0) + 1
+    return counts
+  }
+  let items = all.filter((n) => matches(n, params))
   const byId = (a: Nft, b: Nft) => a.id.localeCompare(b.id)
   items = [...items].sort((a, b) => {
     switch (sort) {
@@ -69,6 +77,7 @@ export function queryNfts(params: ReturnType<typeof parseListParams>): NftListRe
     pageSize,
     total,
     totalPages,
+    facets: { category: facet('category', 'category'), network: facet('network', 'network') },
     query: { q, category, network, minPrice, maxPrice, available, sort },
   }
 }

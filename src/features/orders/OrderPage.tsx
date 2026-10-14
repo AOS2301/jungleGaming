@@ -15,6 +15,8 @@ import { COUNTRIES } from '@/api/contracts'
 import { NETWORK_LABELS, PROVIDER_LABELS } from '@/lib/catalog'
 import { formatDateTime } from '@/lib/format'
 import { useConnectionStatus } from '@/realtime/status'
+import { clearDraft } from '@/features/checkout/storage'
+import { useEffect } from 'react'
 
 const route = getRouteApi('/_auth/orders/$orderId')
 
@@ -63,7 +65,7 @@ function Receipt({ order }: { order: Order }) {
 
 export function OrderPage() {
   const { orderId } = route.useParams()
-  const { scope } = useSession()
+  const { scope, user } = useSession()
   const connection = useConnectionStatus()
   const order = useQuery({
     ...orderOptions(scope, orderId),
@@ -72,6 +74,10 @@ export function OrderPage() {
     retry: (count, error) => !(isApiError(error) && (error.status === 403 || error.status === 404)) && count < 2,
   })
   const data = order.data
+  // compra concluída: o rascunho do checkout não é mais necessário (em falha ele é mantido para retentativa)
+  useEffect(() => {
+    if (data?.status === 'confirmed' && user) clearDraft(user.id)
+  }, [data?.status, user])
   useDocumentTitle(data ? (data.status === 'confirmed' ? 'Compra confirmada' : data.status === 'declined' ? 'Pagamento recusado' : 'Aguardando confirmação') : 'Pedido')
 
   if (order.isPending) return <OrderSkeleton />

@@ -147,7 +147,7 @@
     {
       "id": "nft-001",
       "name": "Aurora Drift",
-      "description": "Aurora Drift é uma obra de Lia Moreira da coleção Aurora Series. Composição abstrata em tons de lilás e menta, mintada na rede Ethereum com certificado de autenticidade simulado.",
+      "description": "Aurora Drift é uma obra de Lia Moreira da coleção Aurora Series. Composição abstrata em tons de rosa-antigo e verde, mintada na rede Ethereum com certificado de autenticidade simulado.",
       "category": "art",
       "network": "ethereum",
       "collectionId": "col-aurora",
@@ -158,7 +158,7 @@
       "traits": [
         {
           "label": "Paleta",
-          "value": "lilás e menta"
+          "value": "rosa-antigo e verde"
         },
         {
           "label": "Estilo",
@@ -188,22 +188,22 @@
       "images": [
         {
           "src": "/nfts/nft-001.svg",
-          "alt": "Composição abstrata em tons de lilás e menta — Aurora Drift"
+          "alt": "Composição abstrata em tons de rosa-antigo e verde — Aurora Drift"
         },
         {
           "src": "/nfts/nft-001-2.svg",
-          "alt": "Composição abstrata em tons de lilás e menta — Aurora Drift (detalhe 1)"
+          "alt": "Composição abstrata em tons de rosa-antigo e verde — Aurora Drift (detalhe 1)"
         },
         {
           "src": "/nfts/nft-001-3.svg",
-          "alt": "Composição abstrata em tons de lilás e menta — Aurora Drift (detalhe 2)"
+          "alt": "Composição abstrata em tons de rosa-antigo e verde — Aurora Drift (detalhe 2)"
         }
       ]
     },
     {
       "id": "nft-002",
       "name": "Etéreo Cidade",
-      "description": "Etéreo Cidade é uma obra de Lia Moreira da coleção Isometria. Blocos isométricos em 3D em tons de magenta e ciano, mintada na rede Polygon com certificado de autenticidade simulado.",
+      "description": "Etéreo Cidade é uma obra de Lia Moreira da coleção Isometria. Blocos isométricos em 3D em tons de âmbar e marrom, mintada na rede Polygon com certificado de autenticidade simulado.",
       "category": "3d",
       "network": "polygon",
       "collectionId": "col-iso",
@@ -214,7 +214,7 @@
       "traits": [
         {
           "label": "Paleta",
-          "value": "magenta e ciano"
+          "value": "âmbar e marrom"
         },
         {
           "label": "Estilo",
@@ -244,22 +244,22 @@
       "images": [
         {
           "src": "/nfts/nft-002.svg",
-          "alt": "Blocos isométricos em 3D em tons de magenta e ciano — Etéreo Cidade"
+          "alt": "Blocos isométricos em 3D em tons de âmbar e marrom — Etéreo Cidade"
         },
         {
           "src": "/nfts/nft-002-2.svg",
-          "alt": "Blocos isométricos em 3D em tons de magenta e ciano — Etéreo Cidade (detalhe 1)"
+          "alt": "Blocos isométricos em 3D em tons de âmbar e marrom — Etéreo Cidade (detalhe 1)"
         },
         {
           "src": "/nfts/nft-002-3.svg",
-          "alt": "Blocos isométricos em 3D em tons de magenta e ciano — Etéreo Cidade (detalhe 2)"
+          "alt": "Blocos isométricos em 3D em tons de âmbar e marrom — Etéreo Cidade (detalhe 2)"
         }
       ]
     },
     {
       "id": "nft-003",
       "name": "Líquido Compasso",
-      "description": "Líquido Compasso é uma obra de Tobias Reis da coleção Synth Wave Club. Disco de vinil e equalizador em tons de grafite e dourado, mintada na rede Polygon com certificado de autenticidade simulado.",
+      "description": "Líquido Compasso é uma obra de Tobias Reis da coleção Synth Wave Club. Disco de vinil e equalizador em tons de oliva e mostarda, mintada na rede Polygon com certificado de autenticidade simulado.",
       "category": "music",
       "network": "polygon",
       "collectionId": "col-synth",
@@ -270,7 +270,7 @@
       "traits": [
         {
           "label": "Paleta",
-          "value": "grafite e dourado"
+          "value": "oliva e mostarda"
         },
         {
           "label": "Estilo",
@@ -293,22 +293,22 @@
       "images": [
         {
           "src": "/nfts/nft-003.svg",
-          "alt": "Disco de vinil e equalizador em tons de grafite e dourado — Líquido Compasso"
+          "alt": "Disco de vinil e equalizador em tons de oliva e mostarda — Líquido Compasso"
         },
         {
           "src": "/nfts/nft-003-2.svg",
-          "alt": "Disco de vinil e equalizador em tons de grafite e dourado — Líquido Compasso (detalhe 1)"
+          "alt": "Disco de vinil e equalizador em tons de oliva e mostarda — Líquido Compasso (detalhe 1)"
         },
         {
           "src": "/nfts/nft-003-3.svg",
-          "alt": "Disco de vinil e equalizador em tons de grafite e dourado — Líquido Compasso (detalhe 2)"
+          "alt": "Disco de vinil e equalizador em tons de oliva e mostarda — Líquido Compasso (detalhe 2)"
         }
       ]
     },
     {
       "id": "nft-004",
       "name": "Silente Guaxinim",
-      "description": "Silente Guaxinim é uma obra de Tobias Reis da coleção Bichos do Mangue. Criatura colecionável em tons de azul-petróleo e coral, mintada na rede Base com certificado de autenticidade simulado.",
+      "description": "Silente Guaxinim é uma obra de Tobias Reis da coleção Bichos do Mangue. Criatura colecionável em tons de cobre e grafite, mintada na rede Base com certificado de autenticidade simulado.",
       "category": "collectibles",
       "network": "base",
       "collectionId": "col-bichos",
@@ -319,7 +319,7 @@
       "traits": [
         {
           "label": "Paleta",
-          "value": "azul-petróleo e coral"
+          "value": "cobre e grafite"
         },
         {
           "label": "Estilo",
@@ -342,22 +342,22 @@
       "images": [
         {
           "src": "/nfts/nft-004.svg",
-          "alt": "Criatura colecionável em tons de azul-petróleo e coral — Silente Guaxinim"
+          "alt": "Criatura colecionável em tons de cobre e grafite — Silente Guaxinim"
         },
         {
           "src": "/nfts/nft-004-2.svg",
-          "alt": "Criatura colecionável em tons de azul-petróleo e coral — Silente Guaxinim (detalhe 1)"
+          "alt": "Criatura colecionável em tons de cobre e grafite — Silente Guaxinim (detalhe 1)"
         },
         {
           "src": "/nfts/nft-004-3.svg",
-          "alt": "Criatura colecionável em tons de azul-petróleo e coral — Silente Guaxinim (detalhe 2)"
+          "alt": "Criatura colecionável em tons de cobre e grafite — Silente Guaxinim (detalhe 2)"
         }
       ]
     },
     {
       "id": "nft-005",
       "name": "Etéreo Litoral",
-      "description": "Etéreo Litoral é uma obra de Marta Quental da coleção Golden Hour. Paisagem ao entardecer em tons de verde-floresta e limão, mintada na rede Ethereum com certificado de autenticidade simulado.",
+      "description": "Etéreo Litoral é uma obra de Marta Quental da coleção Golden Hour. Paisagem ao entardecer em tons de sálvia e lavanda, mintada na rede Ethereum com certificado de autenticidade simulado.",
       "category": "photography",
       "network": "ethereum",
       "collectionId": "col-golden",
@@ -368,7 +368,7 @@
       "traits": [
         {
           "label": "Paleta",
-          "value": "verde-floresta e limão"
+          "value": "sálvia e lavanda"
         },
         {
           "label": "Estilo",
@@ -391,22 +391,22 @@
       "images": [
         {
           "src": "/nfts/nft-005.svg",
-          "alt": "Paisagem ao entardecer em tons de verde-floresta e limão — Etéreo Litoral"
+          "alt": "Paisagem ao entardecer em tons de sálvia e lavanda — Etéreo Litoral"
         },
         {
           "src": "/nfts/nft-005-2.svg",
-          "alt": "Paisagem ao entardecer em tons de verde-floresta e limão — Etéreo Litoral (detalhe 1)"
+          "alt": "Paisagem ao entardecer em tons de sálvia e lavanda — Etéreo Litoral (detalhe 1)"
         },
         {
           "src": "/nfts/nft-005-3.svg",
-          "alt": "Paisagem ao entardecer em tons de verde-floresta e limão — Etéreo Litoral (detalhe 2)"
+          "alt": "Paisagem ao entardecer em tons de sálvia e lavanda — Etéreo Litoral (detalhe 2)"
         }
       ]
     },
     {
       "id": "nft-006",
       "name": "Solar Portal",
-      "description": "Solar Portal é uma obra de Marta Quental da coleção Pixel Arena. Sprite em pixel art em tons de laranja e índigo, mintada na rede Ethereum com certificado de autenticidade simulado.",
+      "description": "Solar Portal é uma obra de Marta Quental da coleção Pixel Arena. Sprite em pixel art em tons de azul-petróleo e areia, mintada na rede Ethereum com certificado de autenticidade simulado.",
       "category": "games",
       "network": "ethereum",
       "collectionId": "col-pixel",
@@ -417,7 +417,7 @@
       "traits": [
         {
           "label": "Paleta",
-          "value": "laranja e índigo"
+          "value": "azul-petróleo e areia"
         },
         {
           "label": "Estilo",
@@ -440,22 +440,22 @@
       "images": [
         {
           "src": "/nfts/nft-006.svg",
-          "alt": "Sprite em pixel art em tons de laranja e índigo — Solar Portal"
+          "alt": "Sprite em pixel art em tons de azul-petróleo e areia — Solar Portal"
         },
         {
           "src": "/nfts/nft-006-2.svg",
-          "alt": "Sprite em pixel art em tons de laranja e índigo — Solar Portal (detalhe 1)"
+          "alt": "Sprite em pixel art em tons de azul-petróleo e areia — Solar Portal (detalhe 1)"
         },
         {
           "src": "/nfts/nft-006-3.svg",
-          "alt": "Sprite em pixel art em tons de laranja e índigo — Solar Portal (detalhe 2)"
+          "alt": "Sprite em pixel art em tons de azul-petróleo e areia — Solar Portal (detalhe 2)"
         }
       ]
     },
     {
       "id": "nft-007",
       "name": "Sereno Cidade",
-      "description": "Sereno Cidade é uma obra de Kenji Aoki da coleção Vox Blocks. Blocos isométricos em 3D em tons de rosa e turquesa, mintada na rede Polygon com certificado de autenticidade simulado.",
+      "description": "Sereno Cidade é uma obra de Kenji Aoki da coleção Vox Blocks. Blocos isométricos em 3D em tons de terracota e menta, mintada na rede Polygon com certificado de autenticidade simulado.",
       "category": "3d",
       "network": "polygon",
       "collectionId": "col-vox",
@@ -466,7 +466,7 @@
       "traits": [
         {
           "label": "Paleta",
-          "value": "rosa e turquesa"
+          "value": "terracota e menta"
         },
         {
           "label": "Estilo",
@@ -496,22 +496,22 @@
       "images": [
         {
           "src": "/nfts/nft-007.svg",
-          "alt": "Blocos isométricos em 3D em tons de rosa e turquesa — Sereno Cidade"
+          "alt": "Blocos isométricos em 3D em tons de terracota e menta — Sereno Cidade"
         },
         {
           "src": "/nfts/nft-007-2.svg",
-          "alt": "Blocos isométricos em 3D em tons de rosa e turquesa — Sereno Cidade (detalhe 1)"
+          "alt": "Blocos isométricos em 3D em tons de terracota e menta — Sereno Cidade (detalhe 1)"
         },
         {
           "src": "/nfts/nft-007-3.svg",
-          "alt": "Blocos isométricos em 3D em tons de rosa e turquesa — Sereno Cidade (detalhe 2)"
+          "alt": "Blocos isométricos em 3D em tons de terracota e menta — Sereno Cidade (detalhe 2)"
         }
       ]
     },
     {
       "id": "nft-008",
       "name": "Selvagem Acorde",
-      "description": "Selvagem Acorde é uma obra de Nadia Farouk da coleção Vinil Digital. Disco de vinil e equalizador em tons de azul-petróleo e coral, mintada na rede Arbitrum com certificado de autenticidade simulado.",
+      "description": "Selvagem Acorde é uma obra de Nadia Farouk da coleção Vinil Digital. Disco de vinil e equalizador em tons de cobre e grafite, mintada na rede Arbitrum com certificado de autenticidade simulado.",
       "category": "music",
       "network": "arbitrum",
       "collectionId": "col-vinil",
@@ -522,7 +522,7 @@
       "traits": [
         {
           "label": "Paleta",
-          "value": "azul-petróleo e coral"
+          "value": "cobre e grafite"
         },
         {
           "label": "Estilo",
@@ -545,22 +545,22 @@
       "images": [
         {
           "src": "/nfts/nft-008.svg",
-          "alt": "Disco de vinil e equalizador em tons de azul-petróleo e coral — Selvagem Acorde"
+          "alt": "Disco de vinil e equalizador em tons de cobre e grafite — Selvagem Acorde"
         },
         {
           "src": "/nfts/nft-008-2.svg",
-          "alt": "Disco de vinil e equalizador em tons de azul-petróleo e coral — Selvagem Acorde (detalhe 1)"
+          "alt": "Disco de vinil e equalizador em tons de cobre e grafite — Selvagem Acorde (detalhe 1)"
         },
         {
           "src": "/nfts/nft-008-3.svg",
-          "alt": "Disco de vinil e equalizador em tons de azul-petróleo e coral — Selvagem Acorde (detalhe 2)"
+          "alt": "Disco de vinil e equalizador em tons de cobre e grafite — Selvagem Acorde (detalhe 2)"
         }
       ]
     },
     {
       "id": "nft-009",
       "name": "Silente Cubo",
-      "description": "Silente Cubo é uma obra de Lia Moreira da coleção Vox Blocks. Blocos isométricos em 3D em tons de verde-floresta e limão, mintada na rede Polygon com certificado de autenticidade simulado.",
+      "description": "Silente Cubo é uma obra de Lia Moreira da coleção Vox Blocks. Blocos isométricos em 3D em tons de sálvia e lavanda, mintada na rede Polygon com certificado de autenticidade simulado.",
       "category": "3d",
       "network": "polygon",
       "collectionId": "col-vox",
@@ -571,7 +571,7 @@
       "traits": [
         {
           "label": "Paleta",
-          "value": "verde-floresta e limão"
+          "value": "sálvia e lavanda"
         },
         {
           "label": "Estilo",
@@ -608,22 +608,22 @@
       "images": [
         {
           "src": "/nfts/nft-009.svg",
-          "alt": "Blocos isométricos em 3D em tons de verde-floresta e limão — Silente Cubo"
+          "alt": "Blocos isométricos em 3D em tons de sálvia e lavanda — Silente Cubo"
         },
         {
           "src": "/nfts/nft-009-2.svg",
-          "alt": "Blocos isométricos em 3D em tons de verde-floresta e limão — Silente Cubo (detalhe 1)"
+          "alt": "Blocos isométricos em 3D em tons de sálvia e lavanda — Silente Cubo (detalhe 1)"
         },
         {
           "src": "/nfts/nft-009-3.svg",
-          "alt": "Blocos isométricos em 3D em tons de verde-floresta e limão — Silente Cubo (detalhe 2)"
+          "alt": "Blocos isométricos em 3D em tons de sálvia e lavanda — Silente Cubo (detalhe 2)"
         }
       ]
     },
     {
       "id": "nft-010",
       "name": "Dourado Campo",
-      "description": "Dourado Campo é uma obra de Lia Moreira da coleção Golden Hour. Paisagem ao entardecer em tons de vermelho e creme, mintada na rede Ethereum com certificado de autenticidade simulado.",
+      "description": "Dourado Campo é uma obra de Lia Moreira da coleção Golden Hour. Paisagem ao entardecer em tons de violeta e âmbar, mintada na rede Ethereum com certificado de autenticidade simulado.",
       "category": "photography",
       "network": "ethereum",
       "collectionId": "col-golden",
@@ -634,7 +634,7 @@
       "traits": [
         {
           "label": "Paleta",
-          "value": "vermelho e creme"
+          "value": "violeta e âmbar"
         },
         {
           "label": "Estilo",
@@ -657,22 +657,22 @@
       "images": [
         {
           "src": "/nfts/nft-010.svg",
-          "alt": "Paisagem ao entardecer em tons de vermelho e creme — Dourado Campo"
+          "alt": "Paisagem ao entardecer em tons de violeta e âmbar — Dourado Campo"
         },
         {
           "src": "/nfts/nft-010-2.svg",
-          "alt": "Paisagem ao entardecer em tons de vermelho e creme — Dourado Campo (detalhe 1)"
+          "alt": "Paisagem ao entardecer em tons de violeta e âmbar — Dourado Campo (detalhe 1)"
         },
         {
           "src": "/nfts/nft-010-3.svg",
-          "alt": "Paisagem ao entardecer em tons de vermelho e creme — Dourado Campo (detalhe 2)"
+          "alt": "Paisagem ao entardecer em tons de violeta e âmbar — Dourado Campo (detalhe 2)"
         }
       ]
     },
     {
       "id": "nft-011",
       "name": "Cósmico Espírito",
-      "description": "Cósmico Espírito é uma obra de Suri Valdés da coleção Totem Friends. Criatura colecionável em tons de grafite e dourado, mintada na rede Base com certificado de autenticidade simulado.",
+      "description": "Cósmico Espírito é uma obra de Suri Valdés da coleção Totem Friends. Criatura colecionável em tons de oliva e mostarda, mintada na rede Base com certificado de autenticidade simulado.",
       "category": "collectibles",
       "network": "base",
       "collectionId": "col-totem",
@@ -683,7 +683,7 @@
       "traits": [
         {
           "label": "Paleta",
-          "value": "grafite e dourado"
+          "value": "oliva e mostarda"
         },
         {
           "label": "Estilo",
@@ -713,22 +713,22 @@
       "images": [
         {
           "src": "/nfts/nft-011.svg",
-          "alt": "Criatura colecionável em tons de grafite e dourado — Cósmico Espírito"
+          "alt": "Criatura colecionável em tons de oliva e mostarda — Cósmico Espírito"
         },
         {
           "src": "/nfts/nft-011-2.svg",
-          "alt": "Criatura colecionável em tons de grafite e dourado — Cósmico Espírito (detalhe 1)"
+          "alt": "Criatura colecionável em tons de oliva e mostarda — Cósmico Espírito (detalhe 1)"
         },
         {
           "src": "/nfts/nft-011-3.svg",
-          "alt": "Criatura colecionável em tons de grafite e dourado — Cósmico Espírito (detalhe 2)"
+          "alt": "Criatura colecionável em tons de oliva e mostarda — Cósmico Espírito (detalhe 2)"
         }
       ]
     },
     {
       "id": "nft-012",
       "name": "Cósmico Campo",
-      "description": "Cósmico Campo é uma obra de Suri Valdés da coleção Horizonte Aberto. Paisagem ao entardecer em tons de laranja e índigo, mintada na rede Base com certificado de autenticidade simulado.",
+      "description": "Cósmico Campo é uma obra de Suri Valdés da coleção Horizonte Aberto. Paisagem ao entardecer em tons de azul-petróleo e areia, mintada na rede Base com certificado de autenticidade simulado.",
       "category": "photography",
       "network": "base",
       "collectionId": "col-horizonte",
@@ -739,7 +739,7 @@
       "traits": [
         {
           "label": "Paleta",
-          "value": "laranja e índigo"
+          "value": "azul-petróleo e areia"
         },
         {
           "label": "Estilo",
@@ -776,22 +776,22 @@
       "images": [
         {
           "src": "/nfts/nft-012.svg",
-          "alt": "Paisagem ao entardecer em tons de laranja e índigo — Cósmico Campo"
+          "alt": "Paisagem ao entardecer em tons de azul-petróleo e areia — Cósmico Campo"
         },
         {
           "src": "/nfts/nft-012-2.svg",
-          "alt": "Paisagem ao entardecer em tons de laranja e índigo — Cósmico Campo (detalhe 1)"
+          "alt": "Paisagem ao entardecer em tons de azul-petróleo e areia — Cósmico Campo (detalhe 1)"
         },
         {
           "src": "/nfts/nft-012-3.svg",
-          "alt": "Paisagem ao entardecer em tons de laranja e índigo — Cósmico Campo (detalhe 2)"
+          "alt": "Paisagem ao entardecer em tons de azul-petróleo e areia — Cósmico Campo (detalhe 2)"
         }
       ]
     },
     {
       "id": "nft-013",
       "name": "Silente Refrão",
-      "description": "Silente Refrão é uma obra de Hugo Bernardes da coleção Synth Wave Club. Disco de vinil e equalizador em tons de rosa e turquesa, mintada na rede Base com certificado de autenticidade simulado.",
+      "description": "Silente Refrão é uma obra de Hugo Bernardes da coleção Synth Wave Club. Disco de vinil e equalizador em tons de terracota e menta, mintada na rede Base com certificado de autenticidade simulado.",
       "category": "music",
       "network": "base",
       "collectionId": "col-synth",
@@ -802,7 +802,7 @@
       "traits": [
         {
           "label": "Paleta",
-          "value": "rosa e turquesa"
+          "value": "terracota e menta"
         },
         {
           "label": "Estilo",
@@ -825,22 +825,22 @@
       "images": [
         {
           "src": "/nfts/nft-013.svg",
-          "alt": "Disco de vinil e equalizador em tons de rosa e turquesa — Silente Refrão"
+          "alt": "Disco de vinil e equalizador em tons de terracota e menta — Silente Refrão"
         },
         {
           "src": "/nfts/nft-013-2.svg",
-          "alt": "Disco de vinil e equalizador em tons de rosa e turquesa — Silente Refrão (detalhe 1)"
+          "alt": "Disco de vinil e equalizador em tons de terracota e menta — Silente Refrão (detalhe 1)"
         },
         {
           "src": "/nfts/nft-013-3.svg",
-          "alt": "Disco de vinil e equalizador em tons de rosa e turquesa — Silente Refrão (detalhe 2)"
+          "alt": "Disco de vinil e equalizador em tons de terracota e menta — Silente Refrão (detalhe 2)"
         }
       ]
     },
     {
       "id": "nft-014",
       "name": "Líquido Delta",
-      "description": "Líquido Delta é uma obra de Marta Quental da coleção Aurora Series. Composição abstrata em tons de grafite e dourado, mintada na rede Base com certificado de autenticidade simulado.",
+      "description": "Líquido Delta é uma obra de Marta Quental da coleção Aurora Series. Composição abstrata em tons de oliva e mostarda, mintada na rede Base com certificado de autenticidade simulado.",
       "category": "art",
       "network": "base",
       "collectionId": "col-aurora",
@@ -851,7 +851,7 @@
       "traits": [
         {
           "label": "Paleta",
-          "value": "grafite e dourado"
+          "value": "oliva e mostarda"
         },
         {
           "label": "Estilo",
@@ -874,22 +874,22 @@
       "images": [
         {
           "src": "/nfts/nft-014.svg",
-          "alt": "Composição abstrata em tons de grafite e dourado — Líquido Delta"
+          "alt": "Composição abstrata em tons de oliva e mostarda — Líquido Delta"
         },
         {
           "src": "/nfts/nft-014-2.svg",
-          "alt": "Composição abstrata em tons de grafite e dourado — Líquido Delta (detalhe 1)"
+          "alt": "Composição abstrata em tons de oliva e mostarda — Líquido Delta (detalhe 1)"
         },
         {
           "src": "/nfts/nft-014-3.svg",
-          "alt": "Composição abstrata em tons de grafite e dourado — Líquido Delta (detalhe 2)"
+          "alt": "Composição abstrata em tons de oliva e mostarda — Líquido Delta (detalhe 2)"
         }
       ]
     },
     {
       "id": "nft-015",
       "name": "Vibrante Refrão",
-      "description": "Vibrante Refrão é uma obra de Suri Valdés da coleção Vinil Digital. Disco de vinil e equalizador em tons de grafite e dourado, mintada na rede Polygon com certificado de autenticidade simulado.",
+      "description": "Vibrante Refrão é uma obra de Suri Valdés da coleção Vinil Digital. Disco de vinil e equalizador em tons de oliva e mostarda, mintada na rede Polygon com certificado de autenticidade simulado.",
       "category": "music",
       "network": "polygon",
       "collectionId": "col-vinil",
@@ -900,7 +900,7 @@
       "traits": [
         {
           "label": "Paleta",
-          "value": "grafite e dourado"
+          "value": "oliva e mostarda"
         },
         {
           "label": "Estilo",
@@ -930,22 +930,22 @@
       "images": [
         {
           "src": "/nfts/nft-015.svg",
-          "alt": "Disco de vinil e equalizador em tons de grafite e dourado — Vibrante Refrão"
+          "alt": "Disco de vinil e equalizador em tons de oliva e mostarda — Vibrante Refrão"
         },
         {
           "src": "/nfts/nft-015-2.svg",
-          "alt": "Disco de vinil e equalizador em tons de grafite e dourado — Vibrante Refrão (detalhe 1)"
+          "alt": "Disco de vinil e equalizador em tons de oliva e mostarda — Vibrante Refrão (detalhe 1)"
         },
         {
           "src": "/nfts/nft-015-3.svg",
-          "alt": "Disco de vinil e equalizador em tons de grafite e dourado — Vibrante Refrão (detalhe 2)"
+          "alt": "Disco de vinil e equalizador em tons de oliva e mostarda — Vibrante Refrão (detalhe 2)"
         }
       ]
     },
     {
       "id": "nft-016",
       "name": "Solar Totem",
-      "description": "Solar Totem é uma obra de Lia Moreira da coleção Bichos do Mangue. Criatura colecionável em tons de lilás e menta, mintada na rede Polygon com certificado de autenticidade simulado.",
+      "description": "Solar Totem é uma obra de Lia Moreira da coleção Bichos do Mangue. Criatura colecionável em tons de rosa-antigo e verde, mintada na rede Polygon com certificado de autenticidade simulado.",
       "category": "collectibles",
       "network": "polygon",
       "collectionId": "col-bichos",
@@ -956,7 +956,7 @@
       "traits": [
         {
           "label": "Paleta",
-          "value": "lilás e menta"
+          "value": "rosa-antigo e verde"
         },
         {
           "label": "Estilo",
@@ -986,22 +986,22 @@
       "images": [
         {
           "src": "/nfts/nft-016.svg",
-          "alt": "Criatura colecionável em tons de lilás e menta — Solar Totem"
+          "alt": "Criatura colecionável em tons de rosa-antigo e verde — Solar Totem"
         },
         {
           "src": "/nfts/nft-016-2.svg",
-          "alt": "Criatura colecionável em tons de lilás e menta — Solar Totem (detalhe 1)"
+          "alt": "Criatura colecionável em tons de rosa-antigo e verde — Solar Totem (detalhe 1)"
         },
         {
           "src": "/nfts/nft-016-3.svg",
-          "alt": "Criatura colecionável em tons de lilás e menta — Solar Totem (detalhe 2)"
+          "alt": "Criatura colecionável em tons de rosa-antigo e verde — Solar Totem (detalhe 2)"
         }
       ]
     },
     {
       "id": "nft-017",
       "name": "Silente Miragem",
-      "description": "Silente Miragem é uma obra de Nadia Farouk da coleção Prisma Lab. Composição abstrata em tons de grafite e dourado, mintada na rede Ethereum com certificado de autenticidade simulado.",
+      "description": "Silente Miragem é uma obra de Nadia Farouk da coleção Prisma Lab. Composição abstrata em tons de oliva e mostarda, mintada na rede Ethereum com certificado de autenticidade simulado.",
       "category": "art",
       "network": "ethereum",
       "collectionId": "col-prisma",
@@ -1012,7 +1012,7 @@
       "traits": [
         {
           "label": "Paleta",
-          "value": "grafite e dourado"
+          "value": "oliva e mostarda"
         },
         {
           "label": "Estilo",
@@ -1049,22 +1049,22 @@
       "images": [
         {
           "src": "/nfts/nft-017.svg",
-          "alt": "Composição abstrata em tons de grafite e dourado — Silente Miragem"
+          "alt": "Composição abstrata em tons de oliva e mostarda — Silente Miragem"
         },
         {
           "src": "/nfts/nft-017-2.svg",
-          "alt": "Composição abstrata em tons de grafite e dourado — Silente Miragem (detalhe 1)"
+          "alt": "Composição abstrata em tons de oliva e mostarda — Silente Miragem (detalhe 1)"
         },
         {
           "src": "/nfts/nft-017-3.svg",
-          "alt": "Composição abstrata em tons de grafite e dourado — Silente Miragem (detalhe 2)"
+          "alt": "Composição abstrata em tons de oliva e mostarda — Silente Miragem (detalhe 2)"
         }
       ]
     },
     {
       "id": "nft-018",
       "name": "Líquido Espírito",
-      "description": "Líquido Espírito é uma obra de Marta Quental da coleção Bichos do Mangue. Criatura colecionável em tons de azul-royal e prata, mintada na rede Arbitrum com certificado de autenticidade simulado.",
+      "description": "Líquido Espírito é uma obra de Marta Quental da coleção Bichos do Mangue. Criatura colecionável em tons de grafite e dourado, mintada na rede Arbitrum com certificado de autenticidade simulado.",
       "category": "collectibles",
       "network": "arbitrum",
       "collectionId": "col-bichos",
@@ -1075,7 +1075,7 @@
       "traits": [
         {
           "label": "Paleta",
-          "value": "azul-royal e prata"
+          "value": "grafite e dourado"
         },
         {
           "label": "Estilo",
@@ -1112,22 +1112,22 @@
       "images": [
         {
           "src": "/nfts/nft-018.svg",
-          "alt": "Criatura colecionável em tons de azul-royal e prata — Líquido Espírito"
+          "alt": "Criatura colecionável em tons de grafite e dourado — Líquido Espírito"
         },
         {
           "src": "/nfts/nft-018-2.svg",
-          "alt": "Criatura colecionável em tons de azul-royal e prata — Líquido Espírito (detalhe 1)"
+          "alt": "Criatura colecionável em tons de grafite e dourado — Líquido Espírito (detalhe 1)"
         },
         {
           "src": "/nfts/nft-018-3.svg",
-          "alt": "Criatura colecionável em tons de azul-royal e prata — Líquido Espírito (detalhe 2)"
+          "alt": "Criatura colecionável em tons de grafite e dourado — Líquido Espírito (detalhe 2)"
         }
       ]
     },
     {
       "id": "nft-019",
       "name": "Cósmico Miragem",
-      "description": "Cósmico Miragem é uma obra de Marta Quental da coleção Prisma Lab. Composição abstrata em tons de vermelho e creme, mintada na rede Base com certificado de autenticidade simulado.",
+      "description": "Cósmico Miragem é uma obra de Marta Quental da coleção Prisma Lab. Composição abstrata em tons de violeta e âmbar, mintada na rede Base com certificado de autenticidade simulado.",
       "category": "art",
       "network": "base",
       "collectionId": "col-prisma",
@@ -1138,7 +1138,7 @@
       "traits": [
         {
           "label": "Paleta",
-          "value": "vermelho e creme"
+          "value": "violeta e âmbar"
         },
         {
           "label": "Estilo",
@@ -1168,22 +1168,22 @@
       "images": [
         {
           "src": "/nfts/nft-019.svg",
-          "alt": "Composição abstrata em tons de vermelho e creme — Cósmico Miragem"
+          "alt": "Composição abstrata em tons de violeta e âmbar — Cósmico Miragem"
         },
         {
           "src": "/nfts/nft-019-2.svg",
-          "alt": "Composição abstrata em tons de vermelho e creme — Cósmico Miragem (detalhe 1)"
+          "alt": "Composição abstrata em tons de violeta e âmbar — Cósmico Miragem (detalhe 1)"
         },
         {
           "src": "/nfts/nft-019-3.svg",
-          "alt": "Composição abstrata em tons de vermelho e creme — Cósmico Miragem (detalhe 2)"
+          "alt": "Composição abstrata em tons de violeta e âmbar — Cósmico Miragem (detalhe 2)"
         }
       ]
     },
     {
       "id": "nft-020",
       "name": "Crepuscular Acorde",
-      "description": "Crepuscular Acorde é uma obra de Marta Quental da coleção Vinil Digital. Disco de vinil e equalizador em tons de violeta e âmbar, mintada na rede Ethereum com certificado de autenticidade simulado.",
+      "description": "Crepuscular Acorde é uma obra de Marta Quental da coleção Vinil Digital. Disco de vinil e equalizador em tons de esmeralda e creme, mintada na rede Ethereum com certificado de autenticidade simulado.",
       "category": "music",
       "network": "ethereum",
       "collectionId": "col-vinil",
@@ -1194,7 +1194,7 @@
       "traits": [
         {
           "label": "Paleta",
-          "value": "violeta e âmbar"
+          "value": "esmeralda e creme"
         },
         {
           "label": "Estilo",
@@ -1224,22 +1224,22 @@
       "images": [
         {
           "src": "/nfts/nft-020.svg",
-          "alt": "Disco de vinil e equalizador em tons de violeta e âmbar — Crepuscular Acorde"
+          "alt": "Disco de vinil e equalizador em tons de esmeralda e creme — Crepuscular Acorde"
         },
         {
           "src": "/nfts/nft-020-2.svg",
-          "alt": "Disco de vinil e equalizador em tons de violeta e âmbar — Crepuscular Acorde (detalhe 1)"
+          "alt": "Disco de vinil e equalizador em tons de esmeralda e creme — Crepuscular Acorde (detalhe 1)"
         },
         {
           "src": "/nfts/nft-020-3.svg",
-          "alt": "Disco de vinil e equalizador em tons de violeta e âmbar — Crepuscular Acorde (detalhe 2)"
+          "alt": "Disco de vinil e equalizador em tons de esmeralda e creme — Crepuscular Acorde (detalhe 2)"
         }
       ]
     },
     {
       "id": "nft-021",
       "name": "Dourado Espírito",
-      "description": "Dourado Espírito é uma obra de Lia Moreira da coleção Totem Friends. Criatura colecionável em tons de azul-royal e prata, mintada na rede Arbitrum com certificado de autenticidade simulado.",
+      "description": "Dourado Espírito é uma obra de Lia Moreira da coleção Totem Friends. Criatura colecionável em tons de grafite e dourado, mintada na rede Arbitrum com certificado de autenticidade simulado.",
       "category": "collectibles",
       "network": "arbitrum",
       "collectionId": "col-totem",
@@ -1250,7 +1250,7 @@
       "traits": [
         {
           "label": "Paleta",
-          "value": "azul-royal e prata"
+          "value": "grafite e dourado"
         },
         {
           "label": "Estilo",
@@ -1287,22 +1287,22 @@
       "images": [
         {
           "src": "/nfts/nft-021.svg",
-          "alt": "Criatura colecionável em tons de azul-royal e prata — Dourado Espírito"
+          "alt": "Criatura colecionável em tons de grafite e dourado — Dourado Espírito"
         },
         {
           "src": "/nfts/nft-021-2.svg",
-          "alt": "Criatura colecionável em tons de azul-royal e prata — Dourado Espírito (detalhe 1)"
+          "alt": "Criatura colecionável em tons de grafite e dourado — Dourado Espírito (detalhe 1)"
         },
         {
           "src": "/nfts/nft-021-3.svg",
-          "alt": "Criatura colecionável em tons de azul-royal e prata — Dourado Espírito (detalhe 2)"
+          "alt": "Criatura colecionável em tons de grafite e dourado — Dourado Espírito (detalhe 2)"
         }
       ]
     },
     {
       "id": "nft-022",
       "name": "Ártico Vale",
-      "description": "Ártico Vale é uma obra de Otávio Prado da coleção Horizonte Aberto. Paisagem ao entardecer em tons de verde-floresta e limão, mintada na rede Arbitrum com certificado de autenticidade simulado.",
+      "description": "Ártico Vale é uma obra de Otávio Prado da coleção Horizonte Aberto. Paisagem ao entardecer em tons de sálvia e lavanda, mintada na rede Arbitrum com certificado de autenticidade simulado.",
       "category": "photography",
       "network": "arbitrum",
       "collectionId": "col-horizonte",
@@ -1313,7 +1313,7 @@
       "traits": [
         {
           "label": "Paleta",
-          "value": "verde-floresta e limão"
+          "value": "sálvia e lavanda"
         },
         {
           "label": "Estilo",
@@ -1343,22 +1343,22 @@
       "images": [
         {
           "src": "/nfts/nft-022.svg",
-          "alt": "Paisagem ao entardecer em tons de verde-floresta e limão — Ártico Vale"
+          "alt": "Paisagem ao entardecer em tons de sálvia e lavanda — Ártico Vale"
         },
         {
           "src": "/nfts/nft-022-2.svg",
-          "alt": "Paisagem ao entardecer em tons de verde-floresta e limão — Ártico Vale (detalhe 1)"
+          "alt": "Paisagem ao entardecer em tons de sálvia e lavanda — Ártico Vale (detalhe 1)"
         },
         {
           "src": "/nfts/nft-022-3.svg",
-          "alt": "Paisagem ao entardecer em tons de verde-floresta e limão — Ártico Vale (detalhe 2)"
+          "alt": "Paisagem ao entardecer em tons de sálvia e lavanda — Ártico Vale (detalhe 2)"
         }
       ]
     },
     {
       "id": "nft-023",
       "name": "Sereno Totem",
-      "description": "Sereno Totem é uma obra de Lia Moreira da coleção Bichos do Mangue. Criatura colecionável em tons de laranja e índigo, mintada na rede Arbitrum com certificado de autenticidade simulado.",
+      "description": "Sereno Totem é uma obra de Lia Moreira da coleção Bichos do Mangue. Criatura colecionável em tons de azul-petróleo e areia, mintada na rede Arbitrum com certificado de autenticidade simulado.",
       "category": "collectibles",
       "network": "arbitrum",
       "collectionId": "col-bichos",
@@ -1369,7 +1369,7 @@
       "traits": [
         {
           "label": "Paleta",
-          "value": "laranja e índigo"
+          "value": "azul-petróleo e areia"
         },
         {
           "label": "Estilo",
@@ -1399,22 +1399,22 @@
       "images": [
         {
           "src": "/nfts/nft-023.svg",
-          "alt": "Criatura colecionável em tons de laranja e índigo — Sereno Totem"
+          "alt": "Criatura colecionável em tons de azul-petróleo e areia — Sereno Totem"
         },
         {
           "src": "/nfts/nft-023-2.svg",
-          "alt": "Criatura colecionável em tons de laranja e índigo — Sereno Totem (detalhe 1)"
+          "alt": "Criatura colecionável em tons de azul-petróleo e areia — Sereno Totem (detalhe 1)"
         },
         {
           "src": "/nfts/nft-023-3.svg",
-          "alt": "Criatura colecionável em tons de laranja e índigo — Sereno Totem (detalhe 2)"
+          "alt": "Criatura colecionável em tons de azul-petróleo e areia — Sereno Totem (detalhe 2)"
         }
       ]
     },
     {
       "id": "nft-024",
       "name": "Neon Maré",
-      "description": "Neon Maré é uma obra de Kenji Aoki da coleção Aurora Series. Composição abstrata em tons de laranja e índigo, mintada na rede Arbitrum com certificado de autenticidade simulado.",
+      "description": "Neon Maré é uma obra de Kenji Aoki da coleção Aurora Series. Composição abstrata em tons de azul-petróleo e areia, mintada na rede Arbitrum com certificado de autenticidade simulado.",
       "category": "art",
       "network": "arbitrum",
       "collectionId": "col-aurora",
@@ -1425,7 +1425,7 @@
       "traits": [
         {
           "label": "Paleta",
-          "value": "laranja e índigo"
+          "value": "azul-petróleo e areia"
         },
         {
           "label": "Estilo",
@@ -1448,22 +1448,22 @@
       "images": [
         {
           "src": "/nfts/nft-024.svg",
-          "alt": "Composição abstrata em tons de laranja e índigo — Neon Maré"
+          "alt": "Composição abstrata em tons de azul-petróleo e areia — Neon Maré"
         },
         {
           "src": "/nfts/nft-024-2.svg",
-          "alt": "Composição abstrata em tons de laranja e índigo — Neon Maré (detalhe 1)"
+          "alt": "Composição abstrata em tons de azul-petróleo e areia — Neon Maré (detalhe 1)"
         },
         {
           "src": "/nfts/nft-024-3.svg",
-          "alt": "Composição abstrata em tons de laranja e índigo — Neon Maré (detalhe 2)"
+          "alt": "Composição abstrata em tons de azul-petróleo e areia — Neon Maré (detalhe 2)"
         }
       ]
     },
     {
       "id": "nft-025",
       "name": "Líquido Arcade",
-      "description": "Líquido Arcade é uma obra de Kenji Aoki da coleção Quest Relics. Sprite em pixel art em tons de grafite e dourado, mintada na rede Polygon com certificado de autenticidade simulado.",
+      "description": "Líquido Arcade é uma obra de Kenji Aoki da coleção Quest Relics. Sprite em pixel art em tons de oliva e mostarda, mintada na rede Polygon com certificado de autenticidade simulado.",
       "category": "games",
       "network": "polygon",
       "collectionId": "col-quest",
@@ -1474,7 +1474,7 @@
       "traits": [
         {
           "label": "Paleta",
-          "value": "grafite e dourado"
+          "value": "oliva e mostarda"
         },
         {
           "label": "Estilo",
@@ -1511,22 +1511,22 @@
       "images": [
         {
           "src": "/nfts/nft-025.svg",
-          "alt": "Sprite em pixel art em tons de grafite e dourado — Líquido Arcade"
+          "alt": "Sprite em pixel art em tons de oliva e mostarda — Líquido Arcade"
         },
         {
           "src": "/nfts/nft-025-2.svg",
-          "alt": "Sprite em pixel art em tons de grafite e dourado — Líquido Arcade (detalhe 1)"
+          "alt": "Sprite em pixel art em tons de oliva e mostarda — Líquido Arcade (detalhe 1)"
         },
         {
           "src": "/nfts/nft-025-3.svg",
-          "alt": "Sprite em pixel art em tons de grafite e dourado — Líquido Arcade (detalhe 2)"
+          "alt": "Sprite em pixel art em tons de oliva e mostarda — Líquido Arcade (detalhe 2)"
         }
       ]
     },
     {
       "id": "nft-026",
       "name": "Lunar Cubo",
-      "description": "Lunar Cubo é uma obra de Kenji Aoki da coleção Isometria. Blocos isométricos em 3D em tons de azul-petróleo e coral, mintada na rede Ethereum com certificado de autenticidade simulado.",
+      "description": "Lunar Cubo é uma obra de Kenji Aoki da coleção Isometria. Blocos isométricos em 3D em tons de cobre e grafite, mintada na rede Ethereum com certificado de autenticidade simulado.",
       "category": "3d",
       "network": "ethereum",
       "collectionId": "col-iso",
@@ -1537,7 +1537,7 @@
       "traits": [
         {
           "label": "Paleta",
-          "value": "azul-petróleo e coral"
+          "value": "cobre e grafite"
         },
         {
           "label": "Estilo",
@@ -1574,22 +1574,22 @@
       "images": [
         {
           "src": "/nfts/nft-026.svg",
-          "alt": "Blocos isométricos em 3D em tons de azul-petróleo e coral — Lunar Cubo"
+          "alt": "Blocos isométricos em 3D em tons de cobre e grafite — Lunar Cubo"
         },
         {
           "src": "/nfts/nft-026-2.svg",
-          "alt": "Blocos isométricos em 3D em tons de azul-petróleo e coral — Lunar Cubo (detalhe 1)"
+          "alt": "Blocos isométricos em 3D em tons de cobre e grafite — Lunar Cubo (detalhe 1)"
         },
         {
           "src": "/nfts/nft-026-3.svg",
-          "alt": "Blocos isométricos em 3D em tons de azul-petróleo e coral — Lunar Cubo (detalhe 2)"
+          "alt": "Blocos isométricos em 3D em tons de cobre e grafite — Lunar Cubo (detalhe 2)"
         }
       ]
     },
     {
       "id": "nft-027",
       "name": "Cobalto Refrão",
-      "description": "Cobalto Refrão é uma obra de Marta Quental da coleção Synth Wave Club. Disco de vinil e equalizador em tons de violeta e âmbar, mintada na rede Base com certificado de autenticidade simulado.",
+      "description": "Cobalto Refrão é uma obra de Marta Quental da coleção Synth Wave Club. Disco de vinil e equalizador em tons de esmeralda e creme, mintada na rede Base com certificado de autenticidade simulado.",
       "category": "music",
       "network": "base",
       "collectionId": "col-synth",
@@ -1600,7 +1600,7 @@
       "traits": [
         {
           "label": "Paleta",
-          "value": "violeta e âmbar"
+          "value": "esmeralda e creme"
         },
         {
           "label": "Estilo",
@@ -1630,22 +1630,22 @@
       "images": [
         {
           "src": "/nfts/nft-027.svg",
-          "alt": "Disco de vinil e equalizador em tons de violeta e âmbar — Cobalto Refrão"
+          "alt": "Disco de vinil e equalizador em tons de esmeralda e creme — Cobalto Refrão"
         },
         {
           "src": "/nfts/nft-027-2.svg",
-          "alt": "Disco de vinil e equalizador em tons de violeta e âmbar — Cobalto Refrão (detalhe 1)"
+          "alt": "Disco de vinil e equalizador em tons de esmeralda e creme — Cobalto Refrão (detalhe 1)"
         },
         {
           "src": "/nfts/nft-027-3.svg",
-          "alt": "Disco de vinil e equalizador em tons de violeta e âmbar — Cobalto Refrão (detalhe 2)"
+          "alt": "Disco de vinil e equalizador em tons de esmeralda e creme — Cobalto Refrão (detalhe 2)"
         }
       ]
     },
     {
       "id": "nft-028",
       "name": "Líquido Filhote",
-      "description": "Líquido Filhote é uma obra de Hugo Bernardes da coleção Totem Friends. Criatura colecionável em tons de violeta e âmbar, mintada na rede Polygon com certificado de autenticidade simulado.",
+      "description": "Líquido Filhote é uma obra de Hugo Bernardes da coleção Totem Friends. Criatura colecionável em tons de esmeralda e creme, mintada na rede Polygon com certificado de autenticidade simulado.",
       "category": "collectibles",
       "network": "polygon",
       "collectionId": "col-totem",
@@ -1656,7 +1656,7 @@
       "traits": [
         {
           "label": "Paleta",
-          "value": "violeta e âmbar"
+          "value": "esmeralda e creme"
         },
         {
           "label": "Estilo",
@@ -1693,22 +1693,22 @@
       "images": [
         {
           "src": "/nfts/nft-028.svg",
-          "alt": "Criatura colecionável em tons de violeta e âmbar — Líquido Filhote"
+          "alt": "Criatura colecionável em tons de esmeralda e creme — Líquido Filhote"
         },
         {
           "src": "/nfts/nft-028-2.svg",
-          "alt": "Criatura colecionável em tons de violeta e âmbar — Líquido Filhote (detalhe 1)"
+          "alt": "Criatura colecionável em tons de esmeralda e creme — Líquido Filhote (detalhe 1)"
         },
         {
           "src": "/nfts/nft-028-3.svg",
-          "alt": "Criatura colecionável em tons de violeta e âmbar — Líquido Filhote (detalhe 2)"
+          "alt": "Criatura colecionável em tons de esmeralda e creme — Líquido Filhote (detalhe 2)"
         }
       ]
     },
     {
       "id": "nft-029",
       "name": "Cobalto Miragem",
-      "description": "Cobalto Miragem é uma obra de Marta Quental da coleção Prisma Lab. Composição abstrata em tons de magenta e ciano, mintada na rede Base com certificado de autenticidade simulado.",
+      "description": "Cobalto Miragem é uma obra de Marta Quental da coleção Prisma Lab. Composição abstrata em tons de âmbar e marrom, mintada na rede Base com certificado de autenticidade simulado.",
       "category": "art",
       "network": "base",
       "collectionId": "col-prisma",
@@ -1719,7 +1719,7 @@
       "traits": [
         {
           "label": "Paleta",
-          "value": "magenta e ciano"
+          "value": "âmbar e marrom"
         },
         {
           "label": "Estilo",
@@ -1756,22 +1756,22 @@
       "images": [
         {
           "src": "/nfts/nft-029.svg",
-          "alt": "Composição abstrata em tons de magenta e ciano — Cobalto Miragem"
+          "alt": "Composição abstrata em tons de âmbar e marrom — Cobalto Miragem"
         },
         {
           "src": "/nfts/nft-029-2.svg",
-          "alt": "Composição abstrata em tons de magenta e ciano — Cobalto Miragem (detalhe 1)"
+          "alt": "Composição abstrata em tons de âmbar e marrom — Cobalto Miragem (detalhe 1)"
         },
         {
           "src": "/nfts/nft-029-3.svg",
-          "alt": "Composição abstrata em tons de magenta e ciano — Cobalto Miragem (detalhe 2)"
+          "alt": "Composição abstrata em tons de âmbar e marrom — Cobalto Miragem (detalhe 2)"
         }
       ]
     },
     {
       "id": "nft-030",
       "name": "Crepuscular Relíquia",
-      "description": "Crepuscular Relíquia é uma obra de Suri Valdés da coleção Quest Relics. Sprite em pixel art em tons de azul-royal e prata, mintada na rede Arbitrum com certificado de autenticidade simulado.",
+      "description": "Crepuscular Relíquia é uma obra de Suri Valdés da coleção Quest Relics. Sprite em pixel art em tons de grafite e dourado, mintada na rede Arbitrum com certificado de autenticidade simulado.",
       "category": "games",
       "network": "arbitrum",
       "collectionId": "col-quest",
@@ -1782,7 +1782,7 @@
       "traits": [
         {
           "label": "Paleta",
-          "value": "azul-royal e prata"
+          "value": "grafite e dourado"
         },
         {
           "label": "Estilo",
@@ -1805,22 +1805,22 @@
       "images": [
         {
           "src": "/nfts/nft-030.svg",
-          "alt": "Sprite em pixel art em tons de azul-royal e prata — Crepuscular Relíquia"
+          "alt": "Sprite em pixel art em tons de grafite e dourado — Crepuscular Relíquia"
         },
         {
           "src": "/nfts/nft-030-2.svg",
-          "alt": "Sprite em pixel art em tons de azul-royal e prata — Crepuscular Relíquia (detalhe 1)"
+          "alt": "Sprite em pixel art em tons de grafite e dourado — Crepuscular Relíquia (detalhe 1)"
         },
         {
           "src": "/nfts/nft-030-3.svg",
-          "alt": "Sprite em pixel art em tons de azul-royal e prata — Crepuscular Relíquia (detalhe 2)"
+          "alt": "Sprite em pixel art em tons de grafite e dourado — Crepuscular Relíquia (detalhe 2)"
         }
       ]
     },
     {
       "id": "nft-031",
       "name": "Vivo Maré",
-      "description": "Vivo Maré é uma obra de Otávio Prado da coleção Prisma Lab. Composição abstrata em tons de grafite e dourado, mintada na rede Arbitrum com certificado de autenticidade simulado.",
+      "description": "Vivo Maré é uma obra de Otávio Prado da coleção Prisma Lab. Composição abstrata em tons de oliva e mostarda, mintada na rede Arbitrum com certificado de autenticidade simulado.",
       "category": "art",
       "network": "arbitrum",
       "collectionId": "col-prisma",
@@ -1831,7 +1831,7 @@
       "traits": [
         {
           "label": "Paleta",
-          "value": "grafite e dourado"
+          "value": "oliva e mostarda"
         },
         {
           "label": "Estilo",
@@ -1861,22 +1861,22 @@
       "images": [
         {
           "src": "/nfts/nft-031.svg",
-          "alt": "Composição abstrata em tons de grafite e dourado — Vivo Maré"
+          "alt": "Composição abstrata em tons de oliva e mostarda — Vivo Maré"
         },
         {
           "src": "/nfts/nft-031-2.svg",
-          "alt": "Composição abstrata em tons de grafite e dourado — Vivo Maré (detalhe 1)"
+          "alt": "Composição abstrata em tons de oliva e mostarda — Vivo Maré (detalhe 1)"
         },
         {
           "src": "/nfts/nft-031-3.svg",
-          "alt": "Composição abstrata em tons de grafite e dourado — Vivo Maré (detalhe 2)"
+          "alt": "Composição abstrata em tons de oliva e mostarda — Vivo Maré (detalhe 2)"
         }
       ]
     },
     {
       "id": "nft-032",
       "name": "Solar Chip",
-      "description": "Solar Chip é uma obra de Hugo Bernardes da coleção Pixel Arena. Sprite em pixel art em tons de vermelho e creme, mintada na rede Polygon com certificado de autenticidade simulado.",
+      "description": "Solar Chip é uma obra de Hugo Bernardes da coleção Pixel Arena. Sprite em pixel art em tons de violeta e âmbar, mintada na rede Polygon com certificado de autenticidade simulado.",
       "category": "games",
       "network": "polygon",
       "collectionId": "col-pixel",
@@ -1887,7 +1887,7 @@
       "traits": [
         {
           "label": "Paleta",
-          "value": "vermelho e creme"
+          "value": "violeta e âmbar"
         },
         {
           "label": "Estilo",
@@ -1910,22 +1910,22 @@
       "images": [
         {
           "src": "/nfts/nft-032.svg",
-          "alt": "Sprite em pixel art em tons de vermelho e creme — Solar Chip"
+          "alt": "Sprite em pixel art em tons de violeta e âmbar — Solar Chip"
         },
         {
           "src": "/nfts/nft-032-2.svg",
-          "alt": "Sprite em pixel art em tons de vermelho e creme — Solar Chip (detalhe 1)"
+          "alt": "Sprite em pixel art em tons de violeta e âmbar — Solar Chip (detalhe 1)"
         },
         {
           "src": "/nfts/nft-032-3.svg",
-          "alt": "Sprite em pixel art em tons de vermelho e creme — Solar Chip (detalhe 2)"
+          "alt": "Sprite em pixel art em tons de violeta e âmbar — Solar Chip (detalhe 2)"
         }
       ]
     },
     {
       "id": "nft-033",
       "name": "Cobalto Terraço",
-      "description": "Cobalto Terraço é uma obra de Nadia Farouk da coleção Vox Blocks. Blocos isométricos em 3D em tons de lilás e menta, mintada na rede Polygon com certificado de autenticidade simulado.",
+      "description": "Cobalto Terraço é uma obra de Nadia Farouk da coleção Vox Blocks. Blocos isométricos em 3D em tons de rosa-antigo e verde, mintada na rede Polygon com certificado de autenticidade simulado.",
       "category": "3d",
       "network": "polygon",
       "collectionId": "col-vox",
@@ -1936,7 +1936,7 @@
       "traits": [
         {
           "label": "Paleta",
-          "value": "lilás e menta"
+          "value": "rosa-antigo e verde"
         },
         {
           "label": "Estilo",
@@ -1959,22 +1959,22 @@
       "images": [
         {
           "src": "/nfts/nft-033.svg",
-          "alt": "Blocos isométricos em 3D em tons de lilás e menta — Cobalto Terraço"
+          "alt": "Blocos isométricos em 3D em tons de rosa-antigo e verde — Cobalto Terraço"
         },
         {
           "src": "/nfts/nft-033-2.svg",
-          "alt": "Blocos isométricos em 3D em tons de lilás e menta — Cobalto Terraço (detalhe 1)"
+          "alt": "Blocos isométricos em 3D em tons de rosa-antigo e verde — Cobalto Terraço (detalhe 1)"
         },
         {
           "src": "/nfts/nft-033-3.svg",
-          "alt": "Blocos isométricos em 3D em tons de lilás e menta — Cobalto Terraço (detalhe 2)"
+          "alt": "Blocos isométricos em 3D em tons de rosa-antigo e verde — Cobalto Terraço (detalhe 2)"
         }
       ]
     },
     {
       "id": "nft-034",
       "name": "Crepuscular Compasso",
-      "description": "Crepuscular Compasso é uma obra de Tobias Reis da coleção Vinil Digital. Disco de vinil e equalizador em tons de grafite e dourado, mintada na rede Arbitrum com certificado de autenticidade simulado.",
+      "description": "Crepuscular Compasso é uma obra de Tobias Reis da coleção Vinil Digital. Disco de vinil e equalizador em tons de oliva e mostarda, mintada na rede Arbitrum com certificado de autenticidade simulado.",
       "category": "music",
       "network": "arbitrum",
       "collectionId": "col-vinil",
@@ -1985,7 +1985,7 @@
       "traits": [
         {
           "label": "Paleta",
-          "value": "grafite e dourado"
+          "value": "oliva e mostarda"
         },
         {
           "label": "Estilo",
@@ -2008,22 +2008,22 @@
       "images": [
         {
           "src": "/nfts/nft-034.svg",
-          "alt": "Disco de vinil e equalizador em tons de grafite e dourado — Crepuscular Compasso"
+          "alt": "Disco de vinil e equalizador em tons de oliva e mostarda — Crepuscular Compasso"
         },
         {
           "src": "/nfts/nft-034-2.svg",
-          "alt": "Disco de vinil e equalizador em tons de grafite e dourado — Crepuscular Compasso (detalhe 1)"
+          "alt": "Disco de vinil e equalizador em tons de oliva e mostarda — Crepuscular Compasso (detalhe 1)"
         },
         {
           "src": "/nfts/nft-034-3.svg",
-          "alt": "Disco de vinil e equalizador em tons de grafite e dourado — Crepuscular Compasso (detalhe 2)"
+          "alt": "Disco de vinil e equalizador em tons de oliva e mostarda — Crepuscular Compasso (detalhe 2)"
         }
       ]
     },
     {
       "id": "nft-035",
       "name": "Líquido Guaxinim",
-      "description": "Líquido Guaxinim é uma obra de Marta Quental da coleção Totem Friends. Criatura colecionável em tons de vermelho e creme, mintada na rede Polygon com certificado de autenticidade simulado.",
+      "description": "Líquido Guaxinim é uma obra de Marta Quental da coleção Totem Friends. Criatura colecionável em tons de violeta e âmbar, mintada na rede Polygon com certificado de autenticidade simulado.",
       "category": "collectibles",
       "network": "polygon",
       "collectionId": "col-totem",
@@ -2034,7 +2034,7 @@
       "traits": [
         {
           "label": "Paleta",
-          "value": "vermelho e creme"
+          "value": "violeta e âmbar"
         },
         {
           "label": "Estilo",
@@ -2057,22 +2057,22 @@
       "images": [
         {
           "src": "/nfts/nft-035.svg",
-          "alt": "Criatura colecionável em tons de vermelho e creme — Líquido Guaxinim"
+          "alt": "Criatura colecionável em tons de violeta e âmbar — Líquido Guaxinim"
         },
         {
           "src": "/nfts/nft-035-2.svg",
-          "alt": "Criatura colecionável em tons de vermelho e creme — Líquido Guaxinim (detalhe 1)"
+          "alt": "Criatura colecionável em tons de violeta e âmbar — Líquido Guaxinim (detalhe 1)"
         },
         {
           "src": "/nfts/nft-035-3.svg",
-          "alt": "Criatura colecionável em tons de vermelho e creme — Líquido Guaxinim (detalhe 2)"
+          "alt": "Criatura colecionável em tons de violeta e âmbar — Líquido Guaxinim (detalhe 2)"
         }
       ]
     },
     {
       "id": "nft-036",
       "name": "Solar Miragem",
-      "description": "Solar Miragem é uma obra de Otávio Prado da coleção Prisma Lab. Composição abstrata em tons de azul-petróleo e coral, mintada na rede Base com certificado de autenticidade simulado.",
+      "description": "Solar Miragem é uma obra de Otávio Prado da coleção Prisma Lab. Composição abstrata em tons de cobre e grafite, mintada na rede Base com certificado de autenticidade simulado.",
       "category": "art",
       "network": "base",
       "collectionId": "col-prisma",
@@ -2083,7 +2083,7 @@
       "traits": [
         {
           "label": "Paleta",
-          "value": "azul-petróleo e coral"
+          "value": "cobre e grafite"
         },
         {
           "label": "Estilo",
@@ -2113,22 +2113,22 @@
       "images": [
         {
           "src": "/nfts/nft-036.svg",
-          "alt": "Composição abstrata em tons de azul-petróleo e coral — Solar Miragem"
+          "alt": "Composição abstrata em tons de cobre e grafite — Solar Miragem"
         },
         {
           "src": "/nfts/nft-036-2.svg",
-          "alt": "Composição abstrata em tons de azul-petróleo e coral — Solar Miragem (detalhe 1)"
+          "alt": "Composição abstrata em tons de cobre e grafite — Solar Miragem (detalhe 1)"
         },
         {
           "src": "/nfts/nft-036-3.svg",
-          "alt": "Composição abstrata em tons de azul-petróleo e coral — Solar Miragem (detalhe 2)"
+          "alt": "Composição abstrata em tons de cobre e grafite — Solar Miragem (detalhe 2)"
         }
       ]
     },
     {
       "id": "nft-037",
       "name": "Selvagem Relíquia",
-      "description": "Selvagem Relíquia é uma obra de Otávio Prado da coleção Quest Relics. Sprite em pixel art em tons de azul-petróleo e coral, mintada na rede Arbitrum com certificado de autenticidade simulado.",
+      "description": "Selvagem Relíquia é uma obra de Otávio Prado da coleção Quest Relics. Sprite em pixel art em tons de cobre e grafite, mintada na rede Arbitrum com certificado de autenticidade simulado.",
       "category": "games",
       "network": "arbitrum",
       "collectionId": "col-quest",
@@ -2139,7 +2139,7 @@
       "traits": [
         {
           "label": "Paleta",
-          "value": "azul-petróleo e coral"
+          "value": "cobre e grafite"
         },
         {
           "label": "Estilo",
@@ -2176,22 +2176,22 @@
       "images": [
         {
           "src": "/nfts/nft-037.svg",
-          "alt": "Sprite em pixel art em tons de azul-petróleo e coral — Selvagem Relíquia"
+          "alt": "Sprite em pixel art em tons de cobre e grafite — Selvagem Relíquia"
         },
         {
           "src": "/nfts/nft-037-2.svg",
-          "alt": "Sprite em pixel art em tons de azul-petróleo e coral — Selvagem Relíquia (detalhe 1)"
+          "alt": "Sprite em pixel art em tons de cobre e grafite — Selvagem Relíquia (detalhe 1)"
         },
         {
           "src": "/nfts/nft-037-3.svg",
-          "alt": "Sprite em pixel art em tons de azul-petróleo e coral — Selvagem Relíquia (detalhe 2)"
+          "alt": "Sprite em pixel art em tons de cobre e grafite — Selvagem Relíquia (detalhe 2)"
         }
       ]
     },
     {
       "id": "nft-038",
       "name": "Solar Maré",
-      "description": "Solar Maré é uma obra de Lia Moreira da coleção Aurora Series. Composição abstrata em tons de magenta e ciano, mintada na rede Arbitrum com certificado de autenticidade simulado.",
+      "description": "Solar Maré é uma obra de Lia Moreira da coleção Aurora Series. Composição abstrata em tons de âmbar e marrom, mintada na rede Arbitrum com certificado de autenticidade simulado.",
       "category": "art",
       "network": "arbitrum",
       "collectionId": "col-aurora",
@@ -2202,7 +2202,7 @@
       "traits": [
         {
           "label": "Paleta",
-          "value": "magenta e ciano"
+          "value": "âmbar e marrom"
         },
         {
           "label": "Estilo",
@@ -2225,22 +2225,22 @@
       "images": [
         {
           "src": "/nfts/nft-038.svg",
-          "alt": "Composição abstrata em tons de magenta e ciano — Solar Maré"
+          "alt": "Composição abstrata em tons de âmbar e marrom — Solar Maré"
         },
         {
           "src": "/nfts/nft-038-2.svg",
-          "alt": "Composição abstrata em tons de magenta e ciano — Solar Maré (detalhe 1)"
+          "alt": "Composição abstrata em tons de âmbar e marrom — Solar Maré (detalhe 1)"
         },
         {
           "src": "/nfts/nft-038-3.svg",
-          "alt": "Composição abstrata em tons de magenta e ciano — Solar Maré (detalhe 2)"
+          "alt": "Composição abstrata em tons de âmbar e marrom — Solar Maré (detalhe 2)"
         }
       ]
     },
     {
       "id": "nft-039",
       "name": "Cósmico Cume",
-      "description": "Cósmico Cume é uma obra de Tobias Reis da coleção Golden Hour. Paisagem ao entardecer em tons de rosa e turquesa, mintada na rede Arbitrum com certificado de autenticidade simulado.",
+      "description": "Cósmico Cume é uma obra de Tobias Reis da coleção Golden Hour. Paisagem ao entardecer em tons de terracota e menta, mintada na rede Arbitrum com certificado de autenticidade simulado.",
       "category": "photography",
       "network": "arbitrum",
       "collectionId": "col-golden",
@@ -2251,7 +2251,7 @@
       "traits": [
         {
           "label": "Paleta",
-          "value": "rosa e turquesa"
+          "value": "terracota e menta"
         },
         {
           "label": "Estilo",
@@ -2274,22 +2274,22 @@
       "images": [
         {
           "src": "/nfts/nft-039.svg",
-          "alt": "Paisagem ao entardecer em tons de rosa e turquesa — Cósmico Cume"
+          "alt": "Paisagem ao entardecer em tons de terracota e menta — Cósmico Cume"
         },
         {
           "src": "/nfts/nft-039-2.svg",
-          "alt": "Paisagem ao entardecer em tons de rosa e turquesa — Cósmico Cume (detalhe 1)"
+          "alt": "Paisagem ao entardecer em tons de terracota e menta — Cósmico Cume (detalhe 1)"
         },
         {
           "src": "/nfts/nft-039-3.svg",
-          "alt": "Paisagem ao entardecer em tons de rosa e turquesa — Cósmico Cume (detalhe 2)"
+          "alt": "Paisagem ao entardecer em tons de terracota e menta — Cósmico Cume (detalhe 2)"
         }
       ]
     },
     {
       "id": "nft-040",
       "name": "Líquido Totem",
-      "description": "Líquido Totem é uma obra de Otávio Prado da coleção Totem Friends. Criatura colecionável em tons de azul-petróleo e coral, mintada na rede Base com certificado de autenticidade simulado.",
+      "description": "Líquido Totem é uma obra de Otávio Prado da coleção Totem Friends. Criatura colecionável em tons de cobre e grafite, mintada na rede Base com certificado de autenticidade simulado.",
       "category": "collectibles",
       "network": "base",
       "collectionId": "col-totem",
@@ -2300,7 +2300,7 @@
       "traits": [
         {
           "label": "Paleta",
-          "value": "azul-petróleo e coral"
+          "value": "cobre e grafite"
         },
         {
           "label": "Estilo",
@@ -2337,22 +2337,22 @@
       "images": [
         {
           "src": "/nfts/nft-040.svg",
-          "alt": "Criatura colecionável em tons de azul-petróleo e coral — Líquido Totem"
+          "alt": "Criatura colecionável em tons de cobre e grafite — Líquido Totem"
         },
         {
           "src": "/nfts/nft-040-2.svg",
-          "alt": "Criatura colecionável em tons de azul-petróleo e coral — Líquido Totem (detalhe 1)"
+          "alt": "Criatura colecionável em tons de cobre e grafite — Líquido Totem (detalhe 1)"
         },
         {
           "src": "/nfts/nft-040-3.svg",
-          "alt": "Criatura colecionável em tons de azul-petróleo e coral — Líquido Totem (detalhe 2)"
+          "alt": "Criatura colecionável em tons de cobre e grafite — Líquido Totem (detalhe 2)"
         }
       ]
     },
     {
       "id": "nft-041",
       "name": "Solar Deserto",
-      "description": "Solar Deserto é uma obra de Marta Quental da coleção Horizonte Aberto. Paisagem ao entardecer em tons de azul-royal e prata, mintada na rede Polygon com certificado de autenticidade simulado.",
+      "description": "Solar Deserto é uma obra de Marta Quental da coleção Horizonte Aberto. Paisagem ao entardecer em tons de grafite e dourado, mintada na rede Polygon com certificado de autenticidade simulado.",
       "category": "photography",
       "network": "polygon",
       "collectionId": "col-horizonte",
@@ -2363,7 +2363,7 @@
       "traits": [
         {
           "label": "Paleta",
-          "value": "azul-royal e prata"
+          "value": "grafite e dourado"
         },
         {
           "label": "Estilo",
@@ -2400,22 +2400,22 @@
       "images": [
         {
           "src": "/nfts/nft-041.svg",
-          "alt": "Paisagem ao entardecer em tons de azul-royal e prata — Solar Deserto"
+          "alt": "Paisagem ao entardecer em tons de grafite e dourado — Solar Deserto"
         },
         {
           "src": "/nfts/nft-041-2.svg",
-          "alt": "Paisagem ao entardecer em tons de azul-royal e prata — Solar Deserto (detalhe 1)"
+          "alt": "Paisagem ao entardecer em tons de grafite e dourado — Solar Deserto (detalhe 1)"
         },
         {
           "src": "/nfts/nft-041-3.svg",
-          "alt": "Paisagem ao entardecer em tons de azul-royal e prata — Solar Deserto (detalhe 2)"
+          "alt": "Paisagem ao entardecer em tons de grafite e dourado — Solar Deserto (detalhe 2)"
         }
       ]
     },
     {
       "id": "nft-042",
       "name": "Sereno Relíquia",
-      "description": "Sereno Relíquia é uma obra de Tobias Reis da coleção Quest Relics. Sprite em pixel art em tons de azul-petróleo e coral, mintada na rede Arbitrum com certificado de autenticidade simulado.",
+      "description": "Sereno Relíquia é uma obra de Tobias Reis da coleção Quest Relics. Sprite em pixel art em tons de cobre e grafite, mintada na rede Arbitrum com certificado de autenticidade simulado.",
       "category": "games",
       "network": "arbitrum",
       "collectionId": "col-quest",
@@ -2426,7 +2426,7 @@
       "traits": [
         {
           "label": "Paleta",
-          "value": "azul-petróleo e coral"
+          "value": "cobre e grafite"
         },
         {
           "label": "Estilo",
@@ -2449,22 +2449,22 @@
       "images": [
         {
           "src": "/nfts/nft-042.svg",
-          "alt": "Sprite em pixel art em tons de azul-petróleo e coral — Sereno Relíquia"
+          "alt": "Sprite em pixel art em tons de cobre e grafite — Sereno Relíquia"
         },
         {
           "src": "/nfts/nft-042-2.svg",
-          "alt": "Sprite em pixel art em tons de azul-petróleo e coral — Sereno Relíquia (detalhe 1)"
+          "alt": "Sprite em pixel art em tons de cobre e grafite — Sereno Relíquia (detalhe 1)"
         },
         {
           "src": "/nfts/nft-042-3.svg",
-          "alt": "Sprite em pixel art em tons de azul-petróleo e coral — Sereno Relíquia (detalhe 2)"
+          "alt": "Sprite em pixel art em tons de cobre e grafite — Sereno Relíquia (detalhe 2)"
         }
       ]
     },
     {
       "id": "nft-043",
       "name": "Selvagem Eclipse",
-      "description": "Selvagem Eclipse é uma obra de Kenji Aoki da coleção Prisma Lab. Composição abstrata em tons de laranja e índigo, mintada na rede Polygon com certificado de autenticidade simulado.",
+      "description": "Selvagem Eclipse é uma obra de Kenji Aoki da coleção Prisma Lab. Composição abstrata em tons de azul-petróleo e areia, mintada na rede Polygon com certificado de autenticidade simulado.",
       "category": "art",
       "network": "polygon",
       "collectionId": "col-prisma",
@@ -2475,7 +2475,7 @@
       "traits": [
         {
           "label": "Paleta",
-          "value": "laranja e índigo"
+          "value": "azul-petróleo e areia"
         },
         {
           "label": "Estilo",
@@ -2512,22 +2512,22 @@
       "images": [
         {
           "src": "/nfts/nft-043.svg",
-          "alt": "Composição abstrata em tons de laranja e índigo — Selvagem Eclipse"
+          "alt": "Composição abstrata em tons de azul-petróleo e areia — Selvagem Eclipse"
         },
         {
           "src": "/nfts/nft-043-2.svg",
-          "alt": "Composição abstrata em tons de laranja e índigo — Selvagem Eclipse (detalhe 1)"
+          "alt": "Composição abstrata em tons de azul-petróleo e areia — Selvagem Eclipse (detalhe 1)"
         },
         {
           "src": "/nfts/nft-043-3.svg",
-          "alt": "Composição abstrata em tons de laranja e índigo — Selvagem Eclipse (detalhe 2)"
+          "alt": "Composição abstrata em tons de azul-petróleo e areia — Selvagem Eclipse (detalhe 2)"
         }
       ]
     },
     {
       "id": "nft-044",
       "name": "Etéreo Eco",
-      "description": "Etéreo Eco é uma obra de Hugo Bernardes da coleção Synth Wave Club. Disco de vinil e equalizador em tons de grafite e dourado, mintada na rede Ethereum com certificado de autenticidade simulado.",
+      "description": "Etéreo Eco é uma obra de Hugo Bernardes da coleção Synth Wave Club. Disco de vinil e equalizador em tons de oliva e mostarda, mintada na rede Ethereum com certificado de autenticidade simulado.",
       "category": "music",
       "network": "ethereum",
       "collectionId": "col-synth",
@@ -2538,7 +2538,7 @@
       "traits": [
         {
           "label": "Paleta",
-          "value": "grafite e dourado"
+          "value": "oliva e mostarda"
         },
         {
           "label": "Estilo",
@@ -2575,22 +2575,22 @@
       "images": [
         {
           "src": "/nfts/nft-044.svg",
-          "alt": "Disco de vinil e equalizador em tons de grafite e dourado — Etéreo Eco"
+          "alt": "Disco de vinil e equalizador em tons de oliva e mostarda — Etéreo Eco"
         },
         {
           "src": "/nfts/nft-044-2.svg",
-          "alt": "Disco de vinil e equalizador em tons de grafite e dourado — Etéreo Eco (detalhe 1)"
+          "alt": "Disco de vinil e equalizador em tons de oliva e mostarda — Etéreo Eco (detalhe 1)"
         },
         {
           "src": "/nfts/nft-044-3.svg",
-          "alt": "Disco de vinil e equalizador em tons de grafite e dourado — Etéreo Eco (detalhe 2)"
+          "alt": "Disco de vinil e equalizador em tons de oliva e mostarda — Etéreo Eco (detalhe 2)"
         }
       ]
     },
     {
       "id": "nft-045",
       "name": "Neon Terraço",
-      "description": "Neon Terraço é uma obra de Suri Valdés da coleção Vox Blocks. Blocos isométricos em 3D em tons de rosa e turquesa, mintada na rede Base com certificado de autenticidade simulado.",
+      "description": "Neon Terraço é uma obra de Suri Valdés da coleção Vox Blocks. Blocos isométricos em 3D em tons de terracota e menta, mintada na rede Base com certificado de autenticidade simulado.",
       "category": "3d",
       "network": "base",
       "collectionId": "col-vox",
@@ -2601,7 +2601,7 @@
       "traits": [
         {
           "label": "Paleta",
-          "value": "rosa e turquesa"
+          "value": "terracota e menta"
         },
         {
           "label": "Estilo",
@@ -2631,22 +2631,22 @@
       "images": [
         {
           "src": "/nfts/nft-045.svg",
-          "alt": "Blocos isométricos em 3D em tons de rosa e turquesa — Neon Terraço"
+          "alt": "Blocos isométricos em 3D em tons de terracota e menta — Neon Terraço"
         },
         {
           "src": "/nfts/nft-045-2.svg",
-          "alt": "Blocos isométricos em 3D em tons de rosa e turquesa — Neon Terraço (detalhe 1)"
+          "alt": "Blocos isométricos em 3D em tons de terracota e menta — Neon Terraço (detalhe 1)"
         },
         {
           "src": "/nfts/nft-045-3.svg",
-          "alt": "Blocos isométricos em 3D em tons de rosa e turquesa — Neon Terraço (detalhe 2)"
+          "alt": "Blocos isométricos em 3D em tons de terracota e menta — Neon Terraço (detalhe 2)"
         }
       ]
     },
     {
       "id": "nft-046",
       "name": "Ártico Cume",
-      "description": "Ártico Cume é uma obra de Nadia Farouk da coleção Horizonte Aberto. Paisagem ao entardecer em tons de laranja e índigo, mintada na rede Arbitrum com certificado de autenticidade simulado.",
+      "description": "Ártico Cume é uma obra de Nadia Farouk da coleção Horizonte Aberto. Paisagem ao entardecer em tons de azul-petróleo e areia, mintada na rede Arbitrum com certificado de autenticidade simulado.",
       "category": "photography",
       "network": "arbitrum",
       "collectionId": "col-horizonte",
@@ -2657,7 +2657,7 @@
       "traits": [
         {
           "label": "Paleta",
-          "value": "laranja e índigo"
+          "value": "azul-petróleo e areia"
         },
         {
           "label": "Estilo",
@@ -2680,22 +2680,22 @@
       "images": [
         {
           "src": "/nfts/nft-046.svg",
-          "alt": "Paisagem ao entardecer em tons de laranja e índigo — Ártico Cume"
+          "alt": "Paisagem ao entardecer em tons de azul-petróleo e areia — Ártico Cume"
         },
         {
           "src": "/nfts/nft-046-2.svg",
-          "alt": "Paisagem ao entardecer em tons de laranja e índigo — Ártico Cume (detalhe 1)"
+          "alt": "Paisagem ao entardecer em tons de azul-petróleo e areia — Ártico Cume (detalhe 1)"
         },
         {
           "src": "/nfts/nft-046-3.svg",
-          "alt": "Paisagem ao entardecer em tons de laranja e índigo — Ártico Cume (detalhe 2)"
+          "alt": "Paisagem ao entardecer em tons de azul-petróleo e areia — Ártico Cume (detalhe 2)"
         }
       ]
     },
     {
       "id": "nft-047",
       "name": "Cobalto Totem",
-      "description": "Cobalto Totem é uma obra de Tobias Reis da coleção Bichos do Mangue. Criatura colecionável em tons de lilás e menta, mintada na rede Polygon com certificado de autenticidade simulado.",
+      "description": "Cobalto Totem é uma obra de Tobias Reis da coleção Bichos do Mangue. Criatura colecionável em tons de rosa-antigo e verde, mintada na rede Polygon com certificado de autenticidade simulado.",
       "category": "collectibles",
       "network": "polygon",
       "collectionId": "col-bichos",
@@ -2706,7 +2706,7 @@
       "traits": [
         {
           "label": "Paleta",
-          "value": "lilás e menta"
+          "value": "rosa-antigo e verde"
         },
         {
           "label": "Estilo",
@@ -2743,22 +2743,22 @@
       "images": [
         {
           "src": "/nfts/nft-047.svg",
-          "alt": "Criatura colecionável em tons de lilás e menta — Cobalto Totem"
+          "alt": "Criatura colecionável em tons de rosa-antigo e verde — Cobalto Totem"
         },
         {
           "src": "/nfts/nft-047-2.svg",
-          "alt": "Criatura colecionável em tons de lilás e menta — Cobalto Totem (detalhe 1)"
+          "alt": "Criatura colecionável em tons de rosa-antigo e verde — Cobalto Totem (detalhe 1)"
         },
         {
           "src": "/nfts/nft-047-3.svg",
-          "alt": "Criatura colecionável em tons de lilás e menta — Cobalto Totem (detalhe 2)"
+          "alt": "Criatura colecionável em tons de rosa-antigo e verde — Cobalto Totem (detalhe 2)"
         }
       ]
     },
     {
       "id": "nft-048",
       "name": "Vivo Corrente",
-      "description": "Vivo Corrente é uma obra de Hugo Bernardes da coleção Prisma Lab. Composição abstrata em tons de vermelho e creme, mintada na rede Arbitrum com certificado de autenticidade simulado.",
+      "description": "Vivo Corrente é uma obra de Hugo Bernardes da coleção Prisma Lab. Composição abstrata em tons de violeta e âmbar, mintada na rede Arbitrum com certificado de autenticidade simulado.",
       "category": "art",
       "network": "arbitrum",
       "collectionId": "col-prisma",
@@ -2769,7 +2769,7 @@
       "traits": [
         {
           "label": "Paleta",
-          "value": "vermelho e creme"
+          "value": "violeta e âmbar"
         },
         {
           "label": "Estilo",
@@ -2806,22 +2806,22 @@
       "images": [
         {
           "src": "/nfts/nft-048.svg",
-          "alt": "Composição abstrata em tons de vermelho e creme — Vivo Corrente"
+          "alt": "Composição abstrata em tons de violeta e âmbar — Vivo Corrente"
         },
         {
           "src": "/nfts/nft-048-2.svg",
-          "alt": "Composição abstrata em tons de vermelho e creme — Vivo Corrente (detalhe 1)"
+          "alt": "Composição abstrata em tons de violeta e âmbar — Vivo Corrente (detalhe 1)"
         },
         {
           "src": "/nfts/nft-048-3.svg",
-          "alt": "Composição abstrata em tons de vermelho e creme — Vivo Corrente (detalhe 2)"
+          "alt": "Composição abstrata em tons de violeta e âmbar — Vivo Corrente (detalhe 2)"
         }
       ]
     },
     {
       "id": "nft-049",
       "name": "Lunar Compasso",
-      "description": "Lunar Compasso é uma obra de Lia Moreira da coleção Synth Wave Club. Disco de vinil e equalizador em tons de laranja e índigo, mintada na rede Polygon com certificado de autenticidade simulado.",
+      "description": "Lunar Compasso é uma obra de Lia Moreira da coleção Synth Wave Club. Disco de vinil e equalizador em tons de azul-petróleo e areia, mintada na rede Polygon com certificado de autenticidade simulado.",
       "category": "music",
       "network": "polygon",
       "collectionId": "col-synth",
@@ -2832,7 +2832,7 @@
       "traits": [
         {
           "label": "Paleta",
-          "value": "laranja e índigo"
+          "value": "azul-petróleo e areia"
         },
         {
           "label": "Estilo",
@@ -2869,22 +2869,22 @@
       "images": [
         {
           "src": "/nfts/nft-049.svg",
-          "alt": "Disco de vinil e equalizador em tons de laranja e índigo — Lunar Compasso"
+          "alt": "Disco de vinil e equalizador em tons de azul-petróleo e areia — Lunar Compasso"
         },
         {
           "src": "/nfts/nft-049-2.svg",
-          "alt": "Disco de vinil e equalizador em tons de laranja e índigo — Lunar Compasso (detalhe 1)"
+          "alt": "Disco de vinil e equalizador em tons de azul-petróleo e areia — Lunar Compasso (detalhe 1)"
         },
         {
           "src": "/nfts/nft-049-3.svg",
-          "alt": "Disco de vinil e equalizador em tons de laranja e índigo — Lunar Compasso (detalhe 2)"
+          "alt": "Disco de vinil e equalizador em tons de azul-petróleo e areia — Lunar Compasso (detalhe 2)"
         }
       ]
     },
     {
       "id": "nft-050",
       "name": "Cósmico Cidade",
-      "description": "Cósmico Cidade é uma obra de Otávio Prado da coleção Isometria. Blocos isométricos em 3D em tons de lilás e menta, mintada na rede Arbitrum com certificado de autenticidade simulado.",
+      "description": "Cósmico Cidade é uma obra de Otávio Prado da coleção Isometria. Blocos isométricos em 3D em tons de rosa-antigo e verde, mintada na rede Arbitrum com certificado de autenticidade simulado.",
       "category": "3d",
       "network": "arbitrum",
       "collectionId": "col-iso",
@@ -2895,7 +2895,7 @@
       "traits": [
         {
           "label": "Paleta",
-          "value": "lilás e menta"
+          "value": "rosa-antigo e verde"
         },
         {
           "label": "Estilo",
@@ -2918,22 +2918,22 @@
       "images": [
         {
           "src": "/nfts/nft-050.svg",
-          "alt": "Blocos isométricos em 3D em tons de lilás e menta — Cósmico Cidade"
+          "alt": "Blocos isométricos em 3D em tons de rosa-antigo e verde — Cósmico Cidade"
         },
         {
           "src": "/nfts/nft-050-2.svg",
-          "alt": "Blocos isométricos em 3D em tons de lilás e menta — Cósmico Cidade (detalhe 1)"
+          "alt": "Blocos isométricos em 3D em tons de rosa-antigo e verde — Cósmico Cidade (detalhe 1)"
         },
         {
           "src": "/nfts/nft-050-3.svg",
-          "alt": "Blocos isométricos em 3D em tons de lilás e menta — Cósmico Cidade (detalhe 2)"
+          "alt": "Blocos isométricos em 3D em tons de rosa-antigo e verde — Cósmico Cidade (detalhe 2)"
         }
       ]
     },
     {
       "id": "nft-051",
       "name": "Etéreo Refrão",
-      "description": "Etéreo Refrão é uma obra de Marta Quental da coleção Vinil Digital. Disco de vinil e equalizador em tons de lilás e menta, mintada na rede Arbitrum com certificado de autenticidade simulado.",
+      "description": "Etéreo Refrão é uma obra de Marta Quental da coleção Vinil Digital. Disco de vinil e equalizador em tons de rosa-antigo e verde, mintada na rede Arbitrum com certificado de autenticidade simulado.",
       "category": "music",
       "network": "arbitrum",
       "collectionId": "col-vinil",
@@ -2944,7 +2944,7 @@
       "traits": [
         {
           "label": "Paleta",
-          "value": "lilás e menta"
+          "value": "rosa-antigo e verde"
         },
         {
           "label": "Estilo",
@@ -2974,22 +2974,22 @@
       "images": [
         {
           "src": "/nfts/nft-051.svg",
-          "alt": "Disco de vinil e equalizador em tons de lilás e menta — Etéreo Refrão"
+          "alt": "Disco de vinil e equalizador em tons de rosa-antigo e verde — Etéreo Refrão"
         },
         {
           "src": "/nfts/nft-051-2.svg",
-          "alt": "Disco de vinil e equalizador em tons de lilás e menta — Etéreo Refrão (detalhe 1)"
+          "alt": "Disco de vinil e equalizador em tons de rosa-antigo e verde — Etéreo Refrão (detalhe 1)"
         },
         {
           "src": "/nfts/nft-051-3.svg",
-          "alt": "Disco de vinil e equalizador em tons de lilás e menta — Etéreo Refrão (detalhe 2)"
+          "alt": "Disco de vinil e equalizador em tons de rosa-antigo e verde — Etéreo Refrão (detalhe 2)"
         }
       ]
     },
     {
       "id": "nft-052",
       "name": "Vibrante Guaxinim",
-      "description": "Vibrante Guaxinim é uma obra de Kenji Aoki da coleção Bichos do Mangue. Criatura colecionável em tons de azul-petróleo e coral, mintada na rede Ethereum com certificado de autenticidade simulado.",
+      "description": "Vibrante Guaxinim é uma obra de Kenji Aoki da coleção Bichos do Mangue. Criatura colecionável em tons de cobre e grafite, mintada na rede Ethereum com certificado de autenticidade simulado.",
       "category": "collectibles",
       "network": "ethereum",
       "collectionId": "col-bichos",
@@ -3000,7 +3000,7 @@
       "traits": [
         {
           "label": "Paleta",
-          "value": "azul-petróleo e coral"
+          "value": "cobre e grafite"
         },
         {
           "label": "Estilo",
@@ -3030,22 +3030,22 @@
       "images": [
         {
           "src": "/nfts/nft-052.svg",
-          "alt": "Criatura colecionável em tons de azul-petróleo e coral — Vibrante Guaxinim"
+          "alt": "Criatura colecionável em tons de cobre e grafite — Vibrante Guaxinim"
         },
         {
           "src": "/nfts/nft-052-2.svg",
-          "alt": "Criatura colecionável em tons de azul-petróleo e coral — Vibrante Guaxinim (detalhe 1)"
+          "alt": "Criatura colecionável em tons de cobre e grafite — Vibrante Guaxinim (detalhe 1)"
         },
         {
           "src": "/nfts/nft-052-3.svg",
-          "alt": "Criatura colecionável em tons de azul-petróleo e coral — Vibrante Guaxinim (detalhe 2)"
+          "alt": "Criatura colecionável em tons de cobre e grafite — Vibrante Guaxinim (detalhe 2)"
         }
       ]
     },
     {
       "id": "nft-053",
       "name": "Selvagem Litoral",
-      "description": "Selvagem Litoral é uma obra de Kenji Aoki da coleção Golden Hour. Paisagem ao entardecer em tons de grafite e dourado, mintada na rede Polygon com certificado de autenticidade simulado.",
+      "description": "Selvagem Litoral é uma obra de Kenji Aoki da coleção Golden Hour. Paisagem ao entardecer em tons de oliva e mostarda, mintada na rede Polygon com certificado de autenticidade simulado.",
       "category": "photography",
       "network": "polygon",
       "collectionId": "col-golden",
@@ -3056,7 +3056,7 @@
       "traits": [
         {
           "label": "Paleta",
-          "value": "grafite e dourado"
+          "value": "oliva e mostarda"
         },
         {
           "label": "Estilo",
@@ -3093,22 +3093,22 @@
       "images": [
         {
           "src": "/nfts/nft-053.svg",
-          "alt": "Paisagem ao entardecer em tons de grafite e dourado — Selvagem Litoral"
+          "alt": "Paisagem ao entardecer em tons de oliva e mostarda — Selvagem Litoral"
         },
         {
           "src": "/nfts/nft-053-2.svg",
-          "alt": "Paisagem ao entardecer em tons de grafite e dourado — Selvagem Litoral (detalhe 1)"
+          "alt": "Paisagem ao entardecer em tons de oliva e mostarda — Selvagem Litoral (detalhe 1)"
         },
         {
           "src": "/nfts/nft-053-3.svg",
-          "alt": "Paisagem ao entardecer em tons de grafite e dourado — Selvagem Litoral (detalhe 2)"
+          "alt": "Paisagem ao entardecer em tons de oliva e mostarda — Selvagem Litoral (detalhe 2)"
         }
       ]
     },
     {
       "id": "nft-054",
       "name": "Silente Mascote",
-      "description": "Silente Mascote é uma obra de Tobias Reis da coleção Bichos do Mangue. Criatura colecionável em tons de rosa e turquesa, mintada na rede Arbitrum com certificado de autenticidade simulado.",
+      "description": "Silente Mascote é uma obra de Tobias Reis da coleção Bichos do Mangue. Criatura colecionável em tons de terracota e menta, mintada na rede Arbitrum com certificado de autenticidade simulado.",
       "category": "collectibles",
       "network": "arbitrum",
       "collectionId": "col-bichos",
@@ -3119,7 +3119,7 @@
       "traits": [
         {
           "label": "Paleta",
-          "value": "rosa e turquesa"
+          "value": "terracota e menta"
         },
         {
           "label": "Estilo",
@@ -3142,22 +3142,22 @@
       "images": [
         {
           "src": "/nfts/nft-054.svg",
-          "alt": "Criatura colecionável em tons de rosa e turquesa — Silente Mascote"
+          "alt": "Criatura colecionável em tons de terracota e menta — Silente Mascote"
         },
         {
           "src": "/nfts/nft-054-2.svg",
-          "alt": "Criatura colecionável em tons de rosa e turquesa — Silente Mascote (detalhe 1)"
+          "alt": "Criatura colecionável em tons de terracota e menta — Silente Mascote (detalhe 1)"
         },
         {
           "src": "/nfts/nft-054-3.svg",
-          "alt": "Criatura colecionável em tons de rosa e turquesa — Silente Mascote (detalhe 2)"
+          "alt": "Criatura colecionável em tons de terracota e menta — Silente Mascote (detalhe 2)"
         }
       ]
     },
     {
       "id": "nft-055",
       "name": "Dourado Torre",
-      "description": "Dourado Torre é uma obra de Otávio Prado da coleção Vox Blocks. Blocos isométricos em 3D em tons de azul-royal e prata, mintada na rede Arbitrum com certificado de autenticidade simulado.",
+      "description": "Dourado Torre é uma obra de Otávio Prado da coleção Vox Blocks. Blocos isométricos em 3D em tons de grafite e dourado, mintada na rede Arbitrum com certificado de autenticidade simulado.",
       "category": "3d",
       "network": "arbitrum",
       "collectionId": "col-vox",
@@ -3168,7 +3168,7 @@
       "traits": [
         {
           "label": "Paleta",
-          "value": "azul-royal e prata"
+          "value": "grafite e dourado"
         },
         {
           "label": "Estilo",
@@ -3205,22 +3205,22 @@
       "images": [
         {
           "src": "/nfts/nft-055.svg",
-          "alt": "Blocos isométricos em 3D em tons de azul-royal e prata — Dourado Torre"
+          "alt": "Blocos isométricos em 3D em tons de grafite e dourado — Dourado Torre"
         },
         {
           "src": "/nfts/nft-055-2.svg",
-          "alt": "Blocos isométricos em 3D em tons de azul-royal e prata — Dourado Torre (detalhe 1)"
+          "alt": "Blocos isométricos em 3D em tons de grafite e dourado — Dourado Torre (detalhe 1)"
         },
         {
           "src": "/nfts/nft-055-3.svg",
-          "alt": "Blocos isométricos em 3D em tons de azul-royal e prata — Dourado Torre (detalhe 2)"
+          "alt": "Blocos isométricos em 3D em tons de grafite e dourado — Dourado Torre (detalhe 2)"
         }
       ]
     },
     {
       "id": "nft-056",
       "name": "Neon Chip",
-      "description": "Neon Chip é uma obra de Tobias Reis da coleção Pixel Arena. Sprite em pixel art em tons de azul-royal e prata, mintada na rede Polygon com certificado de autenticidade simulado.",
+      "description": "Neon Chip é uma obra de Tobias Reis da coleção Pixel Arena. Sprite em pixel art em tons de grafite e dourado, mintada na rede Polygon com certificado de autenticidade simulado.",
       "category": "games",
       "network": "polygon",
       "collectionId": "col-pixel",
@@ -3231,7 +3231,7 @@
       "traits": [
         {
           "label": "Paleta",
-          "value": "azul-royal e prata"
+          "value": "grafite e dourado"
         },
         {
           "label": "Estilo",
@@ -3261,22 +3261,22 @@
       "images": [
         {
           "src": "/nfts/nft-056.svg",
-          "alt": "Sprite em pixel art em tons de azul-royal e prata — Neon Chip"
+          "alt": "Sprite em pixel art em tons de grafite e dourado — Neon Chip"
         },
         {
           "src": "/nfts/nft-056-2.svg",
-          "alt": "Sprite em pixel art em tons de azul-royal e prata — Neon Chip (detalhe 1)"
+          "alt": "Sprite em pixel art em tons de grafite e dourado — Neon Chip (detalhe 1)"
         },
         {
           "src": "/nfts/nft-056-3.svg",
-          "alt": "Sprite em pixel art em tons de azul-royal e prata — Neon Chip (detalhe 2)"
+          "alt": "Sprite em pixel art em tons de grafite e dourado — Neon Chip (detalhe 2)"
         }
       ]
     },
     {
       "id": "nft-057",
       "name": "Cósmico Monólito",
-      "description": "Cósmico Monólito é uma obra de Nadia Farouk da coleção Isometria. Blocos isométricos em 3D em tons de grafite e dourado, mintada na rede Base com certificado de autenticidade simulado.",
+      "description": "Cósmico Monólito é uma obra de Nadia Farouk da coleção Isometria. Blocos isométricos em 3D em tons de oliva e mostarda, mintada na rede Base com certificado de autenticidade simulado.",
       "category": "3d",
       "network": "base",
       "collectionId": "col-iso",
@@ -3287,7 +3287,7 @@
       "traits": [
         {
           "label": "Paleta",
-          "value": "grafite e dourado"
+          "value": "oliva e mostarda"
         },
         {
           "label": "Estilo",
@@ -3317,22 +3317,22 @@
       "images": [
         {
           "src": "/nfts/nft-057.svg",
-          "alt": "Blocos isométricos em 3D em tons de grafite e dourado — Cósmico Monólito"
+          "alt": "Blocos isométricos em 3D em tons de oliva e mostarda — Cósmico Monólito"
         },
         {
           "src": "/nfts/nft-057-2.svg",
-          "alt": "Blocos isométricos em 3D em tons de grafite e dourado — Cósmico Monólito (detalhe 1)"
+          "alt": "Blocos isométricos em 3D em tons de oliva e mostarda — Cósmico Monólito (detalhe 1)"
         },
         {
           "src": "/nfts/nft-057-3.svg",
-          "alt": "Blocos isométricos em 3D em tons de grafite e dourado — Cósmico Monólito (detalhe 2)"
+          "alt": "Blocos isométricos em 3D em tons de oliva e mostarda — Cósmico Monólito (detalhe 2)"
         }
       ]
     },
     {
       "id": "nft-058",
       "name": "Vibrante Névoa",
-      "description": "Vibrante Névoa é uma obra de Suri Valdés da coleção Golden Hour. Paisagem ao entardecer em tons de magenta e ciano, mintada na rede Arbitrum com certificado de autenticidade simulado.",
+      "description": "Vibrante Névoa é uma obra de Suri Valdés da coleção Golden Hour. Paisagem ao entardecer em tons de âmbar e marrom, mintada na rede Arbitrum com certificado de autenticidade simulado.",
       "category": "photography",
       "network": "arbitrum",
       "collectionId": "col-golden",
@@ -3343,7 +3343,7 @@
       "traits": [
         {
           "label": "Paleta",
-          "value": "magenta e ciano"
+          "value": "âmbar e marrom"
         },
         {
           "label": "Estilo",
@@ -3373,22 +3373,22 @@
       "images": [
         {
           "src": "/nfts/nft-058.svg",
-          "alt": "Paisagem ao entardecer em tons de magenta e ciano — Vibrante Névoa"
+          "alt": "Paisagem ao entardecer em tons de âmbar e marrom — Vibrante Névoa"
         },
         {
           "src": "/nfts/nft-058-2.svg",
-          "alt": "Paisagem ao entardecer em tons de magenta e ciano — Vibrante Névoa (detalhe 1)"
+          "alt": "Paisagem ao entardecer em tons de âmbar e marrom — Vibrante Névoa (detalhe 1)"
         },
         {
           "src": "/nfts/nft-058-3.svg",
-          "alt": "Paisagem ao entardecer em tons de magenta e ciano — Vibrante Névoa (detalhe 2)"
+          "alt": "Paisagem ao entardecer em tons de âmbar e marrom — Vibrante Névoa (detalhe 2)"
         }
       ]
     },
     {
       "id": "nft-059",
       "name": "Neon Guaxinim",
-      "description": "Neon Guaxinim é uma obra de Suri Valdés da coleção Bichos do Mangue. Criatura colecionável em tons de violeta e âmbar, mintada na rede Ethereum com certificado de autenticidade simulado.",
+      "description": "Neon Guaxinim é uma obra de Suri Valdés da coleção Bichos do Mangue. Criatura colecionável em tons de esmeralda e creme, mintada na rede Ethereum com certificado de autenticidade simulado.",
       "category": "collectibles",
       "network": "ethereum",
       "collectionId": "col-bichos",
@@ -3399,7 +3399,7 @@
       "traits": [
         {
           "label": "Paleta",
-          "value": "violeta e âmbar"
+          "value": "esmeralda e creme"
         },
         {
           "label": "Estilo",
@@ -3436,22 +3436,22 @@
       "images": [
         {
           "src": "/nfts/nft-059.svg",
-          "alt": "Criatura colecionável em tons de violeta e âmbar — Neon Guaxinim"
+          "alt": "Criatura colecionável em tons de esmeralda e creme — Neon Guaxinim"
         },
         {
           "src": "/nfts/nft-059-2.svg",
-          "alt": "Criatura colecionável em tons de violeta e âmbar — Neon Guaxinim (detalhe 1)"
+          "alt": "Criatura colecionável em tons de esmeralda e creme — Neon Guaxinim (detalhe 1)"
         },
         {
           "src": "/nfts/nft-059-3.svg",
-          "alt": "Criatura colecionável em tons de violeta e âmbar — Neon Guaxinim (detalhe 2)"
+          "alt": "Criatura colecionável em tons de esmeralda e creme — Neon Guaxinim (detalhe 2)"
         }
       ]
     },
     {
       "id": "nft-060",
       "name": "Cósmico Corrente",
-      "description": "Cósmico Corrente é uma obra de Lia Moreira da coleção Aurora Series. Composição abstrata em tons de azul-petróleo e coral, mintada na rede Polygon com certificado de autenticidade simulado.",
+      "description": "Cósmico Corrente é uma obra de Lia Moreira da coleção Aurora Series. Composição abstrata em tons de cobre e grafite, mintada na rede Polygon com certificado de autenticidade simulado.",
       "category": "art",
       "network": "polygon",
       "collectionId": "col-aurora",
@@ -3462,7 +3462,7 @@
       "traits": [
         {
           "label": "Paleta",
-          "value": "azul-petróleo e coral"
+          "value": "cobre e grafite"
         },
         {
           "label": "Estilo",
@@ -3499,15 +3499,15 @@
       "images": [
         {
           "src": "/nfts/nft-060.svg",
-          "alt": "Composição abstrata em tons de azul-petróleo e coral — Cósmico Corrente"
+          "alt": "Composição abstrata em tons de cobre e grafite — Cósmico Corrente"
         },
         {
           "src": "/nfts/nft-060-2.svg",
-          "alt": "Composição abstrata em tons de azul-petróleo e coral — Cósmico Corrente (detalhe 1)"
+          "alt": "Composição abstrata em tons de cobre e grafite — Cósmico Corrente (detalhe 1)"
         },
         {
           "src": "/nfts/nft-060-3.svg",
-          "alt": "Composição abstrata em tons de azul-petróleo e coral — Cósmico Corrente (detalhe 2)"
+          "alt": "Composição abstrata em tons de cobre e grafite — Cósmico Corrente (detalhe 2)"
         }
       ]
     }

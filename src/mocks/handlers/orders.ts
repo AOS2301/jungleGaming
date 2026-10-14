@@ -1,7 +1,7 @@
 import { http } from 'msw'
 import { createOrderSchema, type Order, type CreateOrderRequest } from '@/api/contracts'
 import {
-  commit, getDb, maskAddress, nextId, nowIso, publishOrder, toPublicOrder, updateNftEditions, type DbOrder,
+  bumpMetric, commit, getDb, maskAddress, nextId, nowIso, publishOrder, toPublicOrder, updateNftEditions, type DbOrder,
 } from '../db'
 import { buildQuote, maxQuantityFor, touchCart } from '../domain'
 import { getScenario } from '../scenarios'
@@ -117,6 +117,7 @@ export const orderHandlers = [
       if ('response' in parsed) return parsed.response
       const body = parsed.data
       const d = getDb()
+      bumpMetric('order.requests')
       const payloadHash = cyrb53(canonicalPayload(body))
 
       // idempotência: mesma chave + mesmo conteúdo => mesmo pedido; conteúdo diferente => conflito
@@ -127,6 +128,7 @@ export const orderHandlers = [
         }
         const existing = d.orders.find((o) => o.id === prior.orderId)!
         resolveIfDue(existing)
+        bumpMetric('order.replays')
         return json(toPublicOrder(existing), 200, { 'Idempotent-Replayed': 'true' })
       }
 

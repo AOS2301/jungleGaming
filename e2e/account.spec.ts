@@ -1,0 +1,152 @@
+import { expect, test } from './fixtures'
+
+const PNG = Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8BQDwAEhQGAhKmMIQAAAABJRU5ErkJggg==', 'base64')
+
+test.describe('Perfil do colecionador', () => {
+  test('edita dados, valida campos e persiste após refresh', async ({ app, page }) => {
+    await app.quickLogin('ana', '/profile')
+    await expect(page.getByRole('heading', { name: 'Dados do colecionador' })).toBeVisible()
+    const form = page.getByRole('form', { name: 'Dados do perfil' })
+    // validação local
+    await form.getByLabel('Nome', { exact: false }).first().fill('')
+    await form.getByRole('button', { name: 'Salvar alterações' }).click()
+    await expect(page.getByText('Informe seu nome (mín. 2 caracteres)')).toBeVisible()
+    await expect(page.locator('#p-displayName')).toHaveAttribute('aria-invalid', 'true')
+    // conflito retornado pela API (nome de usuário reservado e e-mail em uso)
+    await page.locator('#p-displayName').fill('Ana Souza Lima')
+    await page.locator('#p-username').fill('admin')
+    await form.getByRole('button', { name: 'Salvar alterações' }).click()
+    await expect(page.getByText('Este nome de usuário não está disponível')).toBeVisible()
+    await page.locator('#p-username').fill('ana.souza')
+    await page.locator('#p-email').fill('bruno@example.com')
+    await form.getByRole('button', { name: 'Salvar alterações' }).click()
+    await expect(page.getByText('Este e-mail já está em uso')).toBeVisible()
+    // sucesso
+    await page.locator('#p-email').fill('ana@example.com')
+    await page.locator('#p-bio').fill('Nova bio da Ana')
+    await form.getByRole('button', { name: 'Salvar alterações' }).click()
+    await expect(page.getByTestId('profile-saved')).toBeVisible()
+    await page.reload()
+    await expect(page.locator('#p-displayName')).toHaveValue('Ana Souza Lima')
+    await expect(page.locator('#p-bio')).toHaveValue('Nova bio da Ana')
+  })
+
+  test('erro de campo vindo da API (cenário profile-validation)', async ({ app, page }) => {
+    await app.quickLogin('ana', '/profile')
+    await app.scenario('instant+profile-validation')
+    await page.locator('#p-bio').fill('alterado')
+    await page.getByRole('button', { name: 'Salvar alterações' }).click()
+    await expect(page.getByText('Este nome não é permitido (regra da API)')).toBeVisible()
+  })
+
+  test('avatar: upload, validação de tipo/tamanho, persistência e remoção', async ({ app, page }) => {
+    await app.quickLogin('ana', '/profile')
+    const avatar = page.getByTestId('profile-avatar').locator('img')
+    const before = await avatar.getAttribute('src')
+    // tipo inválido
+    await page.locator('#avatar-input').setInputFiles({ name: 'doc.txt', mimeType: 'text/plain', buffer: Buffer.from('oi') })
+    await expect(page.getByTestId('avatar-error')).toContainText('Formato não suportado')
+    // arquivo grande demais
+    await page.locator('#avatar-input').setInputFiles({ name: 'grande.png', mimeType: 'image/png', buffer: Buffer.alloc(2 * 1024 * 1024 + 10) })
+    await expect(page.getByTestId('avatar-error')).toContainText('no máximo 2 MB')
+    // válido
+    await page.locator('#avatar-input').setInputFiles({ name: 'foto.png', mimeType: 'image/png', buffer: PNG })
+    await expect.poll(async () => avatar.getAttribute('src')).toMatch(/^data:image\//)
+    expect(await avatar.getAttribute('src')).not.toBe(before)
+    await page.reload()
+    await expect(page.getByTestId('profile-avatar').locator('img')).toHaveAttribute('src', /^data:image\//)
+    // remover
+    await page.getByRole('button', { name: 'Remover' }).click()
+    await expect(page.getByTestId('profile-avatar').locator('img')).toHaveCount(0)
+    await page.reload()
+    await expect(page.getByTestId('profile-avatar').locator('img')).toHaveCount(0)
+  })
+
+  test('alteração de senha: validações, erro da API e login com a nova senha', async ({ app, page }) => {
+    await app.quickLogin('ana', '/profile')
+    const form = page.getByRole('form', { name: 'Alterar senha' })
+    await form.getByRole('button', { name: 'Alterar senha' }).click()
+    await expect(page.getByText('Informe a senha atual')).toBeVisible()
+    await page.locator('#pw-current').fill('errada')
+    await page.locator('#pw-new').fill('NovaSenha@1')
+    await page.locator('#pw-confirm').fill('Diferente@1')
+    await form.getByRole('button', { name: 'Alterar senha' }).click()
+    await expect(page.getByText('As senhas não coincidem')).toBeVisible()
+    await page.locator('#pw-confirm').fill('NovaSenha@1')
+    await form.getByRole('button', { name: 'Alterar senha' }).click()
+    await expect(page.getByText('Senha atual incorreta')).toBeVisible() // erro retornado pela API
+    await page.locator('#pw-current').fill('Senha@123')
+    await form.getByRole('button', { name: 'Alterar senha' }).click()
+    await expect(page.getByText('Senha alterada').first()).toBeVisible()
+    await app.logout()
+    // a senha antiga deixa de funcionar
+    await app.goto('/login')
+    await page.getByLabel('E-mail').fill('ana@example.com')
+    await page.locator('#password').fill('Senha@123')
+    await page.getByRole('button', { name: 'Entrar', exact: true }).click()
+    await expect(page.getByTestId('login-error')).toBeVisible()
+    await page.locator('#password').fill('NovaSenha@1')
+    await page.getByRole('button', { name: 'Entrar', exact: true }).click()
+    await expect(page).toHaveURL(/\/$/)
+  })
+})
+
+test.describe('Carteiras', () => {
+  test('cadastro da secundária com validação, conflito de endereço e persistência', async ({ app, page }) => {
+    await app.quickLogin('bruno', '/wallets')
+    const slot = page.getByTestId('slot-secondary')
+    await slot.getByRole('button', { name: 'Adicionar carteira' }).click()
+    const dialog = page.getByRole('dialog')
+    await expect(dialog).toBeVisible()
+    await dialog.getByRole('button', { name: 'Salvar carteira' }).click()
+    await expect(dialog.getByText(/Endereço inválido/)).toBeVisible()
+    await expect(dialog.getByLabel('Endereço')).toHaveAttribute('aria-invalid', 'true')
+    // endereço da Ana: conflito vindo da API
+    await dialog.getByLabel('Endereço').fill('0x1111111111111111111111111111111111111aaa')
+    await dialog.getByRole('button', { name: 'Salvar carteira' }).click()
+    await expect(dialog.getByText('Este endereço já está cadastrado')).toBeVisible()
+    await dialog.getByLabel('Endereço').fill('0x4444444444444444444444444444444444444ddd')
+    await dialog.getByLabel('Nome da carteira').fill('Reserva do Bruno')
+    await dialog.getByRole('button', { name: 'Salvar carteira' }).click()
+    await expect(dialog).toBeHidden()
+    await expect(slot.getByTestId('wallet-label')).toHaveText('Reserva do Bruno')
+    await page.reload()
+    await expect(page.getByTestId('slot-secondary').getByTestId('wallet-label')).toHaveText('Reserva do Bruno')
+  })
+
+  test('edição da principal, conexão e desconexão', async ({ app, page }) => {
+    await app.quickLogin('ana', '/wallets')
+    await page.getByRole('button', { name: 'Editar carteira principal' }).click()
+    const dialog = page.getByRole('dialog')
+    await dialog.getByLabel('Nome da carteira').fill('Principal renomeada')
+    await dialog.getByRole('button', { name: 'Salvar carteira' }).click()
+    await expect(dialog).toBeHidden()
+    const slot = page.getByTestId('slot-primary')
+    await expect(slot.getByTestId('wallet-label')).toHaveText('Principal renomeada')
+    await slot.getByRole('button', { name: 'Conectar' }).click()
+    await expect(slot.getByText(/Conectada/)).toBeVisible()
+    await slot.getByRole('button', { name: 'Desconectar' }).click()
+    await expect(slot.getByText('Desconectada')).toBeVisible()
+    await page.reload()
+    await expect(page.getByTestId('slot-primary').getByTestId('wallet-label')).toHaveText('Principal renomeada')
+  })
+
+  test('erro de permissão (403) e recusa de conexão são exibidos', async ({ app, page }) => {
+    await app.quickLogin('ana', '/wallets')
+    await app.scenario('instant+wallet-rejected')
+    await page.getByTestId('slot-primary').getByRole('button', { name: 'Conectar' }).click()
+    await expect(page.getByTestId('wallet-error')).toContainText('recusada')
+    await app.scenario('instant+forbidden')
+    await page.reload()
+    await expect(page.getByRole('heading', { name: /Não foi possível carregar suas carteiras/ })).toBeVisible()
+    await expect(page.getByText('Você não tem permissão para acessar este recurso.')).toBeVisible()
+  })
+
+  test('skeleton enquanto carrega e retentativa após falha de rede', async ({ app, page }) => {
+    await app.quickLogin('ana', '/')
+    await app.scenario('slow')
+    await page.goto('/wallets')
+    await expect(page.getByTestId('wallets-skeleton')).toBeVisible()
+    await expect(page.getByTestId('slot-primary')).toBeVisible({ timeout: 15_000 })
+  })
+})

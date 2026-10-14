@@ -11,30 +11,28 @@ import { CATEGORY_LABELS, NETWORK_LABELS } from '@/lib/catalog'
 import { splitCsv, toCsv, type CatalogSearch } from './search'
 
 function CheckGroup<T extends string>({
-  legend, idPrefix, options, labels, selected, onChange,
+  legend, idPrefix, options, labels, selected, counts, onChange,
 }: {
   legend: string
   idPrefix: string
   options: readonly T[]
   labels: Record<T, string>
   selected: string[]
+  counts?: Record<string, number>
   onChange: (next: string | undefined) => void
 }) {
   return (
-    <fieldset className="flex flex-col gap-3">
-      <legend className="mb-1 text-sm font-bold uppercase tracking-wide text-muted">{legend}</legend>
+    <fieldset className="flex flex-col gap-1">
+      <legend className="mb-2 text-lg font-bold">{legend}</legend>
       {options.map((option) => {
         const id = `${idPrefix}-${legend}-${option}`
         const checked = selected.includes(option)
         return (
-          <div key={option} className="flex items-center gap-3">
-            <Checkbox
-              id={id}
-              checked={checked}
-              onCheckedChange={(value) => onChange(toCsv(value === true ? [...selected, option] : selected.filter((s) => s !== option)))}
-            />
-            <Label htmlFor={id} className="flex-1 cursor-pointer py-1 text-[15px] font-medium">
-              {labels[option]}
+          <div key={option} className="flex items-center gap-3 rounded-sm px-1 py-1.5 hover:bg-surface-2">
+            <Checkbox id={id} checked={checked} onCheckedChange={(value) => onChange(toCsv(value === true ? [...selected, option] : selected.filter((s) => s !== option)))} />
+            <Label htmlFor={id} className={`flex flex-1 cursor-pointer items-center justify-between gap-2 py-0.5 text-[15px] ${checked ? 'text-accent' : 'font-medium'}`}>
+              <span>{labels[option]}</span>
+              {counts && <span className="eth text-[13px] font-normal text-muted" aria-label={`${counts[option] ?? 0} NFTs`}>({counts[option] ?? 0})</span>}
             </Label>
           </div>
         )
@@ -44,8 +42,9 @@ function CheckGroup<T extends string>({
 }
 
 export function FiltersPanel({
-  search, onChange, onClear, idPrefix, canClear,
+  search, onChange, onClear, idPrefix, canClear, facets,
 }: {
+  facets?: { category: Record<string, number>; network: Record<string, number> }
   search: CatalogSearch
   onChange: (patch: Partial<CatalogSearch>) => void
   onClear: () => void
@@ -79,11 +78,11 @@ export function FiltersPanel({
         applyPrice()
       }}
     >
-      <CheckGroup legend="Categoria" idPrefix={idPrefix} options={CATEGORY_IDS} labels={CATEGORY_LABELS} selected={splitCsv(search.category)} onChange={(category) => onChange({ category })} />
-      <CheckGroup legend="Rede" idPrefix={idPrefix} options={NETWORK_IDS} labels={NETWORK_LABELS} selected={splitCsv(search.network)} onChange={(network) => onChange({ network })} />
+      <CheckGroup legend="Categoria" idPrefix={idPrefix} options={CATEGORY_IDS} labels={CATEGORY_LABELS} counts={facets?.category} selected={splitCsv(search.category)} onChange={(category) => onChange({ category })} />
+      <CheckGroup legend="Rede" idPrefix={idPrefix} options={NETWORK_IDS} labels={NETWORK_LABELS} counts={facets?.network} selected={splitCsv(search.network)} onChange={(network) => onChange({ network })} />
 
       <fieldset className="flex flex-col gap-3">
-        <legend className="mb-1 text-sm font-bold uppercase tracking-wide text-muted">Preço (ETH)</legend>
+        <legend className="mb-1 text-lg font-bold">Preço (ETH)</legend>
         <div className="grid grid-cols-2 gap-3">
           <FormField id={`${idPrefix}-min`} label="Mínimo" error={error}>
             {(a11y) => <Input {...a11y} inputMode="decimal" placeholder="0" value={min} onChange={(e) => setMin(e.target.value)} onBlur={applyPrice} />}

@@ -11,7 +11,7 @@ import { bus } from './bus'
 import { seedCatalog, seedFavorites, seedUsers, seedWallets, type SeedUser } from './fixtures'
 
 export const DB_KEY = 'jg.mock.db'
-const SCHEMA = 4
+const SCHEMA = 5
 
 export interface DbUser extends SeedUser {}
 export interface DbSession { token: string; userId: string; expiresAt: number; createdAt: number }
@@ -41,6 +41,8 @@ export interface Db {
   idempotency: DbIdempotency[]
   /** Contadores de falhas injetadas (por Fault.id). */
   faults: Record<string, number>
+  /** Métricas do servidor simulado (ex.: requisições de pedido, replays de idempotência) — úteis em testes. */
+  metrics: Record<string, number>
   seq: { event: number; id: number }
 }
 
@@ -131,6 +133,7 @@ export function buildSeed(): Db {
     ],
     idempotency: [],
     faults: {},
+    metrics: {},
     seq: { event: 1, id: 1 },
   }
 }
@@ -152,6 +155,12 @@ export function getDb(): Db {
   db = buildSeed()
   commit()
   return db
+}
+
+export function bumpMetric(name: string): void {
+  const d = getDb()
+  d.metrics[name] = (d.metrics[name] ?? 0) + 1
+  commit()
 }
 
 export function commit(): void {
