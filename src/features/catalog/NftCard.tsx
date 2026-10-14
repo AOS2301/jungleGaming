@@ -12,8 +12,8 @@ export function StockBadge({ nft }: { nft: Pick<Nft, 'available'> }) {
   return null
 }
 
-/** Card no estilo da referência: imagem inserida em painel escuro, texto abaixo e preço em cobre. */
-export function NftCard({ nft, priority = false }: { nft: Nft; priority?: boolean }) {
+/** Card de NFT: imagem num painel escuro, nome, coleção, preço em cobre e botão de favorito. */
+export function NftCard({ nft }: { nft: Nft }) {
   const image = nft.images[0]!
   return (
     <article className="group relative flex h-full flex-col gap-3" data-testid="nft-card" data-nft-id={nft.id}>
@@ -24,8 +24,7 @@ export function NftCard({ nft, priority = false }: { nft: Nft; priority?: boolea
             alt={image.alt}
             width={800}
             height={800}
-            loading={priority ? 'eager' : 'lazy'}
-            fetchPriority={priority ? 'high' : 'auto'}
+            loading="lazy"
             decoding="async"
             className="size-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
           />

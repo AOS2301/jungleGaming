@@ -1,6 +1,6 @@
 # Contratos REST e de eventos
 
-Fonte única de verdade: [`src/api/contracts.ts`](../src/api/contracts.ts) (schemas **zod**; os tipos TypeScript são inferidos deles).
+Fonte única de verdade: [`src/api/contracts/`](../src/api/contracts/) (schemas **zod**; os tipos TypeScript são inferidos deles).
 O cliente valida toda resposta contra esses schemas; os handlers MSW devolvem exatamente esses formatos.
 
 Convenções:

@@ -9,7 +9,7 @@ React + TypeScript, com APIs, autenticação, carteiras, pagamentos e **tempo re
 | Aplicação publicada | _a preencher após o deploy_ (veja [Deploy](#deploy)) |
 | Arquitetura, decisões e limitações | [`ARCHITECTURE.md`](ARCHITECTURE.md) |
 | Contratos REST e eventos | [`docs/API.md`](docs/API.md) |
-| Relatórios Lighthouse (medianas, HTML/JSON, ambiente) | [`reports/lighthouse/summary.md`](reports/lighthouse/summary.md) — todas as metas atingidas (mobile 90/91, desktop 99/100) |
+| Relatórios Lighthouse (medianas, HTML/JSON, ambiente) | [`reports/lighthouse/summary.md`](reports/lighthouse/summary.md) — desktop 97/99; **mobile 77/79, abaixo da meta de 90** (explicação em [`ARCHITECTURE.md` §12](ARCHITECTURE.md)) |
 
 ## Stack
 
@@ -19,7 +19,7 @@ React + TypeScript, com APIs, autenticação, carteiras, pagamentos e **tempo re
 | Roteamento | TanStack Router (rotas em código, search params validados, guarda de rotas privadas) | `src/router.tsx` |
 | Estado remoto | TanStack Query (chaves por usuário/parâmetros, otimismo, invalidação por evento) | `src/api/queries.ts`, `src/features/*/hooks.ts` |
 | Cliente HTTP | Axios (única porta de saída REST, interceptors de sessão/erros) | `src/api/client.ts`, `src/api/endpoints.ts` |
-| Contratos | zod (transporte → estado → UI) | `src/api/contracts.ts` |
+| Contratos | zod (transporte → estado → UI) | `src/api/contracts/` |
 | Tempo real | `socket.io-client` | `src/realtime/` |
 | Estilização / Componentes | Tailwind CSS 4 + componentes no padrão shadcn/ui (Radix) | `src/components/ui/` |
 | Mocking | MSW (REST + `ws`) com `@mswjs/socket.io-binding` | `src/mocks/` |
@@ -145,9 +145,9 @@ npx vercel --prod   # ou conecte o repositório na Vercel (framework Vite, build
 
 ```
 src/
-  api/          contratos (zod), Axios, endpoints, chaves/opções do Query
+  api/          contratos (zod, um arquivo por assunto), Axios, endpoints, chaves/opções do Query
   features/     auth, catalog, nft, cart, checkout, orders, account, favorites
-  realtime/     provider Socket.IO, processador de eventos, status/avisos
+  realtime/     provider Socket.IO, conexão, processador e um handler por tipo de evento
   mocks/        MSW: banco, cenários, handlers REST, servidor Socket.IO, painel
   components/   ui (shadcn/ui adaptado), layout, common
 e2e/            testes Playwright + baselines visuais
