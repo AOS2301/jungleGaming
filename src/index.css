@@ -1,0 +1,104 @@
+@import 'tailwindcss';
+@import '@fontsource-variable/jetbrains-mono/wght.css';
+
+/*
+ * Tokens da identidade visual (tema escuro quente, acento cobre, tipografia monoespaçada).
+ * Reconstruída a partir da imagem de referência enviada (o Figma não estava acessível) —
+ * ver ARCHITECTURE.md → "Desvios do Figma". Pares texto/fundo com contraste AA (≥ 4,5:1).
+ */
+@theme {
+  --font-sans: 'JetBrains Mono Variable', ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-mono: 'JetBrains Mono Variable', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --color-background: #120c0b;
+  --color-surface: #1c1311;
+  --color-surface-2: #2a1d19;
+  --color-border: #44312a;
+  --color-foreground: #f6efe9;
+  --color-muted: #bda99c;
+  --color-primary: #d98a4e;
+  --color-primary-hover: #e6a068;
+  --color-primary-foreground: #1a0f0a;
+  --color-accent: #e8a46c;
+  --color-success: #7ddc9a;
+  --color-warning: #f2c14e;
+  --color-danger: #ff8f80;
+  --color-ring: #f0b888;
+
+  --radius-sm: 3px;
+  --radius-md: 5px;
+  --radius-lg: 10px;
+
+  --animate-shimmer: shimmer 1.6s linear infinite;
+  --animate-fade-in: fade-in 0.2s ease-out;
+  --animate-pulse-ring: pulse-ring 1.6s ease-out infinite;
+  @keyframes shimmer {
+    to { background-position: -200% 0; }
+  }
+  @keyframes fade-in {
+    from { opacity: 0; transform: translateY(4px); }
+    to { opacity: 1; transform: none; }
+  }
+  @keyframes pulse-ring {
+    0% { box-shadow: 0 0 0 0 rgb(217 138 78 / 0.55); }
+    100% { box-shadow: 0 0 0 18px rgb(217 138 78 / 0); }
+  }
+}
+
+@layer base {
+  html {
+    color-scheme: dark;
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    margin: 0;
+    background: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-size: 15px;
+    line-height: 1.6;
+    min-height: 100dvh;
+    overflow-x: clip;
+  }
+  h1, h2, h3, h4 { font-weight: 700; letter-spacing: -0.01em; line-height: 1.2; text-wrap: balance; }
+  h1, h2 { text-transform: uppercase; }
+  :focus-visible {
+    outline: 2px solid var(--color-ring);
+    outline-offset: 2px;
+    border-radius: 6px;
+  }
+  ::selection { background: var(--color-primary); color: #fff; }
+  img { max-width: 100%; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+}
+
+@layer components {
+  /* Skeleton com shimmer; sob prefers-reduced-motion fica estático (regra global acima + abaixo). */
+  .skeleton {
+    background: linear-gradient(90deg, var(--color-surface) 0%, var(--color-surface-2) 40%, var(--color-surface) 80%);
+    background-size: 200% 100%;
+    animation: var(--animate-shimmer);
+    border-radius: var(--radius-sm);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .skeleton { animation: none; background: var(--color-surface-2); }
+  }
+  .container-page { width: 100%; max-width: 1280px; margin-inline: auto; padding-inline: 16px; }
+  @media (min-width: 768px) { .container-page { padding-inline: 24px; } }
+  @media (min-width: 1280px) { .container-page { padding-inline: 32px; } }
+  .eth { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+}
+
+@utility sr-only-focusable {
+  &:not(:focus):not(:focus-within) {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+  }
+}
