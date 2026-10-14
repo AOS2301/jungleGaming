@@ -13,7 +13,7 @@ import { seedCatalog, seedFavorites, seedUsers, seedWallets, type SeedUser } fro
 export const DB_KEY = 'jg.mock.db'
 const SCHEMA = 5
 
-export interface DbUser extends SeedUser {}
+export type DbUser = SeedUser
 export interface DbSession { token: string; userId: string; expiresAt: number; createdAt: number }
 export interface DbCartItem { id: string; nftId: string; editionId: string; quantity: number }
 export interface DbCart {

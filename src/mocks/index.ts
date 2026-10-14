@@ -4,7 +4,7 @@
  */
 import { setupWorker } from 'msw/browser'
 import { DB_KEY, invalidateMemory } from './db'
-import { mockControls, resetMocks } from './controls'
+import { resetMocks } from './reset'
 import { handlers } from './handlers'
 import { bootstrapOrders } from './handlers/orders'
 import { realtimeHandlers } from './realtime'
@@ -33,5 +33,5 @@ export async function enableMocks(): Promise<void> {
   window.addEventListener('storage', (e) => {
     if (e.key === DB_KEY) invalidateMemory()
   })
-  if (import.meta.env.VITE_MOCK_CONTROLS === 'true') window.__mocks = mockControls
+  if (import.meta.env.VITE_MOCK_CONTROLS === 'true') void import('./controls').then((m) => (window.__mocks = m.mockControls))
 }

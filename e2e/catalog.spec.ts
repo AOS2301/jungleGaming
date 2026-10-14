@@ -3,6 +3,15 @@ import { ethNumber, expect, test } from './fixtures'
 /** Cards do catálogo (exclui o carrossel de Destaques, que também usa NftCard). */
 const cards = (page: import('@playwright/test').Page) => page.getByTestId('catalog-grid').getByTestId('nft-card')
 const summary = (page: import('@playwright/test').Page) => page.getByTestId('results-summary')
+/** Filtros: sidebar no desktop; drawer (dialog) em telas menores. Retorna o escopo e uma função para fechar. */
+const openFilters = async (page: import('@playwright/test').Page) => {
+  const sidebar = page.getByRole('complementary', { name: 'Filtros' })
+  if (await sidebar.isVisible()) return { scope: sidebar, close: async () => undefined }
+  await page.getByRole('button', { name: /Filtros/ }).click()
+  const dialog = page.getByRole('dialog', { name: 'Filtros' })
+  await expect(dialog).toBeVisible()
+  return { scope: dialog, close: async () => { await page.keyboard.press('Escape'); await expect(dialog).toBeHidden() } }
+}
 /** Espera a consulta em andamento terminar (a lista antiga fica visível, esmaecida, até a nova chegar). */
 const settled = async (page: import('@playwright/test').Page) => {
   await expect(page.getByTestId('catalog-grid')).toHaveAttribute('aria-busy', 'false')
@@ -29,11 +38,12 @@ test.describe('Catálogo: busca, filtros, ordenação e paginação (estado na U
     await expect(page).toHaveURL(/page=2/)
 
     // categoria + rede + somente disponíveis (mudar filtro volta para a página 1)
-    const filters = page.getByRole('complementary', { name: 'Filtros' })
+    const { scope: filters, close } = await openFilters(page)
     await filters.getByLabel('Arte').check()
     await expect(page).not.toHaveURL(/page=/)
     await filters.getByLabel('Ethereum').check()
     await filters.getByLabel('Somente disponíveis').click()
+    await close()
     await settled(page)
     await expect(page).toHaveURL(/category=art/)
     await expect(page).toHaveURL(/network=ethereum/)
@@ -46,9 +56,11 @@ test.describe('Catálogo: busca, filtros, ordenação e paginação (estado na U
     for (const badge of await cards(page).locator('span:text-is("Ethereum")').all()) await expect(badge).toBeVisible()
     expect(await cards(page).locator('span:text-is("Polygon"), span:text-is("Base"), span:text-is("Arbitrum")').count()).toBe(0)
     // faixa de preço
-    await filters.getByLabel('Mínimo').fill('0.5')
-    await filters.getByRole('button', { name: 'Aplicar preço' }).click()
+    const price = await openFilters(page)
+    await price.scope.getByLabel('Mínimo').fill('0.5')
+    await price.scope.getByRole('button', { name: 'Aplicar preço' }).click()
     await expect(page).toHaveURL(/min=0\.5/)
+    await price.close()
     await settled(page)
     const prices = await cards(page).locator('.eth.font-bold').allInnerTexts()
     for (const price of prices) expect(ethNumber(price)).toBeGreaterThanOrEqual(0.5)
@@ -118,10 +130,11 @@ test.describe('Catálogo: busca, filtros, ordenação e paginação (estado na U
     await app.goto('/')
     await expect(cards(page).first()).toBeVisible()
     await app.scenario('variable-latency') // 1ª consulta = 1,8 s, 2ª = 0,9 s, 3ª = 0,25 s
-    const filters = page.getByRole('complementary', { name: 'Filtros' })
+    const { scope: filters, close } = await openFilters(page)
     await filters.getByLabel('Arte').check() // consulta lenta
     await filters.getByLabel('Música').check() // consulta média
     await filters.getByLabel('Games').check() // consulta rápida (a última)
+    await close()
     await expect(page).toHaveURL(/category=art%2Cmusic%2Cgames|category=art,music,games/)
     // aguarda as consultas antigas terminarem DEPOIS da última
     await page.waitForTimeout(2300)

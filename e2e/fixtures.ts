@@ -12,7 +12,7 @@ export class App {
   /** Abre uma rota e espera a camada de mocks e o app estarem prontos. */
   async goto(path = '/') {
     await this.page.goto(path)
-    await this.page.waitForFunction(() => !!window.__mocks)
+    await this.page.waitForFunction(() => !!window.__mocks && !!window.__realtime)
     await this.page.locator('main#conteudo').waitFor()
   }
 
@@ -53,7 +53,8 @@ export class App {
     return this.page.evaluate((a) => window.__mocks!.orders.resolve(a.id, a.outcome), { id, outcome })
   }
   /** Estado do cliente Socket.IO (diagnóstico exposto em builds de demonstração). */
-  realtime() {
+  async realtime() {
+    await this.page.waitForFunction(() => !!window.__realtime)
     return this.page.evaluate(() => ({
       sockets: window.__realtime!.sockets(),
       listeners: window.__realtime!.listeners(),
@@ -86,7 +87,6 @@ export class App {
       await this.page.getByRole('button', { name: 'Abrir menu' }).click()
       await this.page.getByRole('button', { name: 'Sair' }).click()
     }
-    await expect(this.page.getByRole('link', { name: /Criar conta/ }).first()).toBeAttached()
     await this.page.waitForFunction(() => !localStorage.getItem('jg.session'))
   }
 

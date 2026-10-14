@@ -48,7 +48,7 @@ function UserMenu() {
   const router = useRouter()
   if (!user) {
     return (
-      <div className="hidden items-center gap-2 md:flex">
+      <div className="hidden items-center gap-2 lg:flex">
         <Button asChild variant="ghost" size="sm">
           <Link to="/signup">Criar conta</Link>
         </Button>
@@ -61,7 +61,7 @@ function UserMenu() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <button type="button" className="hidden items-center gap-2 rounded-full p-1 pr-3 transition-colors hover:bg-surface-2 md:flex" aria-label={`Menu da conta de ${user.displayName}`}>
+        <button type="button" className="hidden items-center gap-2 rounded-full p-1 pr-3 transition-colors hover:bg-surface-2 lg:flex" aria-label={`Menu da conta de ${user.displayName}`}>
           <Avatar className="size-9">
             {user.avatarUrl && <AvatarImage src={user.avatarUrl} alt="" />}
             <AvatarFallback>{initials(user.displayName)}</AvatarFallback>
@@ -94,7 +94,7 @@ function MobileNav() {
   const item = 'flex items-center gap-3 rounded-md px-3 py-3 text-base font-medium hover:bg-surface-2'
   return (
     <>
-      <Button variant="ghost" size="icon" className="md:hidden" onClick={() => setOpen(true)} aria-label="Abrir menu" aria-haspopup="dialog" aria-expanded={open}>
+      <Button variant="ghost" size="icon" className="lg:hidden" onClick={() => setOpen(true)} aria-label="Abrir menu" aria-haspopup="dialog" aria-expanded={open}>
         <Menu className="size-5" aria-hidden />
       </Button>
       <Dialog open={open} onOpenChange={setOpen}>
@@ -133,11 +133,11 @@ function MobileNav() {
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-40 bg-background/92 backdrop-blur-md">
+    <header className="sticky top-0 z-40 bg-background">
       <div className="container-page">
         <div className="relative flex h-[68px] items-center justify-between border-b border-border">
           <Logo />
-          <nav aria-label="Principal" className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-9 md:flex">
+          <nav aria-label="Principal" className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-9 lg:flex">
             <Link to="/" className={navLink} activeProps={navActive} activeOptions={{ exact: true, includeHash: false }}>Início</Link>
             <Link to="/" hash="catalogo" className={navLink}>Mercado</Link>
             <Link to="/wallets" className={navLink} activeProps={navActive}>Carteiras</Link>

@@ -77,7 +77,7 @@ function bgGradient(id, p, r) {
 }
 
 function artAbstract(r, p) {
-  let defs = bgGradient('bg', p, r) + '<filter id="b"><feGaussianBlur stdDeviation="22"/></filter>'
+  const defs = bgGradient('bg', p, r) + '<filter id="b"><feGaussianBlur stdDeviation="22"/></filter>'
   let inner = `<rect width="${S}" height="${S}" fill="url(#bg)"/><g filter="url(#b)">`
   const n = 5 + Math.floor(r() * 3)
   for (let i = 0; i < n; i++) {
@@ -92,7 +92,7 @@ function artAbstract(r, p) {
 }
 
 function artLandscape(r, p) {
-  let defs = `<linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${p[0]}"/><stop offset=".7" stop-color="${p[1]}"/><stop offset="1" stop-color="${p[3]}"/></linearGradient><radialGradient id="sun"><stop offset="0" stop-color="${p[4]}"/><stop offset="1" stop-color="${p[3]}" stop-opacity="0"/></radialGradient>`
+  const defs = `<linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${p[0]}"/><stop offset=".7" stop-color="${p[1]}"/><stop offset="1" stop-color="${p[3]}"/></linearGradient><radialGradient id="sun"><stop offset="0" stop-color="${p[4]}"/><stop offset="1" stop-color="${p[3]}" stop-opacity="0"/></radialGradient>`
   let inner = `<rect width="${S}" height="${S}" fill="url(#sky)"/>`
   for (let i = 0; i < 40; i++) inner += `<circle cx="${f(r() * S)}" cy="${f(r() * 380)}" r="${f(between(r, 0.8, 2.2))}" fill="#fff" opacity="${f(between(r, 0.3, 0.9))}"/>`
   const sx = between(r, 200, 600)

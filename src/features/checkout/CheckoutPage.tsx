@@ -148,7 +148,7 @@ function CheckoutSkeleton() {
   return (
     <div className="container-page py-8 sm:py-12" data-testid="checkout-skeleton" aria-busy="true" aria-label="Carregando pagamento">
       <Skeleton className="mb-8 h-10 w-56" />
-      <div className="grid items-start gap-8 lg:grid-cols-[1fr_400px]">
+      <div className="grid items-start gap-8 grid-cols-[minmax(0,1fr)] lg:grid-cols-[minmax(0,1fr)_400px]">
         <div className="flex flex-col gap-6">
           <Skeleton className="h-80 w-full rounded-lg" />
           <Skeleton className="h-72 w-full rounded-lg" />
@@ -308,7 +308,7 @@ export function CheckoutPage() {
       <h1 className="mb-6 text-3xl font-bold sm:text-4xl">Pagamento</h1>
       <Stepper step={step} />
 
-      <div className="grid items-start gap-8 lg:grid-cols-[1fr_400px]">
+      <div className="grid items-start gap-8 grid-cols-[minmax(0,1fr)] lg:grid-cols-[minmax(0,1fr)_400px]">
         <div className="flex flex-col gap-6">
           {step === 'details' ? (
             <form onSubmit={(e) => void goReview(e)} noValidate className="flex flex-col gap-6" aria-label="Dados do pedido">

@@ -1,0 +1,65 @@
+{
+  "environment": {
+    "date": "2026-10-14T13:25:53.442Z",
+    "node": "v22.22.0",
+    "lighthouse": "13.5.0",
+    "chrome": "Chromium 141.0.7390.37",
+    "os": "Linux 6.18.44-fc-v114 (x64)",
+    "cpu": "Intel(R) Xeon(R) Processor @ 2.80GHz × 4",
+    "memoryGb": 17,
+    "app": "nft-marketplace@1.0.0",
+    "conditions": "build de produção (vite build, VITE_ENABLE_MOCKS=true, cenário default), vite preview local, Chrome headless novo por medição (cache/SW/storage limpos), throttling simulado padrão do Lighthouse por perfil",
+    "runsPerTarget": 3
+  },
+  "thresholds": {
+    "performance": 90,
+    "accessibility": 95,
+    "best-practices": 95,
+    "seo": 90
+  },
+  "results": [
+    {
+      "page": "inicio",
+      "path": "/",
+      "profile": "mobile",
+      "runs": [
+        {
+          "performance": 91,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 100,
+          "lcp": 1776.7832,
+          "cls": 0,
+          "tbt": 341.5541999999998
+        },
+        {
+          "performance": 92,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 100,
+          "lcp": 1889.7258,
+          "cls": 0,
+          "tbt": 323
+        },
+        {
+          "performance": 84,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 100,
+          "lcp": 1894.5149,
+          "cls": 0,
+          "tbt": 611.0000000000002
+        }
+      ],
+      "median": {
+        "performance": 91,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100,
+        "lcpMs": 1890,
+        "cls": 0,
+        "tbtMs": 342
+      }
+    }
+  ]
+}

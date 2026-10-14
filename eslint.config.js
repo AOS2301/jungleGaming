@@ -19,6 +19,11 @@ export default tseslint.config(
     },
   },
   {
+    // o `use` do Playwright (fixtures) não é um Hook do React
+    files: ['e2e/**'],
+    rules: { 'react-hooks/rules-of-hooks': 'off' },
+  },
+  {
     // a camada de mocks é "servidor": pode usar fetch/Response e tipos mais soltos
     files: ['src/mocks/**', 'e2e/**', 'scripts/**'],
     rules: { 'no-restricted-syntax': 'off' },

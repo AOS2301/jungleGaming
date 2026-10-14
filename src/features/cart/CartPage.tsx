@@ -140,7 +140,7 @@ export function CartPage() {
       {cart.isError && !cart.data ? (
         <ErrorState error={cart.error} onRetry={() => void cart.refetch()} retrying={cart.isFetching} title="Não foi possível carregar o carrinho" />
       ) : cart.isPending ? (
-        <div className="grid gap-8 lg:grid-cols-[1fr_400px]" data-testid="cart-skeleton">
+        <div className="grid gap-8 grid-cols-[minmax(0,1fr)] lg:grid-cols-[minmax(0,1fr)_400px]" data-testid="cart-skeleton">
           <ul className="flex flex-col gap-4" aria-busy="true" aria-label="Carregando carrinho">{[0, 1].map((i) => <CartLineSkeleton key={i} />)}</ul>
           <div className="rounded-lg border border-border bg-surface p-6"><Skeleton className="mb-5 h-7 w-40" /><QuoteSkeleton /></div>
         </div>
@@ -149,7 +149,7 @@ export function CartPage() {
           <Button asChild><Link to="/">Explorar catálogo</Link></Button>
         </EmptyState>
       ) : (
-        <div className="grid items-start gap-8 lg:grid-cols-[1fr_400px]">
+        <div className="grid items-start gap-8 grid-cols-[minmax(0,1fr)] lg:grid-cols-[minmax(0,1fr)_400px]">
           <ul className="flex flex-col gap-4" aria-label="Itens do carrinho">
             {items.map((item) => (
               <CartLine key={item.id} item={item} line={lineByItem.get(item.id)} />

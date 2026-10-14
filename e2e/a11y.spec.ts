@@ -83,7 +83,7 @@ test.describe('Acessibilidade', () => {
   })
 
   test('menu móvel (drawer): foco preso, Esc fecha e devolve o foco', async ({ app, page }, testInfo) => {
-    test.skip(testInfo.project.name === 'desktop', 'drawer só existe abaixo de 768px')
+    test.skip(testInfo.project.name === 'desktop', 'drawer só existe abaixo de 1024px')
     await app.goto('/')
     const trigger = page.getByRole('button', { name: 'Abrir menu' })
     await trigger.click()

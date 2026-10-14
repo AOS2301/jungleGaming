@@ -7,7 +7,7 @@ export function AccountLayout() {
   return (
     <div className="container-page py-8 sm:py-12">
       <h1 className="mb-6 text-3xl font-bold sm:text-4xl">Minha conta</h1>
-      <div className="grid items-start gap-8 lg:grid-cols-[220px_1fr]">
+      <div className="grid items-start gap-8 grid-cols-[minmax(0,1fr)] lg:grid-cols-[220px_minmax(0,1fr)]">
         <nav aria-label="Conta" className="-mx-4 flex gap-1 overflow-x-auto px-4 lg:mx-0 lg:flex-col lg:px-0">
           <Link to="/profile" className={link} activeProps={{ className: 'bg-surface-2 !text-foreground', 'aria-current': 'page' }}>
             <User className="size-4" aria-hidden /> Perfil

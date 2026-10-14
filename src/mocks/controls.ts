@@ -5,30 +5,11 @@
  * Nada aqui toca o cache do React Query nem a UI — os eventos chegam via socket.io-client.
  */
 import type { Nft } from '@/api/contracts'
-import { commit, getDb, resetDb, updateNftEditions, type EditionPatch } from './db'
+import { commit, getDb, updateNftEditions, type EditionPatch } from './db'
+import { resetMocks } from './reset'
 import { resolveOrder } from './handlers/orders'
 import { realtimeControls } from './realtime'
-import { PRESETS, getScenario, getScenarioSpec, setScenario, SCENARIO_STORAGE_KEY } from './scenarios'
-
-const CLIENT_KEY_PREFIX = 'jg.'
-
-export function clearClientStorage(keepScenario = true): void {
-  try {
-    const scenario = localStorage.getItem(SCENARIO_STORAGE_KEY)
-    for (const key of Object.keys(localStorage)) if (key.startsWith(CLIENT_KEY_PREFIX)) localStorage.removeItem(key)
-    for (const key of Object.keys(sessionStorage)) if (key.startsWith(CLIENT_KEY_PREFIX)) sessionStorage.removeItem(key)
-    if (keepScenario && scenario) localStorage.setItem(SCENARIO_STORAGE_KEY, scenario)
-  } catch {
-    /* ignore */
-  }
-}
-
-/** Restaura o cenário conhecido: semente do banco + limpeza de sessão/carrinho/rascunhos do cliente. */
-export function resetMocks(options: { reload?: boolean; keepScenario?: boolean } = {}): void {
-  clearClientStorage(options.keepScenario ?? true)
-  resetDb()
-  if (options.reload !== false) window.location.assign(window.location.pathname)
-}
+import { PRESETS, getScenario, getScenarioSpec, setScenario } from './scenarios'
 
 export const mockControls = {
   scenario: {

@@ -1,9 +1,8 @@
 import { keepPreviousData, useQuery } from '@tanstack/react-query'
 import { getRouteApi, Link } from '@tanstack/react-router'
 import { RefreshCw, Search, SlidersHorizontal, X } from 'lucide-react'
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { startTransition, useEffect, useMemo, useRef, useState } from 'react'
 import { Eth } from '@/components/common/Eth'
-import { Skeleton } from '@/components/ui/skeleton'
 import { SORT_IDS, type SortId } from '@/api/contracts'
 import { featuredOptions, nftListOptions } from '@/api/queries'
 import { EmptyState, ErrorState } from '@/components/common/States'
@@ -12,6 +11,7 @@ import { Dialog, DialogContent, DialogDescription, DialogTitle } from '@/compone
 import { Input } from '@/components/ui/input'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { useDebouncedValue } from '@/hooks/useDebouncedValue'
+import { useMediaQuery } from '@/hooks/useMediaQuery'
 import { useDocumentTitle } from '@/hooks/useDocumentTitle'
 import { CATEGORY_LABELS, NETWORK_LABELS, PAGE_SIZE, SORT_LABELS } from '@/lib/catalog'
 import { FiltersPanel } from './FiltersPanel'
@@ -27,8 +27,10 @@ function Hero() {
   const slides = (data ?? []).slice(0, 3)
   const [index, setIndex] = useState(0)
   const nft = slides[Math.min(index, Math.max(0, slides.length - 1))]
+  // até a API responder, mostra o destaque editorial do app shell (mesma imagem pré-carregada no HTML)
+  const fallback = { id: 'nft-001', name: 'Aurora Drift', src: '/nfts/nft-001.svg' }
   return (
-    <section aria-labelledby="hero-title" className="container-page grid items-center gap-8 py-10 md:grid-cols-[1.15fr_1fr] md:gap-12 md:py-14">
+    <section aria-labelledby="hero-title" className="container-page grid grid-cols-[minmax(0,1fr)] items-center gap-8 py-10 md:grid-cols-[1.15fr_1fr] md:gap-12 md:py-14">
       <div className="flex flex-col items-start gap-5 md:pl-4">
         <p className="text-sm tracking-wide">Bem-vindo à Kurio</p>
         <h1 id="hero-title" className="text-3xl leading-tight sm:text-4xl lg:text-5xl">Seja dono do futuro da arte digital</h1>
@@ -55,7 +57,9 @@ function Hero() {
       <div role="region" aria-roledescription="carrossel" aria-label="Destaques" className="mx-auto w-full max-w-[440px] md:ml-auto">
         <div className="relative aspect-square overflow-hidden rounded-[18px] bg-surface" data-testid="hero-featured">
           {isPending ? (
-            <Skeleton className="size-full rounded-none" />
+            <Link to="/nfts/$nftId" params={{ nftId: fallback.id }} className="block size-full" aria-label={`Ver ${fallback.name}, NFT em destaque`}>
+              <img src={fallback.src} alt="Composição abstrata em tons de rosa-antigo e verde — Aurora Drift" width={800} height={800} fetchPriority="high" decoding="async" className="size-full object-cover" />
+            </Link>
           ) : nft ? (
             <Link to="/nfts/$nftId" params={{ nftId: nft.id }} className="group block size-full" aria-label={`Ver ${nft.name}, NFT em destaque`}>
               <img key={nft.id} src={nft.images[0]!.src} alt={nft.images[0]!.alt} width={800} height={800} fetchPriority="high" decoding="async" className="size-full animate-fade-in object-cover" />
@@ -105,6 +109,7 @@ function Catalog() {
   const search = route.useSearch()
   const navigate = route.useNavigate()
   const [filtersOpen, setFiltersOpen] = useState(false)
+  const isDesktop = useMediaQuery('(min-width: 1024px)')
   const query = useMemo(() => toApiQuery(search), [search])
 
   const { data, isPending, isError, error, isFetching, isPlaceholderData, refetch } = useQuery({ ...nftListOptions(query), placeholderData: keepPreviousData })
@@ -161,7 +166,7 @@ function Catalog() {
       </div>
 
       <div className="mb-5 flex flex-wrap items-center justify-between gap-x-6 gap-y-3 border-b border-border">
-        <div role="group" aria-label="Atalhos de ordenação" className="flex flex-wrap gap-x-6">
+        <div role="group" aria-label="Atalhos de ordenação" className="-mb-px flex max-w-full gap-x-6 overflow-x-auto">
           {([['featured', 'Todos os NFTs'], ['newest', 'Novos lançamentos'], ['popular', 'Em alta']] as const).map(([id, label]) => {
             const active = (search.sort ?? 'featured') === id
             return (
@@ -170,7 +175,7 @@ function Catalog() {
                 type="button"
                 aria-pressed={active}
                 onClick={() => update({ sort: id === 'featured' ? undefined : id })}
-                className={`-mb-px border-b-2 py-3 text-sm font-medium transition-colors ${active ? 'border-primary text-accent' : 'border-transparent hover:text-accent'}`}
+                className={`whitespace-nowrap border-b-2 py-3 text-sm font-medium transition-colors ${active ? 'border-primary text-accent' : 'border-transparent hover:text-accent'}`}
               >
                 {label}
               </button>
@@ -201,10 +206,13 @@ function Catalog() {
       </div>
 
       <div className="grid gap-8 lg:grid-cols-[280px_1fr]">
+        {/* a sidebar só existe (e só é renderizada) a partir de lg; abaixo disso os filtros ficam no drawer */}
         <aside className="hidden lg:block" aria-label="Filtros">
-          <div className="sticky top-24 rounded-lg bg-surface p-5">
-            <FiltersPanel search={search} onChange={update} onClear={clearAll} idPrefix="side" canClear={filtersActive} facets={data?.facets} />
-          </div>
+          {isDesktop && (
+            <div className="sticky top-24 rounded-lg bg-surface p-5">
+              <FiltersPanel search={search} onChange={update} onClear={clearAll} idPrefix="side" canClear={filtersActive} facets={data?.facets} />
+            </div>
+          )}
         </aside>
 
         <div>
@@ -255,12 +263,26 @@ function Catalog() {
   )
 }
 
+/**
+ * O catálogo fica abaixo do hero: monta logo após o primeiro render (em transition), para dividir o trabalho
+ * de renderização em duas tarefas menores. A reserva de altura evita deslocamento de layout.
+ */
+function DeferredCatalog() {
+  const [ready, setReady] = useState(false)
+  useEffect(() => {
+    const t = setTimeout(() => startTransition(() => setReady(true)), 0)
+    return () => clearTimeout(t)
+  }, [])
+  if (ready) return <Catalog />
+  return <section id="catalogo" aria-label="Catálogo" className="container-page min-h-[1100px] scroll-mt-24 pt-10" aria-busy="true" />
+}
+
 export function HomePage() {
   useDocumentTitle()
   return (
     <>
       <Hero />
-      <Catalog />
+      <DeferredCatalog />
     </>
   )
 }

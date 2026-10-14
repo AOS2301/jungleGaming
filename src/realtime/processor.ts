@@ -13,7 +13,7 @@ import type { QueryClient } from '@tanstack/react-query'
 import { toast } from 'sonner'
 import {
   nftUpdatedEventSchema, orderUpdatedEventSchema, REALTIME_EVENTS,
-  type Cart, type Nft, type NftListResponse, type NftUpdatedEvent, type Order, type OrderUpdatedEvent,
+  type Cart, type Nft, type NftListResponse, type NftUpdatedEvent, type Order, type OrderUpdatedEvent, type Quote,
 } from '@/api/contracts'
 import { qk } from '@/api/queries'
 import { formatEthWithUnit } from '@/lib/decimal'
@@ -94,6 +94,10 @@ export function createEventProcessor(ctx: ProcessorContext) {
 
     const cart = qc.getQueryData<Cart>(qk.cart(scope))
     const cartLines = cart?.items.filter((i) => i.nftId === id) ?? []
+    const quoteLines = qc.getQueriesData<Quote>({ queryKey: qk.quotes(scope) }).flatMap(([, q]) => q?.lines.filter((l) => l.nftId === id) ?? [])
+    // se o carrinho/cotação ainda estão carregando, a resposta em voo pode ser anterior a este evento: revalida
+    const inFlight = qc.isFetching({ queryKey: qk.cart(scope) }) + qc.isFetching({ queryKey: qk.quotes(scope) }) > 0
+    const affectsCart = cartLines.length > 0 || quoteLines.length > 0 || inFlight
     const before =
       copies[0]?.editions.map((e) => ({ id: e.id, name: e.name, price: e.price, available: e.available })) ??
       cartLines.map((l) => ({ id: l.editionId, name: l.editionName, price: l.unitPrice, available: l.available }))
@@ -105,10 +109,12 @@ export function createEventProcessor(ctx: ProcessorContext) {
     qc.setQueryData<Nft[]>(qk.nftFeatured, (old) => old?.map((n) => (n.id === id ? patch(n) : n)))
 
     const messages = describeChange(name, before, event)
-    if (cartLines.length > 0) {
+    if (affectsCart) {
       // a REST é a referência: refaz carrinho e cotação, que atualiza o resumo
       void qc.invalidateQueries({ queryKey: qk.cart(scope) })
       void qc.invalidateQueries({ queryKey: qk.quotes(scope) })
+    }
+    if (cartLines.length > 0) {
       for (const [i, message] of messages.entries()) pushCartNotice({ id: `${event.id}:${i}`, nftId: id, message })
     }
     const relevant = cartLines.length > 0 || ctx.viewingNftId() === id

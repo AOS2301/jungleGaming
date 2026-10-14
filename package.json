@@ -60,5 +60,19 @@
     "workerDirectory": [
       "public"
     ]
+  },
+  "scripts": {
+    "dev": "vite",
+    "dev:mocks": "VITE_ENABLE_MOCKS=true vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "test:unit": "vitest run",
+    "test:e2e": "playwright test",
+    "test:e2e:update": "playwright test e2e/visual.spec.ts --update-snapshots",
+    "test:e2e:report": "playwright show-report",
+    "generate:assets": "node scripts/generate-assets.mjs",
+    "lighthouse": "node scripts/lighthouse/run.mjs"
   }
 }

@@ -54,7 +54,7 @@ function Gallery({ nft }: { nft: Nft }) {
 
 export function NftDetailSkeleton() {
   return (
-    <div className="container-page grid gap-10 py-8 lg:grid-cols-2" aria-busy="true" aria-label="Carregando NFT" data-testid="detail-skeleton">
+    <div className="container-page grid gap-10 py-8 grid-cols-[minmax(0,1fr)] lg:grid-cols-2" aria-busy="true" aria-label="Carregando NFT" data-testid="detail-skeleton">
       <div>
         <Skeleton className="aspect-square w-full rounded-lg" />
         <div className="mt-4 grid grid-cols-4 gap-3">
@@ -212,9 +212,9 @@ export function NftDetailPage() {
 
   return (
     <>
-      <div className="container-page grid gap-10 py-8 lg:grid-cols-2 lg:gap-14">
+      <div className="container-page grid gap-10 py-8 grid-cols-[minmax(0,1fr)] lg:grid-cols-2 lg:gap-14">
         <div>
-          <nav aria-label="Você está em" className="mb-5 flex items-center gap-1.5 text-sm text-muted">
+          <nav aria-label="Você está em" className="mb-5 flex flex-wrap items-center gap-1.5 text-sm text-muted">
             <Link to="/" className="hover:text-foreground">Marketplace</Link>
             <ChevronRight className="size-3.5" aria-hidden />
             <Link to="/" search={{ category: nft.category }} className="hover:text-foreground">{CATEGORY_LABELS[nft.category]}</Link>
@@ -243,7 +243,7 @@ export function NftDetailPage() {
         </div>
       </div>
 
-      <section aria-labelledby="attrs-title" className="container-page mt-4 grid gap-8 lg:grid-cols-2">
+      <section aria-labelledby="attrs-title" className="container-page mt-4 grid gap-8 grid-cols-[minmax(0,1fr)] lg:grid-cols-2">
         <div>
           <h2 id="attrs-title" className="mb-4 text-xl font-bold">Atributos</h2>
           <ul className="grid grid-cols-1 gap-3 min-[480px]:grid-cols-2">
