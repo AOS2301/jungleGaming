@@ -103,4 +103,25 @@ Política (`src/api/query-client.ts`):
 - A “blockchain”, carteiras e pagamentos são simulações; tokens de sessão são opacos e não há refresh token.
 - O banco simulado vive em `localStorage` (≈ 5 MB; avatares são reduzidos a 256 px antes do upload). Duas abas compartilham o mesmo banco, mas os timers de resolução de pedidos pertencem à aba que criou o pedido (a resolução preguiçosa cobre o resto).
 - O servidor Socket.IO simulado só aceita WebSocket e um namespace; não há rooms reais.
-- Desempenho: a camada MSW (~100 KB gzip) faz parte do build de demonstração por exigência do desafio e pesa no carregamento em mobile (ver §12).
+- Desempenho: a camada MSW (~100 KB gzip) faz parte do build de demonstração por exigência do desafio e é o maior custo no mobile (ver §12). A margem no mobile é pequena (90–91 na mediana); medições individuais oscilam ±5 pontos por ruído de CPU.
+
+## 12. Performance (Lighthouse)
+
+Medianas de 3 medições (build de produção com mocks, cenário `default`, Chrome novo por medição; detalhes e ambiente em [`reports/lighthouse/summary.md`](reports/lighthouse/summary.md), com HTML/JSON de cada execução):
+
+| Página | Perfil | Perf. | A11y | Boas práticas | SEO | LCP | CLS | TBT |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| Início | mobile | 90 | 100 | 100 | 100 | 1,88 s | 0 | 391 ms |
+| Início | desktop | 99 | 100 | 100 | 100 | 0,86 s | 0 | 29 ms |
+| Detalhe | mobile | 91 | 100 | 100 | 100 | 2,82 s | 0 | 191 ms |
+| Detalhe | desktop | 100 | 100 | 100 | 100 | 0,79 s | 0 | 0 ms |
+
+Todas as metas foram atingidas, mas o mobile fica no limite. Causa raiz: com throttling simulado (4G lento, CPU 4×) os ~330 KB gzip de JS (React, TanStack, Radix, **MSW ≈ 100 KB**, app) e o encadeamento JS → mocks → API → imagem dominam LCP e TBT. Os problemas encontrados e o que foi feito (sem remover funcionalidade, imagens, fontes ou mocks):
+
+1. **Rotas com lazy loading** (carrinho, detalhe, checkout, pedido, conta, login/cadastro): o chunk principal caiu de 108 KB para ~61 KB gzip.
+2. **App shell estático na rota `/`** (`index.html`): hero em HTML puro + `preload` da imagem e da fonte. O React assume com o mesmo markup/classes (sem CLS). *Transparência:* a imagem do shell é um destaque editorial fixo (`nft-001`); até a API responder o hero mostra essa mesma imagem, depois passa a usar `GET /nfts/featured`. Em outras rotas o shell é removido por um script inline.
+3. **Boot em etapas**: o JS só começa após a primeira pintura (`modulepreload` agressivo fazia o modelo do Lighthouse colocar os 350 KB no caminho crítico do FCP/LCP), e cada vendor/etapa roda em tarefa própria (`yieldToMain`) com render em `startTransition` — o TBT caiu de ~700 ms para ~300–400 ms.
+4. **Catálogo montado logo após o hero** (`DeferredCatalog`, com altura reservada) e **sidebar de filtros só renderizada em ≥ lg**.
+5. `socket.io-client`, painel de mocks e controles de teste carregam sob demanda, fora do caminho crítico.
+
+O que ainda pesa: avaliação do MSW e do React no mobile (tarefas de ~60–100 ms nativos); o detalhe depende da API simulada para o LCP (imagem só é conhecida após a resposta). Em um deploy sem mocks (`VITE_ENABLE_MOCKS=false`) o bundle perde ~120 KB gzip.

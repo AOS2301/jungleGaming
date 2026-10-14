@@ -4,11 +4,14 @@ Medianas de 3 medições por página e perfil. Metas: Performance ≥ 90, Access
 
 | Página | Perfil | Performance | Accessibility | Best Practices | SEO | LCP (ms) | CLS | TBT (ms) |
 | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| inicio | mobile | 91 ✅ | 100 ✅ | 100 ✅ | 100 ✅ | 1890 | 0 | 342 |
+| inicio | mobile | 90 ✅ | 100 ✅ | 100 ✅ | 100 ✅ | 1876 | 0 | 391 |
+| inicio | desktop | 99 ✅ | 100 ✅ | 100 ✅ | 100 ✅ | 855 | 0 | 29 |
+| detalhe | mobile | 91 ✅ | 100 ✅ | 100 ✅ | 100 ✅ | 2816 | 0 | 191 |
+| detalhe | desktop | 100 ✅ | 100 ✅ | 100 ✅ | 100 ✅ | 789 | 0 | 0 |
 
 ## Ambiente
 
-- **date**: 2026-10-14T13:25:53.442Z
+- **date**: 2026-10-14T13:41:49.424Z
 - **node**: v22.22.0
 - **lighthouse**: 13.5.0
 - **chrome**: Chromium 141.0.7390.37

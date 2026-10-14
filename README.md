@@ -9,7 +9,7 @@ React + TypeScript, com APIs, autenticação, carteiras, pagamentos e **tempo re
 | Aplicação publicada | _a preencher após o deploy_ (veja [Deploy](#deploy)) |
 | Arquitetura, decisões e limitações | [`ARCHITECTURE.md`](ARCHITECTURE.md) |
 | Contratos REST e eventos | [`docs/API.md`](docs/API.md) |
-| Relatórios Lighthouse | [`reports/lighthouse/summary.md`](reports/lighthouse/summary.md) |
+| Relatórios Lighthouse (medianas, HTML/JSON, ambiente) | [`reports/lighthouse/summary.md`](reports/lighthouse/summary.md) — todas as metas atingidas (mobile 90/91, desktop 99/100) |
 
 ## Stack
 
@@ -131,7 +131,7 @@ Com o painel “Mocks” (ou `window.__mocks`):
 | `npm run lighthouse` | Build + 3 medições × (início, detalhe) × (mobile, desktop); relatórios em `reports/lighthouse/`. |
 | `npm run generate:assets` | Regenera as artes SVG e o catálogo semente (determinístico). |
 
-Os testes rodam em Chromium nos projetos `desktop` (1440), `mobile` (390) e `tablet` (768, só responsividade/visual). Cada teste usa um contexto novo (storage e Service Worker limpos) = estado isolado.
+As baselines visuais foram geradas neste ambiente (Linux, Chromium 141); em outra plataforma regenere com `npm run test:e2e:update`. Os testes rodam em Chromium nos projetos `desktop` (1440), `mobile` (390) e `tablet` (768, só responsividade/visual). Cada teste usa um contexto novo (storage e Service Worker limpos) = estado isolado.
 
 ## Deploy
 
