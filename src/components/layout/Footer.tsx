@@ -1,8 +1,9 @@
-import { Link } from '@tanstack/react-router'
 import { Radio } from 'lucide-react'
-import { Logo } from '@/components/common/Logo'
 import { STATUS_LABEL, useConnectionStatus } from '@/realtime/status'
 import { cn } from '@/lib/utils'
+import { ContactStrip } from './footer/ContactStrip'
+import { FooterLinks } from './footer/FooterLinks'
+import { Highlights } from './footer/Highlights'
 
 export function ConnectionBadge() {
   const status = useConnectionStatus()
@@ -18,23 +19,19 @@ export function ConnectionBadge() {
   )
 }
 
+/** Rodapé em um cartão com três faixas: destaques/newsletter, contatos e links. */
 export function Footer() {
   return (
-    <footer className="mt-24 border-t border-border bg-surface/60">
-      <div className="container-page flex flex-col gap-8 py-10 md:flex-row md:justify-between">
-        <div className="flex max-w-sm flex-col gap-3">
-          <Logo />
-          <p className="text-sm text-muted">Arte digital selecionada, com edições limitadas. Ambiente de demonstração: carteiras, pagamentos e transações são simulados.</p>
-          <ConnectionBadge />
-        </div>
-        <nav aria-label="Rodapé" className="grid grid-cols-2 gap-x-12 gap-y-2 text-sm">
-          <Link to="/" className="text-muted hover:text-foreground">Início</Link>
-          <Link to="/cart" className="text-muted hover:text-foreground">Carrinho</Link>
-          <Link to="/profile" className="text-muted hover:text-foreground">Perfil</Link>
-          <Link to="/wallets" className="text-muted hover:text-foreground">Carteiras</Link>
-        </nav>
+    <footer className="container-page mt-24 pb-8">
+      <div className="overflow-hidden rounded-lg bg-surface">
+        <Highlights />
+        <ContactStrip />
+        <FooterLinks />
       </div>
-      <div className="border-t border-border py-4 text-center text-xs text-muted">© 2026 Kurio — projeto de demonstração.</div>
+      <div className="mt-5 flex flex-col items-center gap-3 text-center text-xs text-muted">
+        <p>© 2026 Kurio. Propriedade digital para todos. Projeto de demonstração.</p>
+        <ConnectionBadge />
+      </div>
     </footer>
   )
 }
