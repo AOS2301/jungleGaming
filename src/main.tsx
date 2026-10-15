@@ -1,36 +1,37 @@
+import { QueryClientProvider } from '@tanstack/react-query'
+import { RouterProvider } from '@tanstack/react-router'
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import { createQueryClient } from '@/api/query-client'
+import { initSessionManager } from '@/features/auth/session-manager'
 import './index.css'
+import { createAppRouter } from './router'
 
-/**
- * Boot em etapas curtas.
- *
- * O HTML já traz um "app shell" estático (hero da página inicial) que é pintado antes de qualquer JS. Aqui:
- *  1. esperamos a primeira pintura — o download do bundle não compete com FCP/LCP;
- *  2. carregamos e iniciamos a camada de mocks (MSW REST + Socket.IO), só quando habilitada por configuração;
- *  3. carregamos a aplicação e a montamos.
- * Entre as etapas devolvemos o controle ao navegador (`yieldToMain`), para que a avaliação dos módulos não
- * vire uma única tarefa longa na thread principal (TBT).
- */
-const yieldToMain = () => new Promise<void>((resolve) => setTimeout(resolve, 0))
-const afterFirstPaint = () => new Promise<void>((resolve) => requestAnimationFrame(() => setTimeout(resolve, 0)))
-
-async function boot() {
-  await afterFirstPaint()
-  if (import.meta.env.VITE_ENABLE_MOCKS === 'true') {
-    const { enableMocks } = await import('@/mocks')
-    await yieldToMain()
-    await enableMocks()
-    await yieldToMain()
+/** Liga a camada de mocks (MSW) se VITE_ENABLE_MOCKS=true; sem isso o código dos mocks nem entra no build. */
+async function startMocks() {
+  if (import.meta.env.VITE_ENABLE_MOCKS !== 'true') return
+  const { enableMocks } = await import('@/mocks')
+  await enableMocks()
+  if (import.meta.env.VITE_MOCK_CONTROLS === 'true') {
+    const { mountMockPanel } = await import('@/mocks/panel')
+    mountMockPanel()
   }
-  // cada vendor é avaliado numa tarefa própria (em vez de uma única tarefa longa)
-  await import('react-dom/client')
-  await yieldToMain()
-  await import('@tanstack/react-router')
-  await yieldToMain()
-  await import('@radix-ui/react-dialog')
-  await yieldToMain()
-  const { startApp } = await import('./start')
-  await yieldToMain()
-  await startApp()
 }
 
-void boot()
+async function main() {
+  await startMocks() // os mocks precisam estar prontos antes da primeira requisição
+
+  const queryClient = createQueryClient()
+  const router = createAppRouter(queryClient)
+  initSessionManager(queryClient, router)
+
+  createRoot(document.getElementById('root')!).render(
+    <StrictMode>
+      <QueryClientProvider client={queryClient}>
+        <RouterProvider router={router} />
+      </QueryClientProvider>
+    </StrictMode>,
+  )
+}
+
+void main()

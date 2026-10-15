@@ -10,53 +10,9 @@
     <meta property="og:description" content="Descubra, colecione e negocie NFTs únicos." />
     <meta property="og:type" content="website" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <!-- Caminho crítico: fonte e imagem do hero são requisitadas junto com o HTML (a imagem é o LCP da página inicial). -->
-    <link rel="preload" as="font" type="font/woff2" crossorigin href="/node_modules/@fontsource-variable/jetbrains-mono/files/jetbrains-mono-latin-wght-normal.woff2" />
-    <link rel="preload" as="image" href="/nfts/nft-001.svg" fetchpriority="high" />
   </head>
   <body>
-    <div id="root">
-      <!--
-        App shell estático da rota "/": é pintado antes de o JS carregar (FCP/LCP) e substituído pelo React com o
-        MESMO markup/classes do <Hero> e do <Header> (sem deslocamento de layout). Outras rotas removem o shell abaixo.
-      -->
-      <div class="flex min-h-dvh flex-col" data-app-shell>
-        <header class="sticky top-0 z-40 bg-background/92">
-          <div class="container-page">
-            <div class="relative flex h-[68px] items-center justify-between border-b border-border">
-              <span class="inline-flex items-center gap-2.5">
-                <svg viewBox="0 0 32 32" class="hidden size-7 sm:block" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="6" fill="#d98a4e"/><path d="M10 7v18M10 16l9-9M12.5 14l8.5 11" stroke="#1a0f0a" stroke-width="3" stroke-linecap="round" fill="none"/></svg>
-                <span class="text-base font-bold uppercase tracking-[0.2em]">Kurio</span>
-              </span>
-            </div>
-          </div>
-        </header>
-        <main class="flex-1">
-          <section class="container-page grid grid-cols-[minmax(0,1fr)] items-center gap-8 py-10 md:grid-cols-[1.15fr_1fr] md:gap-12 md:py-14">
-            <div class="flex flex-col items-start gap-5 md:pl-4">
-              <p class="text-sm tracking-wide">Bem-vindo à Kurio</p>
-              <h1 class="text-3xl leading-tight sm:text-4xl lg:text-5xl">Seja dono do futuro da arte digital</h1>
-              <p class="max-w-xl text-[15px] text-muted">Descubra NFTs selecionados de criadores emergentes e consagrados. Colecione arte digital rara, apoie artistas e tenha uma parte da cultura da internet.</p>
-              <a href="#catalogo" class="mt-2 inline-flex h-12 items-center justify-center gap-2 whitespace-nowrap rounded-md bg-primary px-7 text-base font-semibold uppercase tracking-wide text-primary-foreground">Explorar</a>
-              <div class="mt-6 flex gap-3 md:ml-[40%]">
-                <span class="flex size-6 items-center justify-center"><span class="size-2.5 rounded-full bg-primary"></span></span>
-                <span class="flex size-6 items-center justify-center"><span class="size-2.5 rounded-full bg-primary/40"></span></span>
-                <span class="flex size-6 items-center justify-center"><span class="size-2.5 rounded-full bg-primary/40"></span></span>
-              </div>
-            </div>
-            <div class="mx-auto w-full max-w-[440px] md:ml-auto">
-              <div class="relative aspect-square overflow-hidden rounded-[18px] bg-surface">
-                <img src="/nfts/nft-001.svg" alt="Composição abstrata em tons de rosa-antigo e verde — Aurora Drift" width="800" height="800" fetchpriority="high" decoding="async" class="size-full object-cover" />
-              </div>
-            </div>
-          </section>
-        </main>
-      </div>
-    </div>
-    <script>
-      // o shell só vale para a página inicial
-      if (location.pathname !== '/') document.getElementById('root').textContent = ''
-    </script>
+    <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
